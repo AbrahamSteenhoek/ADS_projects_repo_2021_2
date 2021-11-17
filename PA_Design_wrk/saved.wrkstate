@@ -1,7 +1,7 @@
 <!DOCTYPE SaveWorkspaceState>
 <SaveWorkspaceState>
     <Windows>
-        <Schematic view="schematic" y1="33" width="1388" cell="GaAs_FET" geom="1,0,0,243,64,1388,897,1920,1080" x1="242" lib="PA_Design_lib" height="897"/>
+        <DDS name="DC_IV.dds"/>
     </Windows>
     <MainWindowTab tab="1"/>
 </SaveWorkspaceState>

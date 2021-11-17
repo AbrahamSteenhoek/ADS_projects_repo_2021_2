@@ -5,7 +5,6 @@ ASSIGN EE_514_Labs_lib libMode shared
 INCLUDE ../DesignKits/DesignKit_EE414/lib.defs
 DEFINE Infineon_BAT15_03W_lib Infineon_BAT15_03W_lib
 ASSIGN Infineon_BAT15_03W_lib libMode shared
-INCLUDE $HOME/OneDrive/Documents/ee514/ADS/DesignKits/Infineon_MMIC_LNA/lib.defs
 INCLUDE $HOME/OneDrive/Documents/ee514/ADS/DesignKits/RF_Passive_SMT_vendor_kit/lib.defs
 INCLUDE $HOME/OneDrive/Documents/ee514/ADS/DesignKits/HFDiode_vendor_kit/lib.defs
 INCLUDE $HOME/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/HFDiode_vendor_kit/lib.defs

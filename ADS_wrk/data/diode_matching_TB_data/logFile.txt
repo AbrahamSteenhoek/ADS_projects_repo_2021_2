@@ -1,0 +1,21 @@
+
+hpeesofsim (*) 532.update2.0 Mar  6 2021, MINT version 5
+    (64-bit windows built: Sat Mar 06, 2021 18:08:32 +0000)
+
+
+***** Simulation started at Wed Nov 17 13:29:55 2021
+      Running on host: "DESKTOP-2U8UJ4L"
+      In Directory: "C:\Users\abrah\OneDrive\Documents\ee514\ADS_2021_u2\ADS_wrk\data"
+      Process ID: 27680
+
+Warning detected by hpeesofsim in topology check during circuit set up.
+    Number of nodes with only one device attached (topology corrected): 4
+    Number of nodes with no DC path to ground (topology corrected): 9
+
+
+SP SP1[1] <EE_514_Labs_lib:diode_matching_TB:schematic>   freq=2.4 GHz
+
+
+Resource usage:
+  Total stopwatch time     =     0.77 seconds.
+

@@ -1,42 +1,92 @@
-; Top Design: "EE_514_Labs_lib:BP_filter_2200MHz_edge_coupled_tuned:schematic"
+; Top Design: "EE_514_Labs_lib:mixer_single_balanced_HC_v1:schematic"
 ; Netlisted using Hierarchy Policy: "Standard"
 
-Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="EE_514_Labs_lib:BP_filter_2200MHz_edge_coupled_tuned:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
-; models
-#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/tlc220x_5v.net"
-#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/tlc220x_10v.net"
-#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/res_1206.net"
-#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/res_0603.net"
-#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/ind_0603.net"
-#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/cap_1206.net"
-#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/cap_0603.net"
-#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/BFR182_cktName.net"
-#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/BFR182.net"
-#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/BFP620_cktName.net"
-#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/BFP620.net"
-; User defined parasitic parameters
-#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/parasitic_param_values.txt"
-model MSub1 MSUB H=59.2 mil Er=4.34 Mur=1 Cond=5.8e7 Hu=3.93701e+34 mil T=1.4 mil TanD=0.016 Rough=0 mil DielectricLossModel=1 FreqForEpsrTanD=1.0 GHz LowFreqForTanD=1.0 kHz HighFreqForTanD=1.0 THz RoughnessModel=2 
-S_Param:SP1 CalcS=yes CalcY=no CalcZ=no GroupDelayAperture=1e-4 FreqConversion=no FreqConversionPort=1 StatusLevel=2 CalcNoise=no SortNoise=0 BandwidthForNoise=1.0 Hz DevOpPtLevel=0 \
-SweepVar="freq" SweepPlan="SP1_stim" OutputPlan="SP1_Output" 
+Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="EE_514_Labs_lib:mixer_single_balanced_HC_v1:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
+; Library Name: EE_514_Labs_lib
+; Cell Name: BP_filter_200MHz
+; View Name: schematic
+define BP_filter_200MHz ( P1  P2 ) 
+;parameters 
+#uselib "ckt" , "SLC"
+SLC:SLC1  P1 N__4 L=795 nH C=795 fF 
+#uselib "ckt" , "PLC"
+PLC:PLC1  0 N__4 L=994 pH C=636 pF 
+#uselib "ckt" , "SLC"
+SLC:SLC2  N__4 P2 L=795 nH C=795 fF 
+end BP_filter_200MHz
 
-SweepPlan: SP1_stim Center=2.2 GHz Span=300 MHz Lin=1901 
+; Library Name: EE_514_Labs_lib
+; Cell Name: HSMS282x
+; View Name: schematic
+define HSMS282x ( P1  P2 ) 
+;parameters 
+#uselib "HfDiodeLibrary" , "di_hp_HSMS282B_20000301"
+di_hp_HSMS282B_20000301:D1  P1 N__5 P2 
+end HSMS282x
 
-OutputPlan:SP1_Output \
+; Library Name: EE_514_Labs_lib
+; Cell Name: hybrid_coupler_90deg
+; View Name: schematic
+define hybrid_coupler_90deg ( P1  P2  P3  P4 ) 
+;parameters 
+model MSub2 MSUB H=59.2 mil Er=4.34  Mur=1.0  Cond=5.8e7  Hu=3.9e+34 mil T=1.4 mil TanD=0.016  Rough=0 mil DielectricLossModel=1 FreqForEpsrTanD=1.0e9  LowFreqForTanD=1.0e3  HighFreqForTanD=1.0e12  RoughnessModel=2 
+MLIN2:TL1  P1 P4 Subst="MSub2"  W=113.478740 mil L=678.397638 mil Mod=1 
+MLIN2:TL2  P2 P3 Subst="MSub2"  W=113.478740 mil L=678.397638 mil Mod=1 
+MLIN2:TL7  P1 P2 Subst="MSub2" W=194.586614 mil L=660.366142 mil Mod=1 
+MLIN2:TL8  P4 P3 Subst="MSub2" W=194.586614 mil L=660.366142 mil Mod=1 
+end hybrid_coupler_90deg
+
+hybrid_coupler_90deg:X1  V_rf N__18 N__7 V_lo 
+Short:I_Probe1  N__37 V_if Mode=0 SaveCurrent=yes 
+HB:HB1 MaxOrder=4 Freq[1]=LOfreq Freq[2]=RFfreq Order[1]=15 Order[2]=15 StatusLevel=2 HBSS_WSP=0 OutputPlan="HB1_Output" 
+
+OutputPlan:HB1_Output \
       Type="Output" \
+      UseNodeNestLevel=yes \
+      NodeNestLevel=2 \
       UseEquationNestLevel=yes \
       EquationNestLevel=2 \
       UseSavedEquationNestLevel=yes \
-      SavedEquationNestLevel=2
+      SavedEquationNestLevel=2 \
+      UseDeviceCurrentNestLevel=no \
+      DeviceCurrentNestLevel=0 \
+      DeviceCurrentDeviceType="All" \
+      DeviceCurrentSymSyntax=yes \
+      UseCurrentNestLevel=yes \
+      CurrentNestLevel=999 \
+      UseDeviceVoltageNestLevel=no \
+      DeviceVoltageNestLevel=0 \
+      DeviceVoltageDeviceType="All"
 
-#load "python","LinearCollapse"
-Component Module="LinearCollapse" Type="ModelExtractor" NetworkRepresentation=2
-Port:TermG1  N__12 0 Num=1 Z=50 Ohm Noise=yes 
-Port:TermG2  N__23 0 Num=2 Z=50 Ohm Noise=yes 
-MCFIL:CLin4  N__1 N__18 Subst="MSub1" W=96 mil S=24 mil L=758 mil tune{ 378.5 mil to 1135.5 mil by 1 mil } 
-MCFIL:CLin5  N__19 N__20 Subst="MSub1" W=110 mil S=114 mil L=680 mil tune{ 100 mil to 2000 mil by 1 mil } 
-MCFIL:CLin6  N__21 N__13 Subst="MSub1" W=96 mil S=24 mil L=758 mil tune{ 378.5 mil to 1135.5 mil by 1 mil } 
-MSTEP:Step3  N__18 N__19 Subst="MSub1" W1=96 mil W2=110 mil 
-MSTEP:Step4  N__20 N__21 Subst="MSub1" W1=96 mil W2=110 mil 
-MLIN2:TL1  N__12 N__1 Subst="MSub1" W=114 mil L=100.0 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
-MLIN2:TL2  N__13 N__23 Subst="MSub1" W=114 mil L=100.0 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+Tran:HB1_tran HB_Sol=1 SteadyState=1 StatusLevel=3 \
+Freq[1]=LOfreq Order[1]=15 
+
+Component:tahb_HB1 Module="ATAHB" Type="ModelExtractor" \ 
+ Tran_Analysis="HB1_tran" HB_Analysis="HB1" 
+
+Port:PORT1  V_rf 0 Num=1 Z=50 Ohm P[1]=dbmtow(RFpower) Freq[1]=RFfreq    Noise=yes Pac=polar(dbmtow(0),0) 
+Short:D8  N__23 N__25 Mode=0 SaveCurrent=no
+model BAT15_03W Diode Is=74e-9 Rs=5.0 N=1.07 Tt=3e-12 Cjo=138.3e-12 Vj=0.224 M=0.138 Fc=0.5 Bv=4.2 Ibv=100e-6 AllowScaling=0 
+Short:I_Probe2  N__32 V_if Mode=0 SaveCurrent=yes 
+"DIODEM1":DIODE2  N__28 N__13 Mode=1 Noise=yes 
+R:R2  V_if_filtered 0 R=50 Ohm Noise=yes 
+
+RFfreq=2.4 GHz
+Vbias=0.32
+RFpower=0
+LOpower=7
+LOfreq=2.2 GHz
+Port:PORT2  V_lo 0 Num=2 Z=50 Ohm P[1]=dbmtow(LOpower) Freq[1]=LOfreq    Noise=no Pac=polar(dbmtow(0),0) 
+model DIODEM1 Diode AllowScaling=0 
+"DIODEM1":DIODE1  N__1 N__29 Mode=1 Noise=yes 
+HSMS282x:X4  N__39 N__42 
+HSMS282x:X3  N__41 N__40 
+"BAT15_03W":DIODE3  N__31 N__20 Mode=1 Noise=yes 
+"BAT15_03W":DIODE4  N__22 N__30 Mode=1 Noise=yes 
+#uselib "HfDiodeLibrary" , "di_hp_HSMS282B_20000301"
+di_hp_HSMS282B_20000301:D9  N__32 0 N__7 
+#uselib "HfDiodeLibrary" , "di_hp_HSMS282B_20000301"
+di_hp_HSMS282B_20000301:D10  N__18 0 N__37 
+V_Source:SRC2  N__8 0 Type="V_DC" Vdc=Vbias V SaveCurrent=1 
+V_Source:SRC1  N__21 0 Type="V_DC" Vdc=Vbias V SaveCurrent=1 
+BP_filter_200MHz:X2  N__3 N__10 
