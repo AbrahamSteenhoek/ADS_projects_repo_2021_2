@@ -1,0 +1,40 @@
+
+hpeesofsim (*) 550.shp Jul 24 2021, MINT version 5
+    (64-bit windows built: Sat Jul 24, 2021 16:09:49 +0000)
+
+
+***** Simulation started at Sun Oct  3 09:14:53 2021
+      Running on host: "DESKTOP-2U8UJ4L"
+      In Directory: "C:\Users\abrah\OneDrive\Documents\ee514\ADS\ADS_wrk\data"
+      Process ID: 20612
+
+
+SP SP1[1] <EE_514_Labs_lib:HW6_M4L1:schematic>   freq=(30 MHz->12 GHz)
+Warning detected by hpeesofsim during SP analysis `SP1'.
+    The DC (0 Hz) value has not been specified in the Touchstone file
+    'C:/users/abrah/onedrive/documents/ee514/ads/designkits/designkit_ee414/circuit/data/BFP620_w_noise_VCE_1.5V_IC_80mA.s2p'.
+Warning detected by hpeesofsim during SP analysis `SP1'.
+    Data in the Touchstone file `C:/users/abrah/onedrive/documents/ee514/ads/designkits/designkit_ee414/circuit/data/BFP620_w_noise_VCE_1.5V_IC_80mA.s2p'
+    does not cover the requested value of `freq'.
+    Therefore, the required data was obtained by extrapolation.
+Warning detected by hpeesofsim during SP analysis `SP1'.
+    Noise data in the Touchstone file `C:/users/abrah/onedrive/documents/ee514/ads/designkits/designkit_ee414/circuit/data/BFP620_w_noise_VCE_1.5V_IC_80mA.s2p'
+    does not cover the current value of `freq'. Therefore, if noise
+    simulation is requested the data will be obtained by extrapolation.
+
+Warning detected by hpeesofsim during circuit set up.
+    Evaluation failed for ` GpCircle1=gp_circle(S,9,51)':  "GpCircle1":
+      Function "gp_circle_eqn" : Power gain circle is only available for 2-port scattering parameters
+Warning detected by hpeesofsim during circuit set up.
+    Evaluation failed for ` Mu1=mu(S)':  "Mu1":
+      Function "mu" : Geometrically derived stability factor (load) is only available for 2-port networks
+Warning detected by hpeesofsim during circuit set up.
+    Evaluation failed for ` SmZ1=sm_z1(S,PortZ1)':  "SmZ1":
+      Function "sm_z1" : Simultaneous match input impedance is only available for 2-port networks
+Warning detected by hpeesofsim during circuit set up.
+    Evaluation failed for ` SmZ2=sm_z2(S,PortZ2)':  "SmZ2":
+      Function "sm_z2" : Simultaneous match output impedance is only available for 2-port networks
+
+Resource usage:
+  Total stopwatch time     =     2.90 seconds.
+

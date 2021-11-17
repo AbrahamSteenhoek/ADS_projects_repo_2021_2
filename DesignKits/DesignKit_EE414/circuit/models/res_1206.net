@@ -1,0 +1,21 @@
+define res_1206 (_n11 _n44)
+
+; The following component parameters come from the file: parasitic_param_values.txt
+; which should be edited by the user of the library.
+parameters R= Cs=res1206_Cs Ls=res1206_Ls Cp=res1206_Cp
+
+; Parasitic values extracted from measurement
+; Cs = 
+; Cp = 
+; Ls = 
+
+; Parasitic Model for 1206 Resistor
+; All values are in Ohm, Farad, or Henry
+C:C10 _n11 0 C=Cs F                         ; Parasitic capacitance between leads and ground
+L:L12 _n11 _n22 L=(Ls/2) H                  ; Parasitic series inductance
+R:R23 _n22 _n33 R=R Ohm Noise=yes           ; Nominal resistance
+L:L34 _n33 _n44 L=(Ls/2) H                  ; Parasitic series inductance
+C:C40 _n44 0 C=Cs F                         ; Parasitic capacitance between leads and ground
+C:C14 _n11 _n44 C=Cp F                      ; Parasitic capacitance between leads
+
+end res_1206

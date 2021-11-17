@@ -1,0 +1,249 @@
+// Copyright Nathan M. Neihart 2021 
+/*----------------------------------------------------------------------------+/
+
+    FILE :  palette.ael
+
+    This file creates component palettes
+
+/+----------------------------------------------------------------------------*/
+
+set_design_type(analogRFnet);
+
+/*----------------------------------------------------------------------------+/
+    EE 414 Component Palette for Schematics
+/+----------------------------------------------------------------------------*/
+de_define_library_palette("EE414_DesignKit", SCHEMATIC_WINDOW, "analogRF_net", "414_DesignKit", "Design Kit for EE 414 Students", 0
+        , list(
+              "EE414_DesignKit"
+              , "EE414_INCLUDE"
+              , ""
+              , "Process Parameter Include"
+              , strcat(EE414_DESIGN_KIT_CIRCUIT_BITMAP_DIR, "EE414_INCLUDE")
+        )
+        , list(
+              "EE414_DesignKit"
+              , "res_1206"
+              , ""
+              , "1206 Resistor Model"
+              , strcat(EE414_DESIGN_KIT_CIRCUIT_BITMAP_DIR, "res_1206")
+        )
+        , list(
+              "EE414_DesignKit"
+              , "cap_1206"
+              , ""
+              , "1206 Capacitor Model"
+              , strcat(EE414_DESIGN_KIT_CIRCUIT_BITMAP_DIR, "cap_1206")
+        )
+        , list(
+              "EE414_DesignKit"
+              , "ind_0603"
+              , ""
+              , "0603 Inductor Model"
+              , strcat(EE414_DESIGN_KIT_CIRCUIT_BITMAP_DIR, "ind_0603")
+        )
+        , list(
+              "EE414_DesignKit"
+              , "BFR182"
+              , ""
+              , "Low Noise Si Transistor up to 2.5 GHz, SOT23 package, Key parameters: VCE0max=12.0V ICmax=35.0mA NFmin=0.9dB Gmax=18.0dB OIP3=24.5dBm OP1dB=5.0dBm fT=8.0GHz Ptot=250.0mW"
+              , strcat(EE414_DESIGN_KIT_CIRCUIT_BITMAP_DIR, "BFR182")
+        )
+        , list(
+              "EE414_DesignKit"
+              , "BFR182_SPARA"
+              , ""
+              , "Low Noise Si Transistor up to 2.5 GHz, SOT23 package, Key parameters: VCE0max=12.0V ICmax=35.0mA NFmin=0.9dB Gmax=18.0dB OIP3=24.5dBm OP1dB=5.0dBm fT=8.0GHz Ptot=250.0mW"
+              , strcat(EE414_DESIGN_KIT_CIRCUIT_BITMAP_DIR, "BFR182_SPARA")
+        )
+        , list(
+              "EE414_DesignKit"
+              , "tlc220x_10v"
+              , ""
+              , "TLC2201 Rail-to-Rail Op Amp with 10V Supply"
+              , strcat(EE414_DESIGN_KIT_CIRCUIT_BITMAP_DIR, "opamp_10")
+        )
+);
+
+
+
+/*----------------------------------------------------------------------------+/
+    EE 514 Component Palette for Schematics
+/+----------------------------------------------------------------------------*/
+de_define_library_palette("EE414_DesignKit", SCHEMATIC_WINDOW, "analogRF_net", "514_DesignKit", "Design Kit for EE 514 Students", 1
+        , list(
+              "EE414_DesignKit"
+              , "EE414_INCLUDE"
+              , ""
+              , "Process Parameter Include"
+              , strcat(EE414_DESIGN_KIT_CIRCUIT_BITMAP_DIR, "EE414_INCLUDE")
+        )
+        , list(
+              "EE414_DesignKit"
+              , "res_0603"
+              , ""
+              , "0603 Resistor Model"
+              , strcat(EE414_DESIGN_KIT_CIRCUIT_BITMAP_DIR, "res_0603")
+        )
+        , list(
+              "EE414_DesignKit"
+              , "cap_0603"
+              , ""
+              , "0603 Capacitor Model"
+              , strcat(EE414_DESIGN_KIT_CIRCUIT_BITMAP_DIR, "cap_0603")
+        )
+        , list(
+              "EE414_DesignKit"
+              , "ind_0603"
+              , ""
+              , "0603 Inductor Model"
+              , strcat(EE414_DESIGN_KIT_CIRCUIT_BITMAP_DIR, "ind_0603")
+        )
+        , list(
+              "EE414_DesignKit"
+              , "BFP620"
+              , ""
+              , "Ultra Low Noise SiGe:C Transistors up to 12 GHz, SOT343 package, Key parameters: VCE0max=2.3V ICmax=80.0mA NFmin=0.7dB Gmax=21.5dB OIP3=25.5dBm OP1dB=14.5dBm fT=65.0GHz Ptot=185.0mW"
+              , strcat(EE414_DESIGN_KIT_CIRCUIT_BITMAP_DIR, "BFP620")
+        )
+        , list(
+              "EE414_DesignKit"
+              , "BFP620_SPARA"
+              , ""
+              , "Ultra Low Noise SiGe:C Transistors up to 12 GHz, SOT343 package, Key parameters: VCE0max=2.3V ICmax=80.0mA NFmin=0.7dB Gmax=21.5dB OIP3=25.5dBm OP1dB=14.5dBm fT=65.0GHz Ptot=185.0mW"
+              , strcat(EE414_DESIGN_KIT_CIRCUIT_BITMAP_DIR, "BFP620_SPARA")
+        )
+        , list(
+              "EE414_DesignKit"
+              , "tlc220x_5v"
+              , ""
+              , "TLC2201 Rail-to-Rail Op Amp with 5V Supply"
+              , strcat(EE414_DESIGN_KIT_CIRCUIT_BITMAP_DIR, "opamp_5")
+        )
+);
+
+
+/*----------------------------------------------------------------------------+/
+    EE 414 Component Palette for Layout
+/+----------------------------------------------------------------------------*/
+de_define_library_palette("EE414_DesignKit", LAYOUT_WINDOW, "analogRF_net", "414_DesignKit", "Design Kit for EE 414 Students", 0
+        , list(
+              "EE414_DesignKit"
+              , "res_1206"
+              , ""
+              , "1206 Resistor Model"
+              , strcat(EE414_DESIGN_KIT_CIRCUIT_BITMAP_DIR, "res_1206")
+        )
+        , list(
+              "EE414_DesignKit"
+              , "cap_1206"
+              , ""
+              , "1206 Capacitor Model"
+              , strcat(EE414_DESIGN_KIT_CIRCUIT_BITMAP_DIR, "cap_1206")
+        )
+        , list(
+              "EE414_DesignKit"
+              , "ind_0603"
+              , ""
+              , "0603 Inductor Model"
+              , strcat(EE414_DESIGN_KIT_CIRCUIT_BITMAP_DIR, "ind_0603")
+        )
+        , list(
+              "EE414_DesignKit"
+              , "BFR182"
+              , ""
+              , "Low Noise Si Transistor up to 2.5 GHz, SOT23 package, Key parameters: VCE0max=12.0V ICmax=35.0mA NFmin=0.9dB Gmax=18.0dB OIP3=24.5dBm OP1dB=5.0dBm fT=8.0GHz Ptot=250.0mW"
+              , strcat(EE414_DESIGN_KIT_CIRCUIT_BITMAP_DIR, "BFR182")
+        )
+        , list (
+              "EE414_DesignKit"
+              , "tlc220x_10v"
+              , ""
+              , "Footprint for TLC2201 opamp"
+              , strcat(EE414_DESIGN_KIT_CIRCUIT_BITMAP_DIR, "opamp_10")
+        )
+        , list (
+              "EE414_DesignKit"
+              , "pad"
+              , ""
+              , "Pad with solder mask"
+              , strcat(EE414_DESIGN_KIT_CIRCUIT_BITMAP_DIR, "pad")
+        )
+        , list (
+              "EE414_DesignKit"
+              , "pad_via"
+              , ""
+              , "Pad with via and solder mask"
+              , strcat(EE414_DESIGN_KIT_CIRCUIT_BITMAP_DIR, "pad_via")
+        )
+        , list (
+              "EE414_DesignKit"
+              , "SMA_62mil_edge"
+              , ""
+              , "Footprint for edge-mounted SMA connector"
+              , strcat(EE414_DESIGN_KIT_CIRCUIT_BITMAP_DIR, "sma_edge")
+        )
+);
+
+
+
+/*----------------------------------------------------------------------------+/
+    EE 514 Component Palette for Layout
+/+----------------------------------------------------------------------------*/
+de_define_library_palette("EE414_DesignKit", LAYOUT_WINDOW, "analogRF_net", "514_DesignKit", "Design Kit for EE 514 Students", 1
+        , list(
+              "EE414_DesignKit"
+              , "res_0603"
+              , ""
+              , "0603 Resistor Model"
+              , strcat(EE414_DESIGN_KIT_CIRCUIT_BITMAP_DIR, "res_0603")
+        )
+        , list(
+              "EE414_DesignKit"
+              , "cap_0603"
+              , ""
+              , "0603 Capacitor Model"
+              , strcat(EE414_DESIGN_KIT_CIRCUIT_BITMAP_DIR, "cap_0603")
+        )
+        , list(
+              "EE414_DesignKit"
+              , "ind_0603"
+              , ""
+              , "0603 Inductor Model"
+              , strcat(EE414_DESIGN_KIT_CIRCUIT_BITMAP_DIR, "ind_0603")
+        )
+        , list(
+              "EE414_DesignKit"
+              , "BFP620"
+              , ""
+              , "Ultra Low Noise SiGe:C Transistors up to 12 GHz, SOT343 package, Key parameters: VCE0max=2.3V ICmax=80.0mA NFmin=0.7dB Gmax=21.5dB OIP3=25.5dBm OP1dB=14.5dBm fT=65.0GHz Ptot=185.0mW"
+              , strcat(EE414_DESIGN_KIT_CIRCUIT_BITMAP_DIR, "BFP620")
+        )
+        , list (
+              "EE414_DesignKit"
+              , "tlc220x_5v"
+              , ""
+              , "Footprint for TLC2201 opamp"
+              , strcat(EE414_DESIGN_KIT_CIRCUIT_BITMAP_DIR, "opamp_5")
+        )
+        , list (
+              "EE414_DesignKit"
+              , "pad"
+              , ""
+              , "Pad with Solder Mask"
+              , strcat(EE414_DESIGN_KIT_CIRCUIT_BITMAP_DIR, "pad")
+        )
+        , list (
+              "EE414_DesignKit"
+              , "pad_via"
+              , ""
+              , "Pad with via and solder mask"
+              , strcat(EE414_DESIGN_KIT_CIRCUIT_BITMAP_DIR, "pad_via")
+        )
+        , list (
+              "EE414_DesignKit"
+              , "SMA_62mil_edge"
+              , ""
+              , "Footprint for edge-mounted SMA connector"
+              , strcat(EE414_DESIGN_KIT_CIRCUIT_BITMAP_DIR, "sma_edge")
+        )
+);

@@ -1,0 +1,17 @@
+
+hpeesofsim (*) 550.shp Jul 24 2021, MINT version 5
+    (64-bit windows built: Sat Jul 24, 2021 16:09:49 +0000)
+
+
+***** Simulation started at Tue Nov 16 14:59:32 2021
+      Running on host: "DESKTOP-2U8UJ4L"
+      In Directory: "C:\Users\abrah\OneDrive\Documents\ee514\ADS\ADS_wrk\data"
+      Process ID: 10140
+
+
+SP SP1[1] <EE_514_Labs_lib:BP_Filter_O2_ideal:schematic>   freq=(1.95 GHz->2.45 GHz)
+
+
+Resource usage:
+  Total stopwatch time     =     3.30 seconds.
+

@@ -1,0 +1,5 @@
+# Library Defs for DesignKit_EE414_AC
+DEFINE EE414_DesignKit_tech ./EE414_DesignKit_tech
+ASSIGN EE414_DesignKit_tech libMode readOnly
+DEFINE EE414_DesignKit ./EE414_DesignKit
+ASSIGN EE414_DesignKit libMode readOnly

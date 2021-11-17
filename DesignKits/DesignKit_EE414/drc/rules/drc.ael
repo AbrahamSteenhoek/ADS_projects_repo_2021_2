@@ -1,0 +1,12 @@
+// Copyright Nathan Neihart - 2021
+/*----------------------------------------------------------------------------+/
+    File :  drc.ael
+
+    This file loads the various rules files.
+      layer_defs.ael - Contains the layer imports and rules categories
+      advanced_circuits_rules.ael - Contains the DRC rules for Advanced
+               Circuits 2-layer process.
+/*----------------------------------------------------------------------------*/
+
+dve_load_rules("layer_defs.ael");
+dve_load_rules("advanced_circuits_rules.ael");

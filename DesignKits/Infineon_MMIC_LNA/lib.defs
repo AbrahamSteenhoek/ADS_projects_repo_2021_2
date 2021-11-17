@@ -1,0 +1,3 @@
+# Library Defs for Infineon_MMIC_LNA design kit 
+DEFINE Infineon_MMIC_LNA ./Infineon_MMIC_LNA
+ASSIGN Infineon_MMIC_LNA libMode readOnly 

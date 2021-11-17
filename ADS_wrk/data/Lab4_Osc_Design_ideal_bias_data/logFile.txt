@@ -1,0 +1,23 @@
+
+hpeesofsim (*) 550.shp Jul 24 2021, MINT version 5
+    (64-bit windows built: Sat Jul 24, 2021 16:09:49 +0000)
+
+
+***** Simulation started at Wed Nov  3 23:40:14 2021
+      Running on host: "DESKTOP-2U8UJ4L"
+      In Directory: "C:\Users\abrah\OneDrive\Documents\ee514\ADS\ADS_wrk\data"
+      Process ID: 1520
+
+Warning detected by hpeesofsim during netlist flattening.
+    Short `OscP1.Short1' is shorted.
+
+Pt DC convergence is used.
+
+AC OscP1.AC1[1] <EE_514_Labs_lib:Lab4_Osc_Design_ideal_bias:schematic>   freq=(1 GHz->3 GHz)
+Warning detected by hpeesofsim during circuit set up.
+    Unable to resolve variable(s) or functions(s) in expression ` Mu1=mu(S)'
+        S
+
+Resource usage:
+  Total stopwatch time     =     1.49 seconds.
+

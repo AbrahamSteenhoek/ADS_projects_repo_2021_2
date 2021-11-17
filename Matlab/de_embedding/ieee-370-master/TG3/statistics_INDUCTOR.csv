@@ -1,0 +1,5 @@
+file name,Datarte,Max Freq,Recommended Freq,Pass mV,Rec mV,Caus mV,Pass %,Rec %,Caus %
+0603_IND_100NH,40,6,60,0,16,176,100.0,90.0,93
+0603_IND_1P8NH,40,6,60,10,2,202,96.0,98.0,86
+0603_IND_56NH,40,6,60,12,7,187,94.0,95.0,88
+0603_IND_THRU,40,6,60,0,7,157,99.0,96.0,71

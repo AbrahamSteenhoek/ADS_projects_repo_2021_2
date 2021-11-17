@@ -1,0 +1,77 @@
+/*----------------------------------------------------------------------------+/
+    FILE : EE414_INCLUDE.ael
+
+    FILE STRUCTURE :
+        Component definition :
+        [ forms and formsets ]
+        [ netlist callback function ]
+        [ parameter callback functions ]
+        item definition
+/+----------------------------------------------------------------------------*/
+
+
+//-----------------------------------------------------------------------------
+// Forms and Formsets
+//-----------------------------------------------------------------------------
+
+
+//-----------------------------------------------------------------------------
+// Netlist Callback
+//-----------------------------------------------------------------------------
+defun EE414KIT_process_netlist_cb
+(
+    cbP,
+    cbData,
+    instH
+)
+{
+    decl net = "";
+    decl modelDirPath = strcat(EE414_DESIGN_KIT_PATH, "circuit/models");
+    decl modelFileList = get_dir_files(modelDirPath, "net");
+
+    // Include the model files
+    net = strcat(net, "; models\n");
+    while (is_list(modelFileList))
+    {
+        net = strcat(net, "#include \"", EE414_DESIGN_KIT_PATH, "circuit/models/", car(modelFileList), "\"\n");
+        modelFileList = cdr(modelFileList);
+    }
+
+    // Add the txt file containing the parasitic parameter values
+    net = strcat(net, "; User defined parasitic parameters\n");
+    net = strcat(net, "#include \"", EE414_DESIGN_KIT_PATH, "circuit/models/parasitic_param_values.txt\"\n");
+
+    // Create a parameter iterator and extract the value
+    decl paramIter = db_create_param_iter(instH);
+    for (; db_param_iter_is_valid(paramIter);
+    db_param_iter_get_next(paramIter))
+    {
+        decl paramName = db_get_param_name(paramIter);
+        decl paramVal = db_param_iter_get_netlist_value(paramIter);
+        net = strcat(net, sprintf("%s = %s\n", paramName, paramVal));
+    }
+
+    return(net);
+}
+
+//-----------------------------------------------------------------------------
+// Item Defintion
+//-----------------------------------------------------------------------------
+create_item("EE414_INCLUDE"                 // name
+            , "Process Parameter Include"   // description label
+            , "EE414_INCLUDE"               // prefix
+            , ITEM_UNIQUE | ITEM_GLOBAL     // attributes
+            , 0                             // priority
+            , "EE414_INCLUDE"               // iconName
+            , standard_dialog               // dialogName
+            , NULL                          // dialogData
+            , ComponentNetlistFmt           // netlist format string
+            , NULL                          // netlist data
+            , ComponentAnnotFmt             // display format string
+            , NULL                          // symbol name
+            , NULL                          // artwork type
+            , NULL                          // artwork data
+            , ITEM_PRIMITIVE_EX             // extra attributes
+            , list(dm_create_cb(ITEM_NETLIST_CB, "EE414KIT_process_netlist_cb", "", TRUE))
+);
+

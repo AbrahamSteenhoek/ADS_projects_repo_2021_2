@@ -1,0 +1,23 @@
+// Copyright Nathan M. Neihart 2021
+/*----------------------------------------------------------------------------+/
+
+    FILE :  EE414_artwork_globals.ael
+
+    This file has all of the globals that are required by the artwork macros.
+
+/+----------------------------------------------------------------------------*/
+
+//------------------------------------------------------------------------------
+// Layer Definitions
+//------------------------------------------------------------------------------
+
+//decl default = db_layerid(0);
+decl Top_Cu = db_layerid(1);
+decl Bot_Cu = db_layerid(2);
+decl Top_SilkS = db_layerid(3);
+decl Bot_SilkS = db_layerid(4);
+decl Edge_Cuts = db_layerid(5);
+decl Top_Mask = db_layerid(6);
+decl Bot_Mask = db_layerid(7);
+decl Bound = db_layerid(8);
+decl Via = db_layerid(9);

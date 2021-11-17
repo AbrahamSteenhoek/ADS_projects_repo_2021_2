@@ -1,0 +1,94 @@
+; 
+; TLC2201_10V
+;*****************************************************************************
+; (C) Copyright 2020 Texas Instruments Incorporated. All rights reserved.                                            
+;*****************************************************************************
+;** This model has been translated into ADS netlist syntax from its original
+;** SPICE syntax by Nathan M. Neihart. This model is Part of the EE 414/514 
+;** ADS Design Kit that is used by students to complete their laboratory 
+;** assignments.
+;**
+;** This model uses 10 V supply voltages. This can be either single-ended or
+;** +/- 5V.
+;*****************************************************************************
+;
+; Released by: Online Design Tools, Texas Instruments Inc.
+; Part: TLC2201_10V
+; Date: 06/26/90 
+; Parts is a MicroSim product.
+; Model Version: Final 1.0
+;
+;*****************************************************************************
+; CONNECTIONS:       NON-INVERTING INPUT
+;                    | INVERTING INPUT
+;                    | | POSITIVE POWER SUPPLY
+;                    | | | NEGATIVE POWER SUPPLY
+;                    | | | | OUTPUT
+;                    | | | | |
+define tlc220x_10v ( 1 2 3 4 5 )
+;
+; Capacitors
+C:C1 11 12 C=8.51E-12
+C:C2 6 7 C=50.00E-12
+C:CPSR 85 86 C=79.6E-9
+; Diodes
+DX:DCMP 81 82 Mode=1
+DX:DCMM 83 81 Mode=1
+DX:DC 5 53 Mode=1
+DX:DE 54 5 Mode=1
+DX:DLP 90 91 Mode=1
+DX:DLN 92 90 Mode=1
+DX:DP 4 3 Mode=1
+; Voltage controlled Voltage Sources
+SDD:ECMR 2 99 84 99 I[1,0]=0 F[2,0]=(1*_v1)-_v2                                 ; v(84,99) = v(2,99)
+SDD:EGND 3 0 4 0 99 0 I[1,0]=0 I[2,0]=0 F[3,0]=(0 + 0.5*_v1 + 0.5*_v2)-_v3      ; V(99,0) = 0 + 0.5*V(3,0) + 0.5*V(4,0)
+SDD:EPSR 3 4 85 0 I[1,0]=0 F[2,0]=(-200E-6 + 20E-6*_v1)-_v2                     ; V(85,0) = -200E-6 + 20E-6*V(3,4)
+SDD:ENSE 88 0 89 2 I[1,0]=0 F[2,0]=(100E-6 + 1*_v1)-_v2                         ; V(89,2) = 100E-6 + V(88,0)
+; Current Controlled Current Sourses
+SDD:FB 7 99 I[1,0]=0 + 895.9E3*_c1 - 90E3*_c2 + 90E3*_c3 + 90E3*_c4 - 90E3*_c5 + 895E3*_c6 \
+       C[1]="VB" C[2]="VC" C[3]="VE" C[4]="VLP" C[5]="VLN" C[6]="VPSR"
+; Voltage Controlled Current Sourses
+SDD:GA 11 12 6 0 I[1,0]=0 I[2,0]=314.2E-6*_v1           ; I(6,0) = 314.2E-6*(V11,12)
+SDD:GCM 10 99 0 6 I[1,0]=0 I[2,0]=1.295E-9*_v1          ; I(0,6) = 1.295E-9*V(10,99)
+SDD:GPSR 85 86 85 86 I[1,0]=0 I[2,0]=100E-6*_v1         ; I(85,86) = 100E-6*V(85,86)
+SDD:GRD1 60 11 60 11 I[1,0]=0 I[2,0]=3.141E-4*_v1       ; I(60,11) = 3.141E-4*V(60,11)
+SDD:GRD2 60 12 60 12 I[1,0]=0 I[2,0]=3.141E-4*_v1      ; I(60,12) = 3.141E-4*V(60,12)
+; Current Controlled Voltage Sources
+SDD:HLIM 90 0 F[1,0]=(1000*_c1)-_v1 C[1]="VLIM"         ; V(90,0) = 1000 * Current through VLIM
+SDD:HCMR 80 1 F[1,0]=(0 + 100*_c1 + 100*_c2)-_v1 C[1]="VCMP" C[2]="VCMM"
+; Current Sources
+I_Source:IRP 3 4 Idc=965E-6
+I_Source:ISS 3 10 Idc=135.0E-6
+I_Source:IIO 2 0 Idc=0.5E-12
+I_Source:I1 88 0 Idc=1E-12
+; J-FET Transistors
+JX:J1 11 89 10 Mode=1
+JX:J2 12 80 10 Mode=1
+; Resistors
+R:R2 6 9 R=100E3
+R:RCM 84 81 R=1000
+R:RN1 88 0 R=1500
+R:RO1 8 5 R=188
+R:RO2 7 99 R=187
+R:RSS 10 99 R=1.481E6
+; Voltage Sources
+V_Source:VAD 60 4 Vdc=-0.3
+V_Source:VCMP 82 99 Vdc=2.2
+V_Source:VCMM 83 99 Vdc=-4.5
+V_Source:VB 9 0 Vdc=0
+V_Source:VC 3 53 Vdc=0.9
+V_Source:VE 54 4 Vdc=0.8
+V_Source:VLIM 7 8 Vdc=0
+V_Source:VLP 91 0 Vdc=2.8
+V_Source:VLN 0 92 Vdc=2.8
+V_Source:VPSR 0 86 Vdc=0
+; Model definitions for diode and J-FETs
+model DX Diode Is=800.0E-18 Ibv=1E-10 Tnom=27 IkModel=1 Imax=100 Trs1=0 Trs2=0
+model JX JFET Is=500.0E-15 Beta=1.462E-3 Vto=-0.155 Kf=1E-17 PFET=1 NFET=0 Imax=100 Tnom=27
+end tlc220x_10v
+
+
+
+  
+
+

@@ -1,0 +1,48 @@
+Name: EE414_DesignKit
+Version: 1.24
+Date: Nov. 4, 2021
+Description: Design kit containing component models and artwork to be used in EE414/514
+Revision History: 
+
+Rev. 1.2
+-----------
+11/4/2021 -- Fixed typo in DRC file and updated version to v1.24
+
+11/4/2021 -- Fixed incorrect layer mapping in substrate definitions and updated the version to v1.23
+
+10/18/2021 -- Added DRC rules for Advanced Circuits 2-layer process and updated the version to v1.22
+
+10/14/2021 -- The following changes were made:
+   -- Updated the names of the pad and pad-with-via cells.
+   -- Created footprint layout for the edge-mount SMA connector.
+   -- Created footprint layout for the TLC2201 opamp.
+
+10/12/2021 -- The following changes were made:
+   -- Added TLC2201 10V model to the EE414 palette and the TLC2201 5V model to the EE514 palette.
+   -- Added a file for defining global variabls for the parameterized artwork
+   -- Added layout component for in-pad via with solder mask
+
+10/11/2021 -- Added a Pad component to the layout palette that includes both copper and solder mask layers.
+
+10/8/2021 -- The following changes were made:
+   -- Added artwork to all resistors, inductors, capacitors, and transistors. The artwork is drawn on the default layer
+    and represents the size of the components for use during layout. Also added two pallets to the Layout view to accomodate this.
+   -- Changed the layer numbers to start at 0 instead of 1. This allows for the correct instancing of other ADS components.
+   -- Updated res_0603.net and res_1206.net so that each parasitic series inductor has a value that is 1/2 of the value
+      defined in the parasitic_param_values.txt file. Comments in the parasitic_param_values.txt file were updated accordingly.
+
+Rev. 1.1
+-----------
+9/8/2021 -- Split the palette into two different palettes. One for 414 students with only 1206 components (and 0603 inductor) and the BFR182 
+transistor, and one for 514 students with only 0603 components and the BFP620 transistor.
+
+9/8/2021 -- Removed Rp and Cblock from the 1206 and 0603 capacitor model files. These components were not required in the actual
+modeling because Rp was on the order of 10's of kOhm. Also removed the parameters for these two components from the parasitic_param_values.txt file.
+
+8/25/2021 -- Fixed the itemdef.ael file for the BFR620 S-parameter model to use the correct path for including the *.net file that
+that ADS doesn't think that the model is being double declared.
+
+-----------
+Rev. 1.0
+-----------
+8/8/2021 -- Created design kit.

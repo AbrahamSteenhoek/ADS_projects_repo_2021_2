@@ -1,0 +1,368 @@
+de_define_library_palette("Infineon_MMIC_LNA", SCHEMATIC_WINDOW, "analogRF_net",
+			 "Infineon_WLAN&WiMAX_LNA", "Infineon WLAN & WiMAX LNA", 0
+
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGA622L7"
+				,""
+				,"BGA622L7 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGA622L7")
+				)
+				);
+
+de_define_library_palette("Infineon_MMIC_LNA", SCHEMATIC_WINDOW, "analogRF_net",
+			 "Infineon_Mobile_TV_MMIC_LNA", "Infineon Mobile TV MMIC LNA", 0
+
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGA728L7"
+				,""
+				,"BGA728L7 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGA728L7")
+				)
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGB741L7ESD"
+				,""
+				,"BGB741L7ESD Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGB741L7ESD")
+				)
+				);
+
+de_define_library_palette("Infineon_MMIC_LNA", SCHEMATIC_WINDOW, "analogRF_net",
+			 "Infineon_GPS,GLONASS&COMPASS_LNA", "Infineon GPS, GLONASS & COMPASS LNA", 0
+
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGA524N6"
+				,""
+				,"BGA524N6 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGA524N6")
+				)
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGA824N6"
+				,""
+				,"BGA824N6 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGA824N6")
+				)
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGA924N6"
+				,""
+				,"BGA924N6 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGA924N6")
+				)
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGA231N7"
+				,""
+				,"BGA231N7 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGA231N7")
+				)
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGA428"
+				,""
+				,"BGA428 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGA428")
+				)
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGA615L7"
+				,""
+				,"BGA615L7 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGA615L7")
+				)
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGA715N7"
+				,""
+				,"BGA715N7 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGA715N7")
+				)
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGA915N7"
+				,""
+				,"BGA915N7 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGA915N7")
+				)
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGA925L6"
+				,""
+				,"BGA925L6 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGA925L6")
+				)
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGA725L6"
+				,""
+				,"BGA725L6 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGA725L6")
+				)
+				);
+
+de_define_library_palette("Infineon_MMIC_LNA", SCHEMATIC_WINDOW, "analogRF_net",
+			 "Infineon_GPS&GLONASS_FEM", "Infineon GPS & GLONASS FEM", 0
+
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGM1032N7"
+				,""
+				,"BGM1032N7 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGM1032N7")
+				)
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGM1033N7"
+				,""
+				,"BGM1033N7 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGM1033N7")
+				)
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGM1034N7"
+				,""
+				,"BGM1034N7 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGM1034N7")
+				)
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGM1043N7"
+				,""
+				,"BGM1043N7 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGM1043N7")
+				)
+				);
+
+de_define_library_palette("Infineon_MMIC_LNA", SCHEMATIC_WINDOW, "analogRF_net",
+			 "Infineon_General_Purpose_MMIC&FM_Radio_LNA", "Infineon General Purpose MMIC & FM Radio LNA", 0
+
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGB707L7ESD"
+				,""
+				,"BGB707L7ESD Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGB707L7ESD")
+				)
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGB719N7ESD"
+				,""
+				,"BGB719N7ESD Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGB719N7ESD")
+				)
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGB741L7ESD"
+				,""
+				,"BGB741L7ESD Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGB741L7ESD")
+				)
+				);
+
+de_define_library_palette("Infineon_MMIC_LNA", SCHEMATIC_WINDOW, "analogRF_net",
+			 "Infineon_CATV&Broadband_LNA", "Infineon CATV&Broadband LNA", 0
+
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGA416"
+				,""
+				,"BGA416 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGA416")
+				)
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGA420"
+				,""
+				,"BGA420 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGA420")
+				)
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGA427"
+				,""
+				,"BGA427 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGA427")
+				)
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGA728L7"
+				,""
+				,"BGA728L7 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGA728L7")
+				)
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGA612"
+				,""
+				,"BGA612 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGA612")
+				)
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGA614"
+				,""
+				,"BGA614 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGA614")
+				)
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGA616"
+				,""
+				,"BGA616 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGA616")
+				)
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGB741L7ESD"
+				,""
+				,"BGB741L7ESD Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGB741L7ESD")
+				)
+				);
+
+de_define_library_palette("Infineon_MMIC_LNA", SCHEMATIC_WINDOW, "analogRF_net",
+			 "Infineon_4G_LTE/LTE-A_Module_and_Bank", "Infineon 4G LTE/LTE-A LNA MODULE AND BANK", 0
+
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGM15LA12"
+				,""
+				,"BGM15LA12 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGM15LA12")
+				)
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGM15MA12"
+				,""
+				,"BGM15MA12 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGM15MA12")
+				)
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGM15HA12"
+				,""
+				,"BGM15HA12 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGM15HA12")
+				)
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGM7LLHM4L12"
+				,""
+				,"BGM7LLHM4L12 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGM7LLHM4L12")
+				)
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGM7LMHM4L12"
+				,""
+				,"BGM7LMHM4L12 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGM7LMHM4L12")
+				)
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGM7MLLM4L12"
+				,""
+				,"BGM7MLLM4L12 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGM7MLLM4L12")
+				)
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGM7MHLL4L12"
+				,""
+				,"BGM7MHLL4L12 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGM7MHLL4L12")
+				)
+				);
+
+de_define_library_palette("Infineon_MMIC_LNA", SCHEMATIC_WINDOW, "analogRF_net",
+			 "Infineon_3G/4G_LNA", "Infineon 3G/4G LNA", 0
+
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGA622L7"
+				,""
+				,"BGA622L7 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGA622L7")
+				)
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGA777N7"
+				,""
+				,"BGA777N7 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGA777N7")
+				)
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGA711N7"
+				,""
+				,"BGA711N7 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGA711N7")
+				)
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGA713N7"
+				,""
+				,"BGA713N7 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGA713N7")
+				)
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGA751N7"
+				,""
+				,"BGA751N7 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGA751N7")
+				)
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGA735N16"
+				,""
+				,"BGA735N16 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGA735N16")
+				)
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGA748L16"
+				,""
+				,"BGA748L16 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGA748L16")
+				)
+				);
+
+de_define_library_palette("Infineon_MMIC_LNA", SCHEMATIC_WINDOW, "analogRF_net",
+			 "Infineon_4G_LTE/LTE-A_LNA", "Infineon 4G LTE/LTE-Advanced LNA", 0
+
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGA7L1N6"
+				,""
+				,"BGA7L1N6 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGA7L1N6")
+				)
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGA7M1N6"
+				,""
+				,"BGA7M1N6 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGA7M1N6")
+				)
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGA7H1N6"
+				,""
+				,"BGA7H1N6 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGA7H1N6")
+				)
+				,list(
+				"Infineon_MMIC_LNA"
+				,"BGA824N6"
+				,""
+				,"BGA824N6 Element Help"
+				,strcat(Infineon_MMIC_LNA_BITMAP_DIR,"Amplifier_BGA824N6")
+				)
+				);
+
+

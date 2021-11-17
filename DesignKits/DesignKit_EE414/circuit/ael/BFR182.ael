@@ -1,0 +1,53 @@
+/*----------------------------------------------------------------------------+/
+
+    FILE :  BFR182.ael
+
+    FILE STRUCTURE :
+        Component definition :
+                [ forms and formsets ]
+                [ netlist callback function ]
+                [ parameter callback functions ]
+                item definition
+
+
+    This model was taken from the ADS Design Kit provided by Infineon.
+    Infineon Design Kit version 2.1
+    April 2016
+
+/+----------------------------------------------------------------------------*/
+
+//------------------------------------------------------------------------------
+// Global Variables
+//------------------------------------------------------------------------------
+
+
+//------------------------------------------------------------------------------
+// Forms and Formsets
+//------------------------------------------------------------------------------
+
+
+//------------------------------------------------------------------------------
+// Parameter Callback Function
+//------------------------------------------------------------------------------
+
+
+//------------------------------------------------------------------------------
+// Item Definition
+//------------------------------------------------------------------------------
+create_item("BFR182"                    //name  	 
+            , "BFR182"                  //label 	 
+            , "Q"                       //prefix	 
+            , 0                         //attibute	 
+            , NULL                      //priority	 
+            , "BFR182"                  //icon name	 
+            , standard_dialog           //dialog code	 
+            , "BJT"                     //dialog data	 
+            , ComponentNetlistFmt       //Netlist Format 
+            , "BFR182"                  //Netlist Data   
+            , ComponentAnnotFmt         //display Format 
+            , NULL                      //Symbol Name    
+            , NULL                      //Artwork Type   
+            , NULL                      //Artwork Data (SOT23)
+            , ITEM_PRIMITIVE_EX         //extra Attribute
+);  
+

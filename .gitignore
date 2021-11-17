@@ -1,0 +1,9 @@
+# ignore Module learning assessment stuff and class examples
+
+ADS_wrk/M*
+ADS_wrk/%M*
+ADS_wrk/*HW*
+ADS_wrk/*%HW*
+
+
+Oscillator_Design_Example_wrk/

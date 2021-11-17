@@ -1,0 +1,1 @@
+create_item("SMA_62mil_edge","SMA connector; Edge mount for 62 mil board thickness","J",524288,-1,NULL,"Component Parameters",NULL,"  ","SMA_62mil_edge","%t%b%r%38?%:\n%30?%s%:%k%?[%1i]%;=%s%;%;%e%e%;","",3,NULL,0);

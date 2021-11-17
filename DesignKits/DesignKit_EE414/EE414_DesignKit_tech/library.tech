@@ -1,0 +1,13 @@
+<!DOCTYPE Technology>
+<Lpp_List>
+    <LPP protect="0" line="0" purpose="drawing" mode="1" rgb="33792" alpha="205" layer="Bot_Cu" visible="1" fill="0"/>
+    <LPP protect="0" line="0" purpose="drawing" mode="2" rgb="8684544" alpha="255" layer="Bot_Mask" visible="1" fill="0"/>
+    <LPP protect="0" line="0" purpose="drawing" mode="2" rgb="8650884" alpha="255" layer="Bot_SilkS" visible="1" fill="0"/>
+    <LPP protect="0" line="5" purpose="drawing" mode="0" rgb="16759807" alpha="255" layer="Bound" visible="1" fill="0"/>
+    <LPP protect="0" line="0" purpose="drawing" mode="0" rgb="12763648" alpha="255" layer="Edge_Cuts" visible="1" fill="0"/>
+    <LPP protect="0" line="0" purpose="drawing" mode="1" rgb="8650752" alpha="205" layer="Top_Cu" visible="1" fill="0"/>
+    <LPP protect="0" line="0" purpose="drawing" mode="2" rgb="8650884" alpha="255" layer="Top_Mask" visible="1" fill="0"/>
+    <LPP protect="0" line="0" purpose="drawing" mode="2" rgb="33924" alpha="255" layer="Top_SilkS" visible="1" fill="0"/>
+    <LPP protect="0" line="0" purpose="drawing" mode="2" rgb="8421504" alpha="255" layer="Via" visible="1" fill="0"/>
+    <LPP protect="0" line="0" purpose="drawing" mode="0" rgb="13296127" alpha="255" layer="default" visible="1" fill="0"/>
+</Lpp_List>

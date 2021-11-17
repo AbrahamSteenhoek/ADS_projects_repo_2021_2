@@ -1,0 +1,227 @@
+
+hpeesofsim (*) 550.shp Jul 24 2021, MINT version 5
+    (64-bit windows built: Sat Jul 24, 2021 16:09:49 +0000)
+
+
+***** Simulation started at Sat Sep 18 15:21:52 2021
+      Running on host: "LAPTOP-FH3QRCEV"
+      In Directory: "D:\EE_514\EE_514_Labs_wrk\data"
+      Process ID: 15424
+
+
+OPTIM Optim1[1] <EE_514_Labs_lib:Lab_2_Inductor_Refine:schematic>  optIter=(0->200)
+
+SP Optim1[1].SP1[0] <EE_514_Labs_lib:Lab_2_Inductor_Refine:schematic>  optIter=0  freq=(300 kHz->6 GHz)
+
+Iteration/Trial #0:
+  CurrentEF: 151.944908237472
+  Optimization variables:
+    Cp = 229.17e-15
+    Cs = 200e-15
+    Rp = 42.75e+03
+    Rs = 2.25
+
+SP Optim1[1].SP1[1] <EE_514_Labs_lib:Lab_2_Inductor_Refine:schematic>  optIter=1  freq=(300 kHz->6 GHz)
+
+Iteration/Trial #1:
+  CurrentEF: 76.5070215952924
+  Optimization variables:
+    Cp = 385.8578197500002e-15
+    Cs = 191.6582547e-15
+    Rp = 43.03795468650001e+03
+    Rs = 2.999845228000086
+
+SP Optim1[1].SP1[2] <EE_514_Labs_lib:Lab_2_Inductor_Refine:schematic>  optIter=2  freq=(300 kHz->6 GHz)
+
+Iteration/Trial #2:
+  CurrentEF: 76.077324735624
+  Optimization variables:
+    Cp = 379.2453975560076e-15
+    Cs = 170.5497124398325e-15
+    Rp = 42.82646481909083e+03
+    Rs = 2.992063496122596
+
+SP Optim1[1].SP1[3] <EE_514_Labs_lib:Lab_2_Inductor_Refine:schematic>  optIter=3  freq=(300 kHz->6 GHz)
+
+Iteration/Trial #3:
+  CurrentEF: 75.3447290428719
+  Optimization variables:
+    Cp = 380.5693612526694e-15
+    Cs = 98.10001081918394e-15
+    Rp = 41.68985141300411e+03
+    Rs = 2.967808934689711
+
+SP Optim1[1].SP1[4] <EE_514_Labs_lib:Lab_2_Inductor_Refine:schematic>  optIter=4  freq=(300 kHz->6 GHz)
+
+Iteration/Trial #4:
+  CurrentEF: 75.2508237402762
+  Optimization variables:
+    Cp = 381.1865464742758e-15
+    Cs = 107.6771252059002e-15
+    Rp = 40.25152953368358e+03
+    Rs = 2.973120953875434
+
+SP Optim1[1].SP1[5] <EE_514_Labs_lib:Lab_2_Inductor_Refine:schematic>  optIter=5  freq=(300 kHz->6 GHz)
+
+Iteration/Trial #5:
+  CurrentEF: 65.7153108284686
+  Optimization variables:
+    Cp = 389.4484929546026e-15
+    Cs = 81.10520505219879e-15
+    Rp = 4.750479232001965e+03
+    Rs = 2.998550811678657
+
+SP Optim1[1].SP1[6] <EE_514_Labs_lib:Lab_2_Inductor_Refine:schematic>  optIter=6  freq=(300 kHz->6 GHz)
+
+Iteration/Trial #6:
+  CurrentEF: 60.8671817598793
+  Optimization variables:
+    Cp = 390.6161223377781e-15
+    Cs = 91.45161663933283e-15
+    Rp = 1.147489373183497e+03
+    Rs = 2.998454356717679
+
+SP Optim1[1].SP1[7] <EE_514_Labs_lib:Lab_2_Inductor_Refine:schematic>  optIter=7  freq=(300 kHz->6 GHz)
+
+Iteration/Trial #7:
+  CurrentEF: 60.1003355210026
+  Optimization variables:
+    Cp = 387.3390390953841e-15
+    Cs = 78.65001348763688e-15
+    Rp = 1.358057832116496e+03
+    Rs = 2.99816034689035
+
+SP Optim1[1].SP1[8] <EE_514_Labs_lib:Lab_2_Inductor_Refine:schematic>  optIter=8  freq=(300 kHz->6 GHz)
+
+Iteration/Trial #8:
+  CurrentEF: 59.7442066566749
+  Optimization variables:
+    Cp = 381.1656794243438e-15
+    Cs = 46.75995913416502e-15
+    Rp = 1.556650690090953e+03
+    Rs = 2.998906983930536
+
+SP Optim1[1].SP1[9] <EE_514_Labs_lib:Lab_2_Inductor_Refine:schematic>  optIter=9  freq=(300 kHz->6 GHz)
+
+Iteration/Trial #9:
+  CurrentEF: 59.5723725320722
+  Optimization variables:
+    Cp = 379.0309460049477e-15
+    Cs = 43.05742185626539e-15
+    Rp = 1.540640240296177e+03
+    Rs = 2.997995396455528
+
+SP Optim1[1].SP1[10] <EE_514_Labs_lib:Lab_2_Inductor_Refine:schematic>  optIter=10  freq=(300 kHz->6 GHz)
+
+Iteration/Trial #10:
+  CurrentEF: 57.8309838502851
+  Optimization variables:
+    Cp = 360.3209346385658e-15
+    Cs = 64.09369029357443e-15
+    Rp = 1.315605853808361e+03
+    Rs = 2.982086855043196
+
+SP Optim1[1].SP1[11] <EE_514_Labs_lib:Lab_2_Inductor_Refine:schematic>  optIter=11  freq=(300 kHz->6 GHz)
+
+Iteration/Trial #11:
+  CurrentEF: 57.1011081954336
+  Optimization variables:
+    Cp = 340.0097904186711e-15
+    Cs = 81.22608783662931e-15
+    Rp = 1.469657336753555e+03
+    Rs = 2.965733034889923
+
+SP Optim1[1].SP1[12] <EE_514_Labs_lib:Lab_2_Inductor_Refine:schematic>  optIter=12  freq=(300 kHz->6 GHz)
+
+Iteration/Trial #12:
+  CurrentEF: 57.0827239494951
+  Optimization variables:
+    Cp = 342.7319765146462e-15
+    Cs = 76.98681144735025e-15
+    Rp = 1.518187361617455e+03
+    Rs = 2.968206862186157
+
+SP Optim1[1].SP1[13] <EE_514_Labs_lib:Lab_2_Inductor_Refine:schematic>  optIter=13  freq=(300 kHz->6 GHz)
+
+Iteration/Trial #13:
+  CurrentEF: 57.0819457001291
+  Optimization variables:
+    Cp = 342.2831205044996e-15
+    Cs = 77.04936395189435e-15
+    Rp = 1.508315781270978e+03
+    Rs = 2.967890374534843
+
+SP Optim1[1].SP1[33] <EE_514_Labs_lib:Lab_2_Inductor_Refine:schematic>  optIter=33  freq=(300 kHz->6 GHz)
+
+Iteration/Trial #33:
+  CurrentEF: 56.4745997570325
+  Optimization variables:
+    Cp = 340.54312324165e-15
+    Cs = 79.54014897231869e-15
+    Rp = 1.427420299917415e+03
+    Rs = 605.3043997021593e-03
+
+SP Optim1[1].SP1[34] <EE_514_Labs_lib:Lab_2_Inductor_Refine:schematic>  optIter=34  freq=(300 kHz->6 GHz)
+
+Iteration/Trial #34:
+  CurrentEF: 56.4697986910041
+  Optimization variables:
+    Cp = 341.1721541897236e-15
+    Cs = 78.32770510051563e-15
+    Rp = 1.448663900276641e+03
+    Rs = 608.2897459055365e-03
+
+SP Optim1[1].SP1[35] <EE_514_Labs_lib:Lab_2_Inductor_Refine:schematic>  optIter=35  freq=(300 kHz->6 GHz)
+
+Iteration/Trial #35:
+  CurrentEF: 56.469476159568
+  Optimization variables:
+    Cp = 341.372532521414e-15
+    Cs = 77.87141100675221e-15
+    Rp = 1.455744585149678e+03
+    Rs = 592.8439492425317e-03
+
+SP Optim1[1].SP1[60] <EE_514_Labs_lib:Lab_2_Inductor_Refine:schematic>  optIter=60  freq=(300 kHz->6 GHz)
+
+Iteration/Trial #60:
+  CurrentEF: 56.4689063784193
+  Optimization variables:
+    Cp = 341.0465540354177e-15
+    Cs = 76.33697565443318e-15
+    Rp = 1.452067502112379e+03
+    Rs = 607.9759777021467e-03
+
+SP Optim1[1].SP1[64] <EE_514_Labs_lib:Lab_2_Inductor_Refine:schematic>  optIter=64  freq=(300 kHz->6 GHz)
+
+Iteration/Trial #64:
+  CurrentEF: 56.4687243652321
+  Optimization variables:
+    Cp = 340.7326137791265e-15
+    Cs = 76.48234523263935e-15
+    Rp = 1.454594903894959e+03
+    Rs = 591.9206953607822e-03
+
+SP Optim1[1].SP1[119] <EE_514_Labs_lib:Lab_2_Inductor_Refine:schematic>  optIter=119  freq=(300 kHz->6 GHz)
+
+Iteration/Trial #119:
+  CurrentEF: 56.4687213631357
+  Optimization variables:
+    Cp = 340.9372391479236e-15
+    Cs = 76.5648991085737e-15
+    Rp = 1.456586553506992e+03
+    Rs = 595.8025606855132e-03
+
+SP Optim1[1].SP1[125] <EE_514_Labs_lib:Lab_2_Inductor_Refine:schematic>  optIter=125  freq=(300 kHz->6 GHz)
+
+Iteration/Trial #125:
+  CurrentEF: 56.468718587925
+  Optimization variables:
+    Cp = 340.8390972071813e-15
+    Cs = 76.54644920699257e-15
+    Rp = 1.453990009681005e+03
+    Rs = 586.3425456356782e-03
+Optim1[1] reached the iteration limit. 
+
+Resource usage:
+  Total stopwatch time     = 63066.04 seconds.
+

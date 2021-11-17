@@ -1,0 +1,4 @@
+# Library Defs for editing Infineon_MMIC_LNA design kit 
+# Remove this from the design kit before distributing to customers. 
+DEFINE Infineon_MMIC_LNA ./Infineon_MMIC_LNA
+ASSIGN Infineon_MMIC_LNA libMode shared 

@@ -1,0 +1,42 @@
+; Top Design: "EE_514_Labs_lib:BP_filter_2200MHz_edge_coupled_tuned:schematic"
+; Netlisted using Hierarchy Policy: "Standard"
+
+Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="EE_514_Labs_lib:BP_filter_2200MHz_edge_coupled_tuned:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
+; models
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/tlc220x_5v.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/tlc220x_10v.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/res_1206.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/res_0603.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/ind_0603.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/cap_1206.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/cap_0603.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/BFR182_cktName.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/BFR182.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/BFP620_cktName.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/BFP620.net"
+; User defined parasitic parameters
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/parasitic_param_values.txt"
+model MSub1 MSUB H=59.2 mil Er=4.34 Mur=1 Cond=5.8e7 Hu=3.93701e+34 mil T=1.4 mil TanD=0.016 Rough=0 mil DielectricLossModel=1 FreqForEpsrTanD=1.0 GHz LowFreqForTanD=1.0 kHz HighFreqForTanD=1.0 THz RoughnessModel=2 
+S_Param:SP1 CalcS=yes CalcY=no CalcZ=no GroupDelayAperture=1e-4 FreqConversion=no FreqConversionPort=1 StatusLevel=2 CalcNoise=no SortNoise=0 BandwidthForNoise=1.0 Hz DevOpPtLevel=0 \
+SweepVar="freq" SweepPlan="SP1_stim" OutputPlan="SP1_Output" 
+
+SweepPlan: SP1_stim Center=2.2 GHz Span=300 MHz Lin=1901 
+
+OutputPlan:SP1_Output \
+      Type="Output" \
+      UseEquationNestLevel=yes \
+      EquationNestLevel=2 \
+      UseSavedEquationNestLevel=yes \
+      SavedEquationNestLevel=2
+
+#load "python","LinearCollapse"
+Component Module="LinearCollapse" Type="ModelExtractor" NetworkRepresentation=2
+Port:TermG1  N__12 0 Num=1 Z=50 Ohm Noise=yes 
+Port:TermG2  N__23 0 Num=2 Z=50 Ohm Noise=yes 
+MCFIL:CLin4  N__1 N__18 Subst="MSub1" W=96 mil S=24 mil L=758 mil tune{ 378.5 mil to 1135.5 mil by 1 mil } 
+MCFIL:CLin5  N__19 N__20 Subst="MSub1" W=110 mil S=114 mil L=680 mil tune{ 100 mil to 2000 mil by 1 mil } 
+MCFIL:CLin6  N__21 N__13 Subst="MSub1" W=96 mil S=24 mil L=758 mil tune{ 378.5 mil to 1135.5 mil by 1 mil } 
+MSTEP:Step3  N__18 N__19 Subst="MSub1" W1=96 mil W2=110 mil 
+MSTEP:Step4  N__20 N__21 Subst="MSub1" W1=96 mil W2=110 mil 
+MLIN2:TL1  N__12 N__1 Subst="MSub1" W=114 mil L=100.0 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL2  N__13 N__23 Subst="MSub1" W=114 mil L=100.0 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 

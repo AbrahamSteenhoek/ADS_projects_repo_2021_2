@@ -1,0 +1,21 @@
+define ind_0603 (_n11 _n33)
+
+; The following component parameters come from the file: parasitic_param_values.txt
+; which should be edited by the user of the library.
+parameters L= Cs=ind0603_Cs Rs=ind0603_Rs Cp=ind0603_Cp Rp=ind0603_Rp
+
+; Default parasitic values extraced from measurement
+; Cs = 60.0211 fF
+; Rs = 0.787207 Ohm
+; Cp = 342.596 fF
+; Rp = 1476.71 Ohm
+
+; Parasitic Model for 0603 Inductor
+C:C10 _n11 0 C=Cs F                         ; Parasitic capacitance between leads and ground
+R:R12 _n11 _n22 R=Rs Ohm Noise=yes          ; Parasitic series resistance
+L:L23 _n22 _n33 L=L H                       ; Nominal inductance
+C:C30 _n33 0 C=Cs F                         ; Parasitic capacitance between leads and ground
+C:C13 _n11 _n33 C=Cp F                      ; Parasitic capacitance between leads
+R:R13 _n11 _n33 R=Rp Ohms Noise=yes         ; Parasitic shunt resistance between leads
+
+end ind_0603

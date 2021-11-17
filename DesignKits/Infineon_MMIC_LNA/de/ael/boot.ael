@@ -1,0 +1,11 @@
+decl Infineon_MMIC_LNA_PATH = designKitRecord[1];
+decl Infineon_MMIC_LNA_BITMAP_DIR = sprintf("%s/circuit/bitmaps/",Infineon_MMIC_LNA_PATH);
+decl Infineon_MMIC_LNA_CIRCUIT_ARTWORK_DIR  = sprintf("%s/circuit/artwork/",Infineon_MMIC_LNA_PATH);
+decl Infineon_MMIC_LNA_CIRCUIT_MODEL_DIR = sprintf("%s/circuit/models/",Infineon_MMIC_LNA_PATH);
+decl Infineon_MMIC_LNA_CIRCUIT_DATA_DIR = sprintf("%s/circuit/data/",Infineon_MMIC_LNA_PATH);
+decl Infineon_MMIC_LNA_DE_AEL_DIR = sprintf("%s/de/ael/",Infineon_MMIC_LNA_PATH);
+
+//load artwork macro AEL files 
+
+//load palette.ael 
+load(strcat(Infineon_MMIC_LNA_DE_AEL_DIR,"palette"));

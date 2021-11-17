@@ -1,0 +1,17 @@
+
+hpeesofsim (*) 550.shp Jul 24 2021, MINT version 5
+    (64-bit windows built: Sat Jul 24, 2021 16:09:49 +0000)
+
+
+***** Simulation started at Sat Nov 13 20:37:22 2021
+      Running on host: "DESKTOP-2U8UJ4L"
+      In Directory: "C:\Users\abrah\OneDrive\Documents\ee514\ADS\ADS_wrk\data"
+      Process ID: 35908
+
+
+SP SP1[1] <EE_514_Labs_lib:branchline_coupler_180deg:schematic>   freq=(2.15 GHz->2.65 GHz)
+
+
+Resource usage:
+  Total stopwatch time     =     0.83 seconds.
+

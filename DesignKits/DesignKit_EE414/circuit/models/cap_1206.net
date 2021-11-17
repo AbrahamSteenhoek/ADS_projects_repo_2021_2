@@ -1,0 +1,22 @@
+define cap_1206 (_n11 _n55)
+
+; The following component parameters come from the file: parasitic_param_values.txt
+; which should be edited by the user of the library.
+parameters C= Cs=cap1206_Cs Rs=cap1206_Rs Ls=cap1206_Ls
+
+; Default parasitic values extraced from measurement
+; Cs = 70.919 fF
+; Rs = 2.63076 Ohms
+; Ls = 482.123 pH
+; Rp = 50 kOhm
+
+
+; Parasitic Model for 1206 Capacitor
+; All values are in Ohm, Farad, or Henry
+C:C10 _n11 0 C=Cs F                         ; Parasitic capacitance between leads and ground
+R:R12 _n11 _n22 R=Rs Ohm Noise=no           ; Parasitic series resistance
+C:C24 _n22 _n44 C=C F                       ; Nominal capacitance
+L:L45 _n44 _n55 L=Ls H                      ; Parasitic series inductance modeling self-resonance
+C:C50 _n55 0 C=Cs F                         ; Parasitic capacitance between leads and ground
+
+end cap_1206

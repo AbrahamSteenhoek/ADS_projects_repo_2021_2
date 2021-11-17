@@ -1,0 +1,47 @@
+
+hpeesofsim (*) 550.shp Jul 24 2021, MINT version 5
+    (64-bit windows built: Sat Jul 24, 2021 16:09:49 +0000)
+
+
+***** Simulation started at Thu Nov  4 23:54:48 2021
+      Running on host: "DESKTOP-2U8UJ4L"
+      In Directory: "C:\Users\abrah\OneDrive\Documents\ee514\ADS\ADS_wrk\data"
+      Process ID: 7876
+
+Warning detected by hpeesofsim in topology check during circuit set up.
+    Number of nodes with only one device attached (topology corrected): 2
+
+
+SP SP1[1] <EE_514_Labs_lib:Amp_Design_ideal_bias:schematic>   freq=(100 MHz->12 GHz)
+Warning detected by hpeesofsim during SP analysis 'SP1'.
+    UserValue(0.001504) < MinRecommendValue(0.000100) OR UserValue > MaxRecommendValue(0.000635) for 'H' in `V8'
+
+Warning detected by hpeesofsim during SP analysis 'SP1'.
+    UserValue(0.506757) < MinRecommendValue(1.000000) OR UserValue > MaxRecommendValue(2.200000) for 'W/H' in `V8'
+
+Warning detected by hpeesofsim during SP analysis 'SP1'.
+    UserValue(0.001504) < MinRecommendValue(0.000100) OR UserValue > MaxRecommendValue(0.000635) for 'H' in `V9'
+
+Warning detected by hpeesofsim during SP analysis 'SP1'.
+    UserValue(0.506757) < MinRecommendValue(1.000000) OR UserValue > MaxRecommendValue(2.200000) for 'W/H' in `V9'
+
+Warning detected by hpeesofsim during SP analysis 'SP1'.
+    UserValue(0.001504) < MinRecommendValue(0.000100) OR UserValue > MaxRecommendValue(0.000635) for 'H' in `V7'
+
+Warning detected by hpeesofsim during SP analysis 'SP1'.
+    UserValue(0.506757) < MinRecommendValue(1.000000) OR UserValue > MaxRecommendValue(2.200000) for 'W/H' in `V7'
+
+Warning detected by hpeesofsim during SP analysis 'SP1'.
+    UserValue(0.001504) < MinRecommendValue(0.000100) OR UserValue > MaxRecommendValue(0.000635) for 'H' in `V6'
+
+Warning detected by hpeesofsim during SP analysis 'SP1'.
+    UserValue(0.506757) < MinRecommendValue(1.000000) OR UserValue > MaxRecommendValue(2.200000) for 'W/H' in `V6'
+
+Warning detected by hpeesofsim during SP analysis 'SP1'.
+    UserValue(0.001504) < MinRecommendValue(0.000100) OR UserValue > MaxRecommendValue(0.000635) for 'H' in `V4'
+
+
+
+Resource usage:
+  Total stopwatch time     =     4.47 seconds.
+

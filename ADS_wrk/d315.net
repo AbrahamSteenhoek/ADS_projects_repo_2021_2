@@ -1,0 +1,30 @@
+; Translated with ADS Netlist Translator (*) 550.shp Jul 24 2021
+;
+;Mapping SPICE functions file to the Netlist
+#ifndef SPCFUNCTIONS_FILE
+#define SPCFUNCTIONS_FILE
+#include "$HPEESOF_DIR/links/spice/spicefunctions.net"
+#endif
+;
+;********************************************************************
+; Infineon Technologies Discrete & RF Semiconductors *
+; SPICE2G6 Model: Schottky Diode BAT15 series (Chip model) *
+; Filename: D315_v7.txt *
+; Version: 7.0 *
+; Date: Feb 2003 *
+; Author: A. Boehme *
+;********************************************************************
+; -Parallel-resistor R1 for a better reverse behaviour. *
+; -The temperature-dependence of the reverse breakdown voltage and *
+; the ohmic series resistance (parameter RS) are in SPICE2G6 not *
+; adaptable. *
+; -Model needs a very low parameter Vj. The value is limited *
+; to 0.224 for model-use at 85 degC. This value can produce *
+; simulator-warnings at higher temperatures. *
+;********************************************************************
+define d315 ( _node1 _node2)
+d1:dd1 _node1 _node2 Mode=1
+R:r1 _node1 _node2 R=15e6
+model d1 Diode Is=74.0n N=1.07 Rs=5.0 Xti=1.5 Eg=0.59 Cjo=138.5f M=0.138 Vj=0.224 Fc=0.5 Tt=3.0p \
+      Bv=4.2 Ibv=100.0u Nbv=1.07 Tnom=27 IkModel=1 Imax=1000 Trs1=0 Trs2=0
+end d315

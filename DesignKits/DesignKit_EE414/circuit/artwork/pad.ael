@@ -1,0 +1,32 @@
+// Copyright Nathan M. Neihart 2021
+/*----------------------------------------------------------------------------+/
+
+    FILE :  pad.ael
+
+    This file consists of artwork macro functions to draw device.
+    The artwork macro name must be the same as defined in customize pcell dialog
+
+/+----------------------------------------------------------------------------*/
+
+
+// Artwork Macro
+defun pad_art(w, l)
+{
+    decl context = de_get_current_design_context();
+    decl touu = db_factor();                            // Convert to User Units
+    decl ox = 0;                                        // Declare the lower-left X
+    decl oy = 0;                                        // Declare the lower-left Y
+
+    // Scale w and l to User Units
+    w = w * touu;
+    l = l * touu;
+
+    // Setting the origin
+    de_set_origin(ox, oy);
+
+    // Draw the Pad Rectangle on Top_Cu
+    db_add_rectangle(context, Top_Cu, ox, oy + w / 2, ox + l, oy - w / 2);
+
+    // Draw window in Solder Mask for the Pad Rectangle
+    db_add_rectangle(context, Top_Mask, ox, oy + w / 2, ox + l, oy - w / 2);
+}

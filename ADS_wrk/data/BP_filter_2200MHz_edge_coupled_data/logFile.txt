@@ -1,0 +1,20 @@
+
+hpeesofsim (*) 532.update2.0 Mar  6 2021, MINT version 5
+    (64-bit windows built: Sat Mar 06, 2021 18:08:32 +0000)
+
+
+***** Simulation started at Tue Nov 16 17:54:56 2021
+      Running on host: "DESKTOP-2U8UJ4L"
+      In Directory: "C:\Users\abrah\OneDrive\Documents\ee514\ADS_2021_u2\ADS_wrk\data"
+      Process ID: 20204
+
+Warning detected by hpeesofsim in topology check during circuit set up.
+    Number of nodes with only one device attached (topology corrected): 6
+
+
+SP SP1[1] <EE_514_Labs_lib:BP_filter_2200MHz_edge_coupled:schematic>   freq=(2.05 GHz->2.35 GHz)
+
+
+Resource usage:
+  Total stopwatch time     =     3.29 seconds.
+

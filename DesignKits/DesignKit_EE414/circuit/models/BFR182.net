@@ -1,0 +1,43 @@
+;**************************************************************
+;   Infineon    Technologies    AG
+;   GUMMEL-POON MODEL   IN  HSPICE      SYNTAX
+;   VALID   UP  TO  6   GHZ
+;   >>> BFR182  <<<
+;   (C) 2014    Infineon    Technologies    AG
+;   Version 2.1 April   2014
+;
+;   This model was taken from the ADS Design Kit provided by Infineon.
+;   Infineon Design Kit version 2.1
+;   April 2016
+;**************************************************************
+;.OPTION TNOM=25, GMIN= 1.00e-12
+;BFR182 1 2 3
+
+Options gmin=1.0e-14 TNOM=25  Imax=100 Imelt=100 
+
+define BFR182 (_node11 _node22 _node33)
+
+C:cbepar _node2 _node3 C=2.851e-013
+C:cbcpar _node2 _node1 C=3.214e-014
+C:ccepar _node1 _node3 C=1.816e-013
+L:le _node33 _node30 L=6.492e-010
+L:lb _node22 _node20 L=7.342e-010
+L:lc _node11 _node1 L=6.908e-010
+C:cbepck _node20 _node30 C=1.567e-014
+C:cbcpck _node20 _node1 C=1.975e-013
+C:ccepck _node1 _node30 C=1.497e-013
+L:lbi _node20 _node2 L=6.736e-010
+L:lei _node30 _node3 L=6.937e-010
+
+m_bfr182:q1 _node1 _node2 _node3 Mode=1
+
+model m_bfr182 BJT Tnom=25 Is=2.252e-016 Bf=105.3 Nf=1.013 Vaf=107.9 Ikf=0.1003 Ise=9.034e-016 \
+      Ne=1.719 Br=9 Nr=1 Var=16.96 Ikr=0.075 Isc=8e-015 Nc=2 Rb=3.961 Irb=0 Rbm=1.291 Re=0.1034 \
+      Rc=0.4892 Xtb=1.303 Eg=1.11 Xti=6.548 Cje=6.989e-013 Vje=1.295 Mje=0.6102 Tf=1.614e-011 \
+      Xtf=0.2049 Vtf=4.868 Itf=0.4362 Ptf=0.1029 Cjc=2.364e-013 Vjc=1.101 Mjc=0.4605 Xcjc=0.4261 \
+      Tr=1.896e-008 Cjs=0 Mjs=1 Vjs=1 Fc=0.2197 Kf=8.931e-017 Af=1.512 NPN=1 PNP=0 RbModel=1 \
+      Tlev=0 Tlevc=0
+
+
+;**************************************************************
+end BFR182

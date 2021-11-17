@@ -1,0 +1,55 @@
+// Copyright Nathan M. Neihart 2021
+/*----------------------------------------------------------------------------+/
+
+    FILE :  ind_0603.ael
+
+    FILE STRUCTURE :
+        Component definition :
+                [ forms and formsets ]
+                [ netlist callback function ]
+                [ parameter callback functions ]
+                item definition
+
+/+----------------------------------------------------------------------------*/
+
+//------------------------------------------------------------------------------
+// Global Variables
+//------------------------------------------------------------------------------
+
+
+//------------------------------------------------------------------------------
+// Forms and Formsets
+//------------------------------------------------------------------------------
+
+
+//------------------------------------------------------------------------------
+// Parameter Callback Function
+//------------------------------------------------------------------------------
+
+
+//------------------------------------------------------------------------------
+// Item Definition
+//------------------------------------------------------------------------------
+create_item("ind_0603"              // Name
+            , "Parasitic 0603 inductor model"  // description label
+            , "L"                   // prefix
+            , 0                     // attributes
+            , NULL                  // priority
+            , "ind_0603"            // iconName
+            , standard_dialog       // dialogName
+            , NULL                  // dialogData
+            , ComponentNetlistFmt   // netlist format string
+            , NULL                  // netlist data
+            , ComponentAnnotFmt     // display format string
+            , NULL                  // symbol name
+            , NULL                  // artwork name
+            , NULL                  // artwork data
+            , ITEM_PRIMITIVE_EX     // extyra attributes
+            , create_parm( "L"                          // name
+                    , "Nominal Inductance"             // label
+                    , PARM_REAL | PARM_OPTIMIZABLE | PARM_STATISTICAL   // sttributes
+                    , "StdFileFormSet"                  // formset
+                    , INDUCTANCE_UNIT                  // units
+                    , prm("StdForm", "1 nH")            // default value      
+            )
+);

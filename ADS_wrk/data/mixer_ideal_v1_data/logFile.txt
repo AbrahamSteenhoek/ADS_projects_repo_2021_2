@@ -1,0 +1,62 @@
+
+hpeesofsim (*) 550.shp Jul 24 2021, MINT version 5
+    (64-bit windows built: Sat Jul 24, 2021 16:09:49 +0000)
+
+
+***** Simulation started at Tue Nov  9 12:03:14 2021
+      Running on host: "DESKTOP-2U8UJ4L"
+      In Directory: "C:\Users\abrah\OneDrive\Documents\ee514\ADS\ADS_wrk\data"
+      Process ID: 22704
+
+Warning detected by hpeesofsim during analysis.
+    Error evaluating `MixIMT1.MixIMTx_FDD.__213':  File (type: imt) `imtfile.imt' read error:  Failed to open "C:\Users\abrah\OneDrive\Documents\ee514\ADS\ADS_wrk\data/imtfile.imt".
+Warning detected by hpeesofsim during analysis.
+    Error evaluating `MixIMT1.MixIMTx_FDD.__216':  File (type: imt) `imtfile.imt' read error:  Failed to open "C:\Users\abrah\OneDrive\Documents\ee514\ADS\ADS_wrk\data/imtfile.imt".
+Warning detected by hpeesofsim during analysis.
+    Error evaluating `MixIMT1.MixIMTx_FDD.__219':  File (type: imt) `imtfile.imt' read error:  Failed to open "C:\Users\abrah\OneDrive\Documents\ee514\ADS\ADS_wrk\data/imtfile.imt".
+Warning detected by hpeesofsim during analysis.
+    Error evaluating `MixIMT1.MixIMTx_FDD.__221':  File (type: imt) `imtfile.imt' read error:  Failed to open "C:\Users\abrah\OneDrive\Documents\ee514\ADS\ADS_wrk\data/imtfile.imt".
+Warning detected by hpeesofsim during analysis.
+    Error evaluating `MixIMT1.MixIMTx_FDD.__222':  File (type: imt) `imtfile.imt' read error:  Failed to open "C:\Users\abrah\OneDrive\Documents\ee514\ADS\ADS_wrk\data/imtfile.imt".
+Warning detected by hpeesofsim during analysis.
+    Error evaluating `MixIMT1.MixIMTx_FDD.__224':  File (type: imt) `imtfile.imt' read error:  Failed to open "C:\Users\abrah\OneDrive\Documents\ee514\ADS\ADS_wrk\data/imtfile.imt".
+Warning detected by hpeesofsim during analysis.
+    Error evaluating `MixIMT1.MixIMTx_FDD.__225':  File (type: imt) `imtfile.imt' read error:  Failed to open "C:\Users\abrah\OneDrive\Documents\ee514\ADS\ADS_wrk\data/imtfile.imt".
+Warning detected by hpeesofsim during analysis.
+    Error evaluating `MixIMT1.MixIMTx_FDD.__227':  File (type: imt) `imtfile.imt' read error:  Failed to open "C:\Users\abrah\OneDrive\Documents\ee514\ADS\ADS_wrk\data/imtfile.imt".
+
+HB HB1[1] <EE_514_Labs_lib:mixer_ideal_v1:schematic>
+    Number of tones:   1.
+    Number of frequencies:   16.
+    Number of time samples:  32.
+    Number of HB equations (problem size): 403.
+    Auto mode: on.
+    Convergence mode: Auto.
+    Linear solver: direct.
+------------------------------------------------------------------------------
+Newton solver:					
+Iter	KCL residual	Damp %	Sol update
+------------------------------------------------------------------------------
+0.0*	7.07946 mA  	100.0             
+1.0 	867.362e-21A	100.0	43.3681 aV   
+
+HB HB1[1] <EE_514_Labs_lib:mixer_ideal_v1:schematic>
+    Number of tones:   2.
+    Number of frequencies:   43.
+    Number of time samples:  1024.
+    Number of HB equations (problem size): 1105.
+    Auto mode: on.
+    Convergence mode: Auto.
+    Linear solver: direct.
+------------------------------------------------------------------------------
+Newton solver:					
+Iter	KCL residual	Damp %	Sol update
+------------------------------------------------------------------------------
+0.0*	2 mA        	100.0             
+1.0 	867.362e-21A	100.0	43.3681 aV   
+Warning detected by hpeesofsim during HB analysis `HB1'.
+     More than one mixing term has landed on frequency 26.4 GHz.
+
+Resource usage:
+  Total stopwatch time     =     0.90 seconds.
+

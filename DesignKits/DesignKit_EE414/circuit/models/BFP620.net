@@ -1,0 +1,55 @@
+;**************************************************************
+;   Infineon    Technologies    AG
+;   GUMMEL-POON MODEL   IN  HSPICE      SYNTAX
+;   VALID   UP  TO  10  GHZ
+;   >>> BFP620  <<<
+;   (C) 2014    Infineon    Technologies    AG
+;   Version 3.1 Oktober 2014
+;
+;   This model was taken from the ADS Design Kit provided by Infineon.
+;   Infineon Design Kit version 2.1
+;   April 2016
+;**************************************************************
+;.OPTION GMIN= 1.00e-12
+;BFP620 C B E1 E2
+
+Options gmin=1.0e-14 TNOM = 25  Imax= 100 Imelt= 100 
+
+define BFP620 ( _node111 _node22 _node31 _node32)
+
+C:cbepar _node2 _node3 C=1.61e-014
+C:cbcpar _node2 _node10 C=9.206e-014
+C:ccepar _node10 _node3 C=4.783e-014
+L:lex _node30 _node33 L=2.103e-012
+L:lbx _node20 _node22 L=4.68e-010
+L:lcx _node11 _node111 L=3.153e-010
+C:cbepck _node20 _node30 C=7.147e-014
+C:cbcpck _node11 _node20 C=4.512e-016
+C:ccepck _node11 _node30 C=1.305e-013
+L:lb _node2 _node20 L=5.692e-010
+L:le _node3 _node30 L=2.255e-010
+L:lc _node10 _node11 L=6.581e-010
+
+R:re1 _node33 _node31 R=1e-03
+R:re2 _node33 _node32 R=1e-03
+
+R:rsub _node4 _node30 R=260
+R:rcx _node1 _node10 R=1.449
+
+m_diode_sub:diode_sub _node4 _node1 Mode=1
+
+model m_diode_sub Diode Is=2.16e-014 N=1.123 Rs=0.1 Cjo=4e-014 Tnom=25 Nbv=1.123 Vj=0.8  \
+      IkModel=2
+
+m_bfp620:q1 _node1 _node2 _node3 Mode=1
+
+model m_bfp620 BJT Tnom=25 Is=2.057e-015 Bf=1148 Nf=1.008 Vaf=355.5 Ikf=0.2022 Ise=2.675e-013 \
+      Ne=2.946 Br=309.1 Nr=0.9849 Var=1.204 Ikr=0.005842 Isc=1e-017 Nc=7.2 Rb=8.533 Irb=0.0007035 \
+      Rbm=3.31 Re=0.02592 Rc=2.429 Xtb=-2.482 Eg=1.034 Xti=0.808 Cje=4.356e-013 Vje=0.337 \
+      Mje=0.004858 Tf=1.4e-012 Xtf=1.466 Vtf=3.079 Itf=2.083 Ptf=8.82e-016 Cjc=9.958e-014 \
+      Vjc=1.68 Mjc=1.715 Xcjc=0.6466 Tr=1e-009 Cjs=8.583e-014 Mjs=0.1744 Vjs=0.1542 Fc=0.8156 \
+      Kf=2.56e-011 Af=1.798 NPN=1 PNP=0 RbModel=1 Tlev=0 Tlevc=0
+
+
+;**************************************************************
+end BFP620

@@ -1,0 +1,24 @@
+// Copyright Nathan Neihart - 2019  
+/*----------------------------------------------------------------------------+/
+    File :  layer_defs.ael
+
+    This file contains the layer imports
+/*----------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------+/
+   Layer Definitions
+/*----------------------------------------------------------------------------*/
+// Input Layers
+decl lyr_Top_Cu = dve_import_layer("Top_Cu");
+decl lyr_Via = dve_import_layer("Via");
+decl lyr_Bot_Cu = dve_import_layer("Bot_Cu");
+
+// Output Layers
+decl lyr_DRC_error = dve_export_layer("ads_drc_error");
+
+/*----------------------------------------------------------------------------+/
+   Rule Categories
+/*----------------------------------------------------------------------------*/
+dve_define_rule_category("Width Rules");
+dve_define_rule_category("Spacing Rules");
+dve_define_rule_category("Inclusion Rules");

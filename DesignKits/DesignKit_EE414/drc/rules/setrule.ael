@@ -1,0 +1,9 @@
+// Copyright Nathan Neihart - 2021  
+/*----------------------------------------------------------------------------+/
+    File :  setrule.ael
+
+    This is a rule registry file
+/+----------------------------------------------------------------------------*/
+
+// List the DRC rule files in the DRC dialog
+dve_set_rule_list(list("EE414 Design Kit : All Rules", "drc.ael"));

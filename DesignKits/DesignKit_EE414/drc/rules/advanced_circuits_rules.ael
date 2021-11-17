@@ -1,0 +1,68 @@
+// Copyright Nathan Neihart - 2019  
+/*----------------------------------------------------------------------------+/
+    File :  rules.ael
+
+    This file contains the basic DRC rules for fabrication using Advanced
+    Circuits 2-layer FR-4 process.
+
+    All layers and rules categories are defined in layer_defs.ael
+/*----------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------+/
+   Layer Dimension Rules (Width Rules)
+/*----------------------------------------------------------------------------*/
+// Select the entire polygon of the Via if it is too small.
+decl wrkLayer1 = dve_drc( width(lyr_Via) <= 9.99, DVE_RN_EDGE_ANGLES, DVE_RV_PARALLEL);
+decl wrkLayer2 = dve_plgout(wrkLayer1);
+
+if (dve_rule_category("Width Rules"))
+{
+    // Top_Cu Width
+    lyr_DRC_error += dve_drc( width(lyr_Top_Cu) < 5.00,
+                              "Width of layer Top_Cu must be >= 5.00 mil",
+                              DVE_RN_EDGE_ANGLES, DVE_RV_PARALLEL);
+    
+    // Bot_Cu Width
+    lyr_DRC_error += dve_drc( width(lyr_Bot_Cu) < 5.00,
+                              "Width of layer Bot_Cu must be >= 5.00 mil",
+                              DVE_RN_EDGE_ANGLES, DVE_RV_PARALLEL);
+
+    // Via Width
+    lyr_DRC_error += dve_drc(all_edges(wrkLayer2), 
+                             "Minimum Via diameter must be >= 10.00 mil");
+}
+
+/*----------------------------------------------------------------------------+/
+   Layer Spacing Rules
+/*----------------------------------------------------------------------------*/
+if (dve_rule_category("Spacing Rules"))
+{
+    // Top_Cu Spacing
+    lyr_DRC_error += dve_drc( spacing(lyr_Top_Cu) < 5.00,
+                              "Spacing of layer Top_Cu must be >= 5.00 mil",
+                              DVE_RN_SEPARATE, DVE_RV_SEPARATE);
+
+    // Bot_Cu Spacing
+    lyr_DRC_error += dve_drc( spacing(lyr_Bot_Cu) < 5.00,
+                              "Spacing of layer Bot_Cu must be >= 5.00 mil",
+                              DVE_RN_SEPARATE, DVE_RV_SEPARATE);
+}
+
+
+/*----------------------------------------------------------------------------+/
+   Layer Inclusion Rules
+/*----------------------------------------------------------------------------*/
+decl lyr_TopCu_AND_Via = dve_bool_and(lyr_Top_Cu, lyr_Via);
+decl lyr_BotCu_AND_Via = dve_bool_and(lyr_Bot_Cu, lyr_Via);
+
+if (dve_rule_category("Inclusion Rules"))
+{
+    lyr_DRC_error += dve_drc( nests(lyr_TopCu_AND_Via, lyr_Top_Cu) <= 4.99,
+                              "Annular ring on Top Copper must be >= 5.00 mil",
+                              DVE_RN_SEPARATE, DVE_RV_SEPARATE);
+    
+    lyr_DRC_error += dve_drc( nests(lyr_BotCu_AND_Via, lyr_Bot_Cu) <= 4.99,
+                              "Annular ring on bottom copper must be >= 5.00 mil",
+                              DVE_RN_SEPARATE, DVE_RV_SEPARATE);
+}
+

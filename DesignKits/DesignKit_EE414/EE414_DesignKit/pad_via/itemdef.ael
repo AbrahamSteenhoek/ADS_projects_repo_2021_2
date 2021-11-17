@@ -1,0 +1,4 @@
+create_item("pad_via","Parameterized pad with in-pad via. Includes solder mask.","X",524288,-1,NULL,"Component Parameters",NULL,"  ","pad_via","%t%b%r%38?%:\n%30?%s%:%k%?[%1i]%;=%s%;%;%e%e%;","",3,NULL,0,
+create_parm("width","Width of Pad",68608,"StdFormSet",5,prm("StdForm","75 mil")),
+create_parm("length","Length of Pad",68608,"StdFormSet",5,prm("StdForm","75 mil")),
+create_parm("drill","Diameter of via hold",68608,"StdFormSet",5,prm("StdForm","20 mil")));

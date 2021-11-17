@@ -1,0 +1,54 @@
+
+hpeesofsim (*) 550.shp Jul 24 2021, MINT version 5
+    (64-bit windows built: Sat Jul 24, 2021 16:09:49 +0000)
+
+
+***** Simulation started at Sun Nov 14 15:52:46 2021
+      Running on host: "DESKTOP-2U8UJ4L"
+      In Directory: "C:\Users\abrah\OneDrive\Documents\ee514\ADS\ADS_wrk\data"
+      Process ID: 28168
+
+Warning detected by hpeesofsim in topology check during circuit set up.
+    Number of nodes with only one device attached (topology corrected): 11
+    Number of nodes with no DC path to ground (topology corrected): 12
+
+
+HB HB1[1] <EE_514_Labs_lib:mixer_single_balanced_v1:schematic>
+    Number of tones:   1.
+    Number of frequencies:   16.
+    Number of time samples:  32.
+    Number of HB equations (problem size): 1116.
+    Auto mode: on.
+    Convergence mode: Auto.
+    Linear solver: direct.
+------------------------------------------------------------------------------
+Newton solver:					
+Iter	KCL residual	Damp %	Sol update
+------------------------------------------------------------------------------
+0.0*	15.5949 uA  	100.0             
+1.0 	11.2541 pA  	100.0	371.209 fV   
+
+HB HB1[1] <EE_514_Labs_lib:mixer_single_balanced_v1:schematic>
+    Number of tones:   2.
+    Number of frequencies:   43.
+    Number of time samples:  1024.
+    Number of HB equations (problem size): 3060.
+    Auto mode: on.
+    Convergence mode: Auto.
+    Linear solver: Krylov (GS_GMRES).
+    Preconditioner: DCP.
+    The general solver is used for HB Krylov preconditioning.
+------------------------------------------------------------------------------
+Newton solver:					Linear solver:
+Iter	KCL residual	Damp %	Sol update	Iters	Residual
+------------------------------------------------------------------------------
+0 	2 mA        	100.0             
+1 	1.10637 uA  	100.0	5.19931 mV  	  3	1.277e-10   
+2 	60.9329 fA  	100.0	68.1451 nV  	  3	2.020e-09   
+3 	10.2458 fA  	100.0	1.9013 fV   	  3	1.235e-09   
+Warning detected by hpeesofsim during HB analysis `HB1'.
+     More than one mixing term has landed on frequency 26.4 GHz.
+
+Resource usage:
+  Total stopwatch time     =     0.96 seconds.
+

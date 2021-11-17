@@ -1,0 +1,3 @@
+create_item("Filter2","Filter2","X",16,-1,NULL,"Component Parameters",NULL,"%d:%t %# %44?0%:%31?%C%:_net%c%;%;%e %b%r%8?%29?%:%30?%p %:%k%?[%1i]%;=%p %;%;%;%e%e","Filter2","%t%b%r%38?%:\n%39?all_parm%A%:%30?%s%:%k%?[%1i]%;=%s%;%;%;%e%e%;","SYM_BPF",3,NULL,0,
+create_parm("CenterFreq","Center Frequency of Filter",68608,"StdFormSet",0,prm("StdForm","1e9")),
+create_parm("Bandwidth","Bandwidth of Filter",68608,"StdFormSet",0,prm("StdForm","10e6")));

@@ -1,0 +1,60 @@
+// Copyright Nathan M. Neihart 2021
+/*----------------------------------------------------------------------------+/
+FILE : boot.ael
+This file controls the loading of the design kit.
+There are list items in the designKitRecord as present in eesof_lib.cfg
+file
+These items are -
+0: Design Kit Name
+1: Design Kit Path
+2: Design Kit.Boot File
+3: Design Kit Version
+/+----------------------------------------------------------------------------*/
+
+// Read values from designKitRecord variable
+decl EE414_DESIGN_KIT_NAME = designKitRecord[0];
+decl EE414_DESIGN_KIT_PATH = designKitRecord[1];
+decl EE414_DESIGN_KIT_BOOT = designKitRecord[2];
+decl EE414_DESIGN_KIT_VER = designKitRecord[3];
+
+// Getting ADS Version
+decl ADS_VERSION_NUMBER = de_version_number_int();
+
+// These path names may be used later to load other files
+decl EE414_DESIGN_KIT_CIRCUIT_AEL_DIR = strcat(EE414_DESIGN_KIT_PATH, "circuit/ael/");
+decl EE414_DESIGN_KIT_CIRCUIT_BITMAP_DIR = strcat(EE414_DESIGN_KIT_PATH, "circuit/bitmaps/");
+decl EE414_DESIGN_KIT_CIRCUIT_ARTWORK = strcat(EE414_DESIGN_KIT_PATH, "circuit/artwork/");
+decl EE414_DESIGN_KIT_DE_AEL_DIR = strcat(EE414_DESIGN_KIT_PATH, "de/ael/");
+decl EE414_DESIGN_KIT_BITMAP_DIR = strcat(EE414_DESIGN_KIT_PATH, "de/bitmaps/");
+decl EE414_DESIGN_KIT_DRC_RULES_DIR = strcat(EE414_DESIGN_KIT_PATH, "drc/rules/");
+decl EE414_DESIGN_KIT_UTILITIES_DIR = strcat(EE414_DESIGN_KIT_PATH, "/ael/pdkutilities/");
+
+// Print message to stderr
+fprintf(stderr, "Loading %s design kit\n", EE414_DESIGN_KIT_NAME);
+
+//------------------------------------------------------------------------------
+// AEL files to be loaded at boot time
+//------------------------------------------------------------------------------
+
+// AEL file present in de/ael director
+load(strcat(EE414_DESIGN_KIT_DE_AEL_DIR, "palette"));
+
+// AEL files having item definitions
+load(strcat(EE414_DESIGN_KIT_CIRCUIT_AEL_DIR, "EE414_INCLUDE"));
+load(strcat(EE414_DESIGN_KIT_CIRCUIT_AEL_DIR, "res_1206"));
+load(strcat(EE414_DESIGN_KIT_CIRCUIT_AEL_DIR, "cap_1206"));
+load(strcat(EE414_DESIGN_KIT_CIRCUIT_AEL_DIR, "res_0603"));
+load(strcat(EE414_DESIGN_KIT_CIRCUIT_AEL_DIR, "cap_0603"));
+load(strcat(EE414_DESIGN_KIT_CIRCUIT_AEL_DIR, "ind_0603"));
+load(strcat(EE414_DESIGN_KIT_CIRCUIT_AEL_DIR, "BFR182"));
+load(strcat(EE414_DESIGN_KIT_CIRCUIT_AEL_DIR, "BFP620"));
+load(strcat(EE414_DESIGN_KIT_CIRCUIT_AEL_DIR, "tlc220x_10v"));
+load(strcat(EE414_DESIGN_KIT_CIRCUIT_AEL_DIR, "tlc220x_5v"));
+
+// AEL files having artwork macros
+load(strcat(EE414_DESIGN_KIT_CIRCUIT_ARTWORK, "EE414_artwork_globals"));
+load(strcat(EE414_DESIGN_KIT_CIRCUIT_ARTWORK, "pad"));
+load(strcat(EE414_DESIGN_KIT_CIRCUIT_ARTWORK, "pad_via"));
+
+
+

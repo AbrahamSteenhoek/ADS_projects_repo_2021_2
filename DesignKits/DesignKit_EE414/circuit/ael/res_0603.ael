@@ -1,0 +1,58 @@
+// Copyright Nathan M. Neihart 2021
+/*----------------------------------------------------------------------------+/
+
+    FILE :  res_0603.ael
+
+    FILE STRUCTURE :
+        Component definition :
+                [ forms and formsets ]
+                [ netlist callback function ]
+                [ parameter callback functions ]
+                item definition
+
+/+----------------------------------------------------------------------------*/
+
+//------------------------------------------------------------------------------
+// Global Variables
+//------------------------------------------------------------------------------
+
+
+//------------------------------------------------------------------------------
+// Forms and Formsets
+//------------------------------------------------------------------------------
+
+
+//------------------------------------------------------------------------------
+// Parameter Callback Function
+//------------------------------------------------------------------------------
+
+
+//------------------------------------------------------------------------------
+// Item Definition
+//------------------------------------------------------------------------------
+create_item("res_0603"              // Name
+            , "Parasitic 0603 resistor model"   // description label
+            , "R"                   // prefix
+            , 0                     // attributes
+            , NULL                  // priority
+            , "res_0603"            // iconName
+            , standard_dialog       // dialogName
+            , NULL                  // dialogData
+            , ComponentNetlistFmt   // netlist format string
+            , NULL                  // netlist data
+            , ComponentAnnotFmt     // display format string
+            , NULL                  // symbol name
+            , NULL                  // artwork type
+            , NULL                  // artwork data
+            , ITEM_PRIMITIVE_EX     // extra attributes
+            , create_parm( "R"                          // name
+                    , "Nominal Resistance"              // label
+                    , PARM_REAL | PARM_OPTIMIZABLE | PARM_STATISTICAL    // attribute
+                    , "StdFileFormSet"                  // formset
+                    , RESISTANCE_UNIT                   // unit
+                    , prm("StdForm","50")               // default value
+            )
+
+);
+
+

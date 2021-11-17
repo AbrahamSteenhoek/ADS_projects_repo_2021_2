@@ -1,0 +1,37 @@
+// Copyright Nathan M. Neihart 2021
+/*----------------------------------------------------------------------------+/
+
+    FILE :  pad_via.ael
+
+    This file consists of artwork macro functions to draw an in-pad via. It
+    draws the hole on the Via layer, the pad on the top copper layer, and 
+    adds solder mask. It is assumed that the via is centered in the pad.
+
+/+----------------------------------------------------------------------------*/
+
+// Artwork Macro
+defun pad_via_art(width, length, drill)
+{
+    decl context = de_get_current_design_context();
+    decl touu = db_factor();                            // Factor to convert to User Units
+    decl ox = 0;                                        // Origin X
+    decl oy = 0;                                        // Origin Y
+    decl radius = drill / 2;                            // Get the radius of the via hole
+
+    // Scale the input arguments to User Units
+    width = width * touu;
+    length = length * touu;
+    radius = radius * touu;
+
+    // Setting the origin
+    de_set_origin(ox, oy);
+
+    // Draw the Pad on Top_Cu layer
+    db_add_rectangle(context, Top_Cu, ox, oy + width / 2, ox + length, oy - width / 2 );
+
+    // Draw the drill hole on the Via layer
+    db_add_circle(context, Via, ox + length / 2, oy, radius);
+
+    // Draw the window in Solder Mask for the Pad
+    db_add_rectangle(context, Top_Mask, ox, oy + width / 2, ox + length, oy - width / 2 );
+}

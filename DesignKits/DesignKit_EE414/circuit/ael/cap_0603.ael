@@ -1,0 +1,55 @@
+// Copyright Nathan M. Neihart 2021
+/*----------------------------------------------------------------------------+/
+
+    FILE :  cap_0603.ael
+
+    FILE STRUCTURE :
+        Component definition :
+                [ forms and formsets ]
+                [ netlist callback function ]
+                [ parameter callback functions ]
+                item definition
+
+/+----------------------------------------------------------------------------*/
+
+//------------------------------------------------------------------------------
+// Global Variables
+//------------------------------------------------------------------------------
+
+
+//------------------------------------------------------------------------------
+// Forms and Formsets
+//------------------------------------------------------------------------------
+
+
+//------------------------------------------------------------------------------
+// Parameter Callback Function
+//------------------------------------------------------------------------------
+
+
+//------------------------------------------------------------------------------
+// Item Definition
+//------------------------------------------------------------------------------
+create_item("cap_0603"              // Name
+            , "Parasitic 0603 capacitor model"  // description label
+            , "C"                   // prefix
+            , 0                     // attributes
+            , NULL                  // priority
+            , "cap_0603"            // iconName
+            , standard_dialog       // dialogName
+            , NULL                  // dialogData
+            , ComponentNetlistFmt   // netlist format string
+            , NULL                  // netlist data
+            , ComponentAnnotFmt     // display format string
+            , NULL                  // symbol name
+            , NULL                  // artwork name
+            , NULL                  // artwork data
+            , ITEM_PRIMITIVE_EX     // extyra attributes
+            , create_parm( "C"                          // name
+                    , "Nominal Capacitance"             // label
+                    , PARM_REAL | PARM_OPTIMIZABLE | PARM_STATISTICAL   // sttributes
+                    , "StdFileFormSet"                  // formset
+                    , CAPACITANCE_UNIT                  // units
+                    , prm("StdForm", "1 pF")            // default value      
+            )
+);

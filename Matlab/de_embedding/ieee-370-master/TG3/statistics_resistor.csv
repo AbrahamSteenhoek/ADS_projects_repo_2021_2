@@ -1,0 +1,5 @@
+file name,Datarte,Max Freq,Recommended Freq,Pass mV,Rec mV,Caus mV,Pass %,Rec %,Caus %
+0603_RES_10OHMS,40,6,60,0,10,126,100.0,93.0,71
+0603_RES_51OHMS,40,6,60,0,6,112,100.0,95.0,72
+0603_RES_820OHMS,40,6,60,4,3,116,98.0,97.0,77
+0603_RES_THRU,40,6,60,2,11,159,99.0,93.0,69

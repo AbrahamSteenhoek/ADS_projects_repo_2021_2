@@ -1,0 +1,5 @@
+file name,Datarte,Max Freq,Recommended Freq,Pass mV,Rec mV,Caus mV,Pass %,Rec %,Caus %
+0603_CAP_1P5PF,40,6,60,7,5,166,96.0,96.0,74
+0603_CAP_2P7PF,40,6,60,4,2,157,98.0,97.0,76
+0603_CAP_5P6PF,40,6,60,1,5,156,99.0,96.0,81
+0603_CAP_THRU,40,6,60,4,6,166,98.0,96.0,73

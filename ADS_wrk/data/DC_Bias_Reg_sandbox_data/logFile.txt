@@ -1,0 +1,51 @@
+
+hpeesofsim (*) 550.shp Jul 24 2021, MINT version 5
+    (64-bit windows built: Sat Jul 24, 2021 16:09:49 +0000)
+
+
+***** Simulation started at Wed Nov  3 22:45:28 2021
+      Running on host: "DESKTOP-2U8UJ4L"
+      In Directory: "C:\Users\abrah\OneDrive\Documents\ee514\ADS\ADS_wrk\data"
+      Process ID: 18756
+
+Warning detected by hpeesofsim during netlist flattening.
+    Capacitor `C3.C50' is shorted.
+
+Warning detected by hpeesofsim in topology check during circuit set up.
+    Number of nodes with no DC path to ground (topology corrected): 1
+
+Warning detected by hpeesofsim during TRAN analysis 'Tran1'.
+    UserValue(0.001504) < MinRecommendValue(0.000100) OR UserValue > MaxRecommendValue(0.000635) for 'H' in `V1'
+
+Warning detected by hpeesofsim during TRAN analysis 'Tran1'.
+    UserValue(0.506757) < MinRecommendValue(1.000000) OR UserValue > MaxRecommendValue(2.200000) for 'W/H' in `V1'
+
+
+COMPONENT : TL2
+    Characterizing to 1 GHz 
+
+COMPONENT : X1.TL1
+    Characterizing to 1 GHz 
+
+COMPONENT : TL3
+    Characterizing to 1 GHz 
+
+COMPONENT : V1
+    Characterizing to 1 GHz 
+Pt DC convergence is used.
+
+.
+
+
+TRAN Tran1[1] <EE_514_Labs_lib:DC_Bias_Reg_sandbox:schematic>   time=(0 s->30 us)
+
+
+DC DC1[1] <EE_514_Labs_lib:DC_Bias_Reg_sandbox:schematic>  
+.
+.
+
+DC convergence achieved in 860 iterations.
+
+Resource usage:
+  Total stopwatch time     =     1.25 seconds.
+

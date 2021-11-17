@@ -1,0 +1,8 @@
+define BFP620_cktName (Pin1 Pin2 Pin3)
+
+parameters File="" Temp="" InterpMode="" ExtrapMode="" CheckPassivity=""
+
+#uselib "ckt", "S2P"
+S2P:X1 Pin2 Pin1 Pin3 File=File Temp=Temp InterpMode=InterpMode ExtrapMode=ExtrapMode CheckPassivity=CheckPassivity 
+
+end BFP620_cktName

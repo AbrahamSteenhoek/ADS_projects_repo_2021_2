@@ -1,0 +1,48 @@
+// Copyright Nathan M. Neihart 2021
+/*----------------------------------------------------------------------------+/
+
+    FILE :  tlc220x_10v.ael
+
+    FILE STRUCTURE :
+        Component definition :
+                [ forms and formsets ]
+                [ netlist callback function ]
+                [ parameter callback functions ]
+                item definition
+
+/+----------------------------------------------------------------------------*/
+
+//------------------------------------------------------------------------------
+// Global Variables
+//------------------------------------------------------------------------------
+
+
+//------------------------------------------------------------------------------
+// Forms and Formsets
+//------------------------------------------------------------------------------
+
+
+//------------------------------------------------------------------------------
+// Parameter Callback Function
+//------------------------------------------------------------------------------
+
+
+//------------------------------------------------------------------------------
+// Item Definition
+//------------------------------------------------------------------------------
+create_item("tlc220x_10v"           // Name
+            , "TLC2201 Op Amp with 10V Supply"  // description label
+            , "U"                   // prefix
+            , 0                     // attributes
+            , NULL                  // priority
+            , "tlc220x_10v"         // iconName
+            , standard_dialog       // dialogName
+            , NULL                  // dialogData
+            , ComponentNetlistFmt   // netlist format string
+            , NULL                  // netlist data
+            , ComponentAnnotFmt     // display format string
+            , NULL                  // symbol name
+            , NULL                  // artwork name
+            , NULL                  // artwork data
+            , ITEM_PRIMITIVE_EX     // extra attributes
+);

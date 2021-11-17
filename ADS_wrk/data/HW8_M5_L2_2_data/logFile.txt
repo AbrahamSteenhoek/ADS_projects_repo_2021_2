@@ -1,0 +1,17 @@
+
+hpeesofsim (*) 550.shp Jul 24 2021, MINT version 5
+    (64-bit windows built: Sat Jul 24, 2021 16:09:49 +0000)
+
+
+***** Simulation started at Sun Oct 17 22:09:47 2021
+      Running on host: "DESKTOP-2U8UJ4L"
+      In Directory: "C:\Users\abrah\OneDrive\Documents\ee514\ADS\ADS_wrk\data"
+      Process ID: 11836
+
+
+SP SP1[1] <EE_514_Labs_lib:HW8_M5_L2_2:schematic>   freq=(1.2 GHz->2 GHz)
+
+
+Resource usage:
+  Total stopwatch time     =     1.00 seconds.
+

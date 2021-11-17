@@ -1,0 +1,118 @@
+
+hpeesofsim (*) 550.shp Jul 24 2021, MINT version 5
+    (64-bit windows built: Sat Jul 24, 2021 16:09:49 +0000)
+
+
+***** Simulation started at Tue Nov  9 12:54:01 2021
+      Running on host: "DESKTOP-2U8UJ4L"
+      In Directory: "C:\Users\abrah\OneDrive\Documents\ee514\ADS\ADS_wrk\data"
+      Process ID: 7880
+
+
+HB HB1[1] <EE_514_Labs_lib:mixer_v1:schematic>
+    Number of tones:   1.
+    Number of frequencies:   16.
+    Number of time samples:  32.
+    Number of HB equations (problem size): 527.
+    Auto mode: on.
+    Convergence mode: Auto.
+    Linear solver: direct.
+------------------------------------------------------------------------------
+Newton solver:					
+Iter	KCL residual	Damp %	Sol update
+------------------------------------------------------------------------------
+0.0*	56.5913 A   	100.0             
+1.0 	1.25951 A   	100.0	8.87804 mV   
+1.1 	869.734 mA  	100.0	6.13298 mV   
+1.2*	672.629 mA  	100.0	23.826 mV    
+2.0 	243.517 mA  	100.0	8.61886 mV   
+2.1 	166.36 mA   	100.0	5.87841 mV   
+2.2 	127.319 mA  	100.0	4.48947 mV   
+2.3 	103.194 mA  	100.0	3.62996 mV   
+2.4 	86.6566 mA  	100.0	3.03998 mV   
+2.5 	74.5563 mA  	100.0	2.6078 mV    
+2.6 	65.2938 mA  	100.0	2.27664 mV   
+2.7*	57.9635 mA  	100.0	18.3201 mV   
+3.0 	17.7606 mA  	100.0	5.44813 mV   
+3.1 	10.554 mA   	100.0	3.20602 mV   
+3.2 	7.04199 mA  	100.0	2.16378 mV   
+3.3 	5.07622 mA  	100.0	1.58896 mV   
+3.4 	3.8541 mA   	100.0	1.20641 mV   
+3.5 	2.99146 mA  	100.0	936.384 uV   
+3.6 	2.35813 mA  	100.0	738.142 uV   
+3.7 	1.88007 mA  	100.0	588.498 uV   
+3.8 	1.51175 mA  	100.0	473.208 uV   
+3.9 	1.22358 mA  	100.0	383.004 uV   
+3.10 	995.413 uA  	100.0	311.584 uV   
+3.11 	813.075 uA  	100.0	254.508 uV   
+3.12 	666.283 uA  	100.0	208.56 uV    
+3.13 	547.41 uA   	100.0	171.35 uV    
+3.14 	450.691 uA  	100.0	141.075 uV   
+3.15 	371.694 uA  	100.0	116.347 uV   
+3.16*	306.971 uA  	100.0	553.457 uV   
+4.0 	4.29486 uA  	100.0	7.74349 uV   
+4.1 	120.396 nA  	100.0	217.071 nV   
+4.2 	3.39876 nA  	100.0	6.12786 nV   
+An HB truncation error may be present.
+o The HB truncation error is due to using a finite order 
+  (number of harmonics) in the representation of the
+  circuit signals.
+
+Waveform                Trunc error             Tolerance
+---------------------------------------------------------
+N__0                    4.067e-06       >       1.420e-06
+N__20                   4.067e-06       >       1.420e-06
+
+o Number of waveforms violating the HB truncation error check:
+        2 out of 4 waveforms.
+o Estimated max HB truncation error: 4.067e-06 @ waveform N__0 .
+o The maximal HB truncation error estimate is greater than the 
+  achieved tolerance of 1.420e-06 for this waveform.
+o A time-domain plot of the N__14 waveform may show the error as 
+  Gibbs ripples.
+o To reduce the error, increase the order (number of harmonics) 
+  and re-simulate.
+
+HB HB1[1] <EE_514_Labs_lib:mixer_v1:schematic>
+    Number of tones:   2.
+    Number of frequencies:   43.
+    Number of time samples:  1024.
+    Number of HB equations (problem size): 1445.
+    Auto mode: on.
+    Convergence mode: Auto.
+    Linear solver: Krylov (GS_GMRES).
+    Preconditioner: DCP.
+    The general solver is used for HB Krylov preconditioning.
+------------------------------------------------------------------------------
+Newton solver:					Linear solver:
+Iter	KCL residual	Damp %	Sol update	Iters	Residual
+------------------------------------------------------------------------------
+0 	2.24485 mA  	100.0             
+1 	5.14195 mA  	100.0	80.3282 mV  	  4	9.346e-02   
+2 	457.254 uA  	100.0	7.8246 mV   	  5	6.936e-02   
+3 	15.8013 uA  	100.0	4.33561 mV  	 11	5.326e-03   
+4 	31.458 nA   	100.0	69.6644 uV  	 17	8.141e-04   
+5 	21.0146 pA  	100.0	146.685 nV  	 21	9.638e-04   
+Warning detected by hpeesofsim during HB analysis `HB1'.
+     More than one mixing term has landed on frequency 26.4 GHz.
+An HB truncation error may be present.
+o The HB truncation error is due to using a finite order 
+  (number of harmonics) in the representation of the
+  circuit signals.
+
+Waveform                Trunc error             Tolerance
+---------------------------------------------------------
+N__0                    2.004e-06       >       1.419e-06
+N__20                   2.004e-06       >       1.419e-06
+
+o Number of waveforms violating the HB truncation error check:
+        2 out of 4 waveforms.
+o Estimated max HB truncation error: 2.004e-06 @ waveform N__0 .
+o The maximal HB truncation error estimate is greater than the 
+  achieved tolerance of 1.419e-06 for this waveform.
+o To reduce the error, increase the order (number of harmonics) 
+  and re-simulate.
+
+Resource usage:
+  Total stopwatch time     =     0.85 seconds.
+

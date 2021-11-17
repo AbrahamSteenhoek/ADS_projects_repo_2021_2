@@ -1,0 +1,62 @@
+; This file contains the values for all parasitic elements used in the
+; RF models of the resistor, capacitor, and inductor.
+;
+; Students will need to update the values below with values that were
+; derived from their own measurements. Please note that the values
+; shown below are simply place-holder values and do not have any bearing
+; on the actual values that should be used. Also, It is important that
+; the parameter names are not changed.
+;
+; When editing the values below, make sure that all values have correct 
+; units! You can follow the sample values for examples.
+
+;----------------------------------------------------------------------
+; PARAMETER VALUES FOR 1206 COMPONENTS
+; 
+; Only update the following values if you are using components in 1206
+; size packages. If you are using only 0603 package sizes, then leave
+; the following values as-is.
+;----------------------------------------------------------------------
+
+;-------------------------
+;----- 1206 RESISTOR -----
+res1206_Ls=1.0 nH           ; Parasitic series inductance
+res1206_Cs=100 fF           ; Parasitic capacitance between leads and ground
+res1206_Cp=100 fF           ; Parasitic capacitance between leads
+
+;--------------------------
+;----- 1206 CAPACITOR -----
+cap1206_Cs = 1.0 fF         ; Parasitic capacitance between leads and ground
+cap1206_Rs = 1.0 Ohm        ; Parasitic series resistance
+cap1206_Ls = 100 pH         ; Parasitic series inductance modeling self-resonance
+
+;----------------------------------------------------------------------
+; PARAMETER VALUES FOR 0603 COMPONENTS
+; 
+; Only update the following values if you are using components in 0603
+; size packages. If you are enrolledin EE 414, then you should only update
+; the following parameter values:
+;     Cs_0603
+;     
+; EE 414 students should leave the 0603 resistor/capacitor values as-is.
+;----------------------------------------------------------------------
+
+;-------------------------
+;----- 0603 RESISTOR -----
+res0603_Cs = 74.1926 fF         ; Parasitic capacitance between leads and ground
+res0603_Ls = 866.625 pH         ; Parasitic series inductance
+res0603_Cp = 25.9663 fF         ; Parasitic capacitance between leads
+
+;--------------------------
+;----- 0603 CAPACITOR -----
+cap0603_Cs = 141.863 fF         ; Parasitic capacitance between leads and ground
+cap0603_Rs = 1.299 Ohm        ; Parasitic series resistance
+cap0603_Ls = 854.038 pH         ; Parasitic series inductance modeling the self-resonant frequency
+
+;--------------------------
+; ----- 0603 INDUCTOR -----
+ind0603_Cs = 65.55 fF         ; Parasitic capacitance between leads and ground
+ind0603_Rs = 0.59 Ohm        ; Parasitic series resistance
+ind0603_Cp = 340.84 fF         ; Parasitic capacitance between leads
+ind0603_Rp = 1454 Ohm       ; Parasitic shunt resistance between leads
+
