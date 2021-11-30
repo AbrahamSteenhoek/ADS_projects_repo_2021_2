@@ -1,0 +1,20 @@
+
+hpeesofsim (*) 550.shp Jul 24 2021, MINT version 5
+    (64-bit windows built: Sat Jul 24, 2021 16:09:49 +0000)
+
+
+***** Simulation started at Sun Sep 26 18:25:15 2021
+      Running on host: "LAPTOP-FH3QRCEV"
+      In Directory: "D:\EE_514\EE_514_Labs_wrk\data"
+      Process ID: 14060
+
+Warning detected by hpeesofsim in topology check during circuit set up.
+    Number of nodes with no DC path to ground (topology corrected): 1
+
+
+SP SP1[1] <EE_514_Labs_lib:tesst:schematic>   freq=1.5 GHz
+
+
+Resource usage:
+  Total stopwatch time     =     1.48 seconds.
+

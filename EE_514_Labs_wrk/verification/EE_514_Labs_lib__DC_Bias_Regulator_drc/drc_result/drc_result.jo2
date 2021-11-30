@@ -1,0 +1,42 @@
+(resolution 10000)
+(line 255 (data
+    2920000 100000
+    2920000 109289
+    )
+    (label "drc_result/000000/ Spacing of layer Top_Cu must be >= 5.00 mil_1")
+    (group 1)
+    (message "Spacing of layer Top_Cu must be >= 5.00 mil")
+)
+(line 255 (data
+    2889596 60307
+    2920000 90711
+    )
+    (label "drc_result/000000/ Spacing of layer Top_Cu must be >= 5.00 mil_1")
+    (group 1)
+    (message "Spacing of layer Top_Cu must be >= 5.00 mil")
+)
+(line 255 (data
+    551010 -90000
+    2020711 -90000
+    )
+    (label "drc_result/000000/ Spacing of layer Top_Cu must be >= 5.00 mil_2")
+    (group 2)
+    (message "Spacing of layer Top_Cu must be >= 5.00 mil")
+)
+(line 255 (data
+    600000 -140000
+    600000 -100000
+    1600000 -100000
+    1600000 -125000
+    1950000 -125000
+    1960894 -125476
+    1971706 -126899
+    1982352 -129259
+    1992753 -132538
+    2002827 -136712
+    2009144 -140000
+    )
+    (label "drc_result/000000/ Spacing of layer Top_Cu must be >= 5.00 mil_2")
+    (group 2)
+    (message "Spacing of layer Top_Cu must be >= 5.00 mil")
+)

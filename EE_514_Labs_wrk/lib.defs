@@ -1,0 +1,5 @@
+INCLUDE $HPEESOF_DIR/oalibs/analog_rf.defs
+INCLUDE $HPEESOF_DIR/oalibs/dsp.defs
+DEFINE EE_514_Labs_lib EE_514_Labs_lib
+ASSIGN EE_514_Labs_lib libMode shared
+INCLUDE ../DesignKits/DesignKit_EE414/lib.defs

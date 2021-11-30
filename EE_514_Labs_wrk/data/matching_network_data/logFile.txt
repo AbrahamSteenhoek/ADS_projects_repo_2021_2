@@ -1,0 +1,23 @@
+
+hpeesofsim (*) 532.update2.0 Mar  6 2021, MINT version 5
+    (64-bit windows built: Sat Mar 06, 2021 18:08:32 +0000)
+
+
+***** Simulation started at Fri Oct 22 12:27:51 2021
+      Running on host: "CO2048-14"
+      In Directory: "C:\Temp\EE_514\EE_514\EE_514\EE_514_Labs_wrk\data"
+      Process ID: 2688
+
+
+SP SP1[1] <EE_514_Labs_lib:matching_network:schematic>   freq=2.2 GHz
+Warning detected by hpeesofsim during SP analysis 'SP1'.
+    UserValue(0.001504) < MinRecommendValue(0.000100) OR UserValue > MaxRecommendValue(0.000635) for 'H' in `V6'
+
+Warning detected by hpeesofsim during SP analysis 'SP1'.
+    UserValue(0.506757) < MinRecommendValue(1.000000) OR UserValue > MaxRecommendValue(2.200000) for 'W/H' in `V6'
+
+
+
+Resource usage:
+  Total stopwatch time     =     0.50 seconds.
+

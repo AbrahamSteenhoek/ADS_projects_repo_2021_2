@@ -1,7 +1,7 @@
-; Top Design: "PA_Design_lib:DC_IV:schematic"
+; Top Design: "PA_Design_lib:HB_sim1:schematic"
 ; Netlisted using Hierarchy Policy: "Standard"
 
-Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="PA_Design_lib:DC_IV:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
+Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="PA_Design_lib:HB_sim1:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
 ; Library Name: PA_Design_lib
 ; Cell Name: GaAs_FET
 ; View Name: schematic
@@ -11,23 +11,21 @@ model Generic_GaAsFET GaAs NFET=1 PFET=0 Idsmod=3 Vto=-2.5 Beta=0.310 Lambda=0.0
 "Generic_GaAsFET":FET1  P1 P2 P3 Area=10 Noise=yes 
 end GaAs_FET
 
-GaAs_FET:M1  N__2 N__1 0 
-Short:IDS  N__0 N__2 Mode=0 SaveCurrent=yes 
-V_Source:SRC3  N__1 0 Type="V_DC" Vdc=VGS SaveCurrent=1 
-V_Source:SRC4  N__0 0 Type="V_DC" Vdc=VDS SaveCurrent=1 
+Port:PORT1  V_in 0 Num=1 Z=1.13+j*24.95 Ohm P[1]=polar(dbmtow(P_avs_dBm),0) Freq[1]=850 MHz    Noise=yes Pac=polar(dbmtow(0),0) LimitPhaseNoiseToCarrier=no 
+GaAs_FET:M2  V_ds N__5 0 
+Short:DC_Block1  N__5 N__8 Mode=1 
+Short:DC_Feed1  N__5 N__1 Mode=-1 
+Short:I_in  V_in N__8 Mode=0 SaveCurrent=yes 
+Short:DC_Block2  N__9 N__6 Mode=1 
+R:R_L  V_L 0 R=7.22 Ohm Noise=yes 
+V_Source:SRC1  N__0 0 Type="V_DC" Vdc=4.8 V SaveCurrent=1 
+TLIN:TL1  N__7 N__9 Z=50.0 Ohm E=90 F=850 MHz 
+V_Source:SRC2  N__1 0 Type="V_DC" Vdc=-2.5 V SaveCurrent=1 
+HB:HB1 MaxOrder=4 Freq[1]=850 MHz Order[1]=20 StatusLevel=2 HBSS_WSP=0 SweepVar="P_avs_dBm" SweepPlan="HB1_stim" OutputPlan="HB1_Output" 
 
-VDS =4.8 V
-VGS =-2.5 V
-ParamSweep:Sweep1 SimInstanceName[1]="DC1" StatusLevel=2 SweepVar="VGS" SweepPlan="Sweep1_stim" 
+SweepPlan: HB1_stim Start=-20 Stop=20 Lin=101 
 
-SweepPlan: Sweep1_stim Start=-3 Stop=1 Step=0.27778 
-
-DC:DC1 StatusLevel=2 DevOpPtLevel=0 UseFiniteDiff=no PrintOpPoint=no Restart=1 \
-SweepVar="VDS" SweepPlan="DC1_stim" OutputPlan="DC1_Output" 
-
-SweepPlan: DC1_stim Start=0 Stop=9.6 Lin=1001 
-
-OutputPlan:DC1_Output \
+OutputPlan:HB1_Output \
       Type="Output" \
       UseNodeNestLevel=yes \
       NodeNestLevel=2 \
@@ -45,5 +43,17 @@ OutputPlan:DC1_Output \
       DeviceVoltageNestLevel=0 \
       DeviceVoltageDeviceType="All"
 
+Tran:HB1_tran HB_Sol=1 SteadyState=1 StatusLevel=3 \
+Freq[1]=850 MHz Order[1]=20 
 
-;#@# autodisplay="FET_curve_tracer"
+Component:tahb_HB1 Module="ATAHB" Type="ModelExtractor" \ 
+ Tran_Analysis="HB1_tran" HB_Analysis="HB1" 
+
+
+R_s=5
+P_avs_dBm=0
+aele Z_in=HB.V_in[1]/HB.I_in.i[1];
+Short:I_L  N__6 V_L Mode=0 SaveCurrent=yes 
+Short:I_supply  N__0 N__7 Mode=0 SaveCurrent=yes 
+Short:I_ds  N__9 V_ds Mode=0 SaveCurrent=yes 
+aele P_L = real( 0.5*HB.V_L[1] * conj(HB.I_L.i[1]) );P_supply = real(HB.I_supply.i[0] * 4.8);DE = P_L / P_supply;P_L_dBm = 10*log10(P_L) + 30;

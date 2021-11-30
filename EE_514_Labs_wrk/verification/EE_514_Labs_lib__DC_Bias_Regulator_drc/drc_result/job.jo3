@@ -1,0 +1,15 @@
+status
+ exitlevel   0 ;
+ cmd_note    0 ;
+ cmd_error   0 ;
+ cmd_warn    0 ;
+ cmd_fatal   0 ;
+ cmd_alloc   0 ;
+ cmd_other   0 ;
+ drcerrors   2 ;
+ flagnon45   0 ;
+ flagacute   0 ;
+ flagoffgrid 0 ;
+ flagbigplg  0 ;
+ storage     0.0 ;
+end_status

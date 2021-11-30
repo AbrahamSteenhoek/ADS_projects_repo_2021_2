@@ -1,0 +1,18 @@
+
+hpeesofsim (*) 532.update2.0 Mar  6 2021, MINT version 5
+    (64-bit windows built: Sat Mar 06, 2021 18:08:32 +0000)
+
+
+***** Simulation started at Sat Nov  6 17:45:55 2021
+      Running on host: "co3102-07"
+      In Directory: "C:\Users\dbadjei\Documents\EE514\EE_514_Labs_wrk\data"
+      Process ID: 1044
+
+
+
+TRAN Tran1[1] <EE_514_Labs_lib:cell_1:schematic>   time=(0 s->4 us)
+
+
+Resource usage:
+  Total stopwatch time     =     0.74 seconds.
+

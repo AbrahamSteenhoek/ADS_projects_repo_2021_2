@@ -1,0 +1,17 @@
+
+hpeesofsim (*) 550.shp Jul 24 2021, MINT version 5
+    (64-bit windows built: Sat Jul 24, 2021 16:09:49 +0000)
+
+
+***** Simulation started at Sun Sep 19 15:08:22 2021
+      Running on host: "LAPTOP-FH3QRCEV"
+      In Directory: "D:\EE_514\EE_514_Labs_wrk\data"
+      Process ID: 8068
+
+
+SP SP1[1] <EE_514_Labs_lib:HW4_Q2:schematic>   freq=1 GHz
+
+
+Resource usage:
+  Total stopwatch time     =     9.05 seconds.
+

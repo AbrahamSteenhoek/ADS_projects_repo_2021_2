@@ -1,0 +1,35 @@
+Design Rule Check
+Advanced Design System 2021 Update 2
+Copyright 2004 - 2021 Keysight Technologies 1989-2021
+Nov 19 2021 0:30:15
+
+Design
+    Workspace               EE_514_Labs_wrk
+    Library                 EE_514_Labs_lib
+    Cell Name               Filter_Amp_Osc_Bias
+
+Errors                      0
+
+Rules                       7
+    Rules with errors       0
+    Rules without errors    7
+
+Summary
+    Shapes                  145
+    Run time                00:00:00
+    Status                  Complete
+
+Job Configuration
+    Rule location           EE414_DesignKit_tech
+    Rule file               drc.ael
+    Rule categories         All
+    Rule folder             rules
+    Analysis engine         ADS
+    Window                  Full design
+    Job name                EE_514_Labs_lib__Filter_Amp_Osc_Bias_drc
+    Arc/Circle resolution   5 degrees
+
+Error Summary
+
+Errors
+

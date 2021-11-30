@@ -1,0 +1,22 @@
+
+hpeesofsim (*) 550.shp Jul 24 2021, MINT version 5
+    (64-bit windows built: Sat Jul 24, 2021 16:09:49 +0000)
+
+
+***** Simulation started at Sun Oct  3 18:38:39 2021
+      Running on host: "LAPTOP-FH3QRCEV"
+      In Directory: "D:\EE_514\EE_514_Labs_wrk\data"
+      Process ID: 13372
+
+Warning detected by hpeesofsim in LinearCollapse '_4_' during analysis.
+    LinearCollapse is disabled because there is 'DC' analysis present.
+
+DC DC1[1] <EE_514_Labs_lib:M4_L1_1:schematic>   Vbe=811e-03
+.
+
+SP SP1[1] <EE_514_Labs_lib:M4_L1_1:schematic>   freq=1.95 GHz
+
+
+Resource usage:
+  Total stopwatch time     =     1.31 seconds.
+
