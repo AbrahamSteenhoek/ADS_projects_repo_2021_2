@@ -3,13 +3,13 @@ hpeesofsim (*) 532.update2.0 Mar  6 2021, MINT version 5
     (64-bit windows built: Sat Mar 06, 2021 18:08:32 +0000)
 
 
-***** Simulation started at Tue Nov 30 16:19:40 2021
+***** Simulation started at Tue Nov 30 23:04:49 2021
       Running on host: "DESKTOP-2U8UJ4L"
       In Directory: "C:\Users\abrah\OneDrive\Documents\ee514\ADS_2021_u2\ADS_wrk\data"
-      Process ID: 29412
+      Process ID: 1820
 
 Warning detected by hpeesofsim in topology check during circuit set up.
-    Number of nodes with only one device attached (topology corrected): 3
+    Number of nodes with only one device attached (topology corrected): 2
 
 
 HB HB1[1] <EE_514_Labs_lib:mixer_single_balanced_HC_v1:schematic>
@@ -17,7 +17,7 @@ Pt DC convergence is used.
     Number of tones:   1.
     Number of frequencies:   6.
     Number of time samples:  16.
-    Number of HB equations (problem size): 561.
+    Number of HB equations (problem size): 682.
     Auto mode: on.
     Convergence mode: Auto.
     Linear solver: direct.
@@ -25,61 +25,61 @@ Pt DC convergence is used.
 Newton solver:					
 Iter	KCL residual	Damp %	Sol update
 ------------------------------------------------------------------------------
-0.0*	2.57284 kA  	100.0             
-1.0 	65.7546 A   	100.0	595.584 mV   
-1.1 	54.9888 A   	100.0	209.47 V     
-        Samanskii-Newton iteration failed
-1.2*	54.9888 A   	100.0	556.125 mV   
-2.0 	20.2072 A   	100.0	437.177 mV   
-2.1 	14.0089 A   	100.0	442.261 mV   
-2.2 	10.8375 A   	100.0	429.795 mV   
-2.3 	8.91825 A   	100.0	432.676 mV   
-2.4 	7.5643 A    	100.0	368.782 mV   
-2.5 	6.61001 A   	100.0	367.61 mV    
-2.6 	5.84505 A   	100.0	328.502 mV   
-2.7 	5.27183 A   	100.0	329.416 mV   
-2.8 	4.77336 A   	100.0	339.079 mV   
-2.9 	4.39258 A   	100.0	347.285 mV   
-2.10 	4.03264 A   	100.0	478.519 mV   
-2.11 	3.76784 A   	100.0	526.823 mV   
-2.12 	3.50863 A   	100.0	2.25824 V    
-        Samanskii-Newton iteration failed
-2.13*	3.50863 A   	100.0	236.223 mV   
-3.0 	1.31908 A   	100.0	2.02464 V    
-        Samanskii-Newton iteration failed
-3.1*	1.31908 A   	100.0	70.7415 mV   
-4.0*	489.767 mA  	100.0	46.3627 mV   
-5.0 	187.798 mA  	100.0	20.0228 mV   
-5.1 	135.218 mA  	100.0	16.4017 mV   
-5.2*	108.789 mA  	100.0	174.092 mV   
-6.0 	49.2816 mA  	100.0	85.905 mV    
-        Samanskii-Newton iteration failed
-6.1*	49.2816 mA  	100.0	246.798 mV   
-7.0*	49.2816 mA  	 25.0	246.798 mV   
-8.0*	38.7009 mA  	 50.0	120.379 mV   
-9.0*	27.1699 mA  	 50.0	112.612 mV   
-10.0*	18.6839 mA  	100.0	122.194 mV   
-11.0*	13.3681 mA  	 50.0	94.2184 mV   
-12.0*	9.25091 mA  	100.0	77.6747 mV   
-13.0*	5.93482 mA  	100.0	57.8279 mV   
-14.0 	3.23198 mA  	100.0	11.3759 mV   
-14.1 	1.85067 mA  	100.0	7.64893 mV   
-14.2 	1.07162 mA  	100.0	4.8557 mV    
-14.3 	693.095 uA  	100.0	2.90609 mV   
-14.4 	425.85 uA   	100.0	1.69128 mV   
-14.5 	245.424 uA  	100.0	981.223 uV   
-14.6 	136.608 uA  	100.0	549.49 uV    
-14.7 	72.6424 uA  	100.0	296.025 uV   
-14.8 	37.4678 uA  	100.0	153.298 uV   
-14.9 	18.5824 uA  	100.0	77.3756 uV   
-14.10 	8.95187 uA  	100.0	37.9528 uV   
-14.11 	4.14928 uA  	100.0	18.0104 uV   
-14.12 	1.87483 uA  	100.0	8.23728 uV   
-14.13 	818.455 nA  	100.0	3.62871 uV   
-14.14 	345.234 nA  	100.0	1.52468 uV   
-14.15 	139.242 nA  	100.0	604.612 nV   
-14.16 	52.4279 nA  	100.0	220.849 nV   
-14.17*	19.0248 nA  	100.0	94.4433 nV   
+0.0*	4.17458 kA  	100.0             
+1.0 	138.338 A   	100.0	20.3208 mV   
+1.1 	95.7526 A   	100.0	11.0072 mV   
+1.2*	74.2224 A   	100.0	42.6359 mV   
+2.0 	27.2945 A   	100.0	15.5929 mV   
+2.1 	18.8873 A   	100.0	10.83 mV     
+2.2 	14.6367 A   	100.0	8.41791 mV   
+2.3 	12.0111 A   	100.0	6.92376 mV   
+2.4 	10.2112 A   	100.0	5.90106 mV   
+2.5 	8.89408 A   	100.0	5.15234 mV   
+2.6 	7.88547 A   	100.0	4.57727 mV   
+2.7*	7.08685 A   	100.0	43.5972 mV   
+3.0 	2.59524 A   	100.0	16.2465 mV   
+3.1 	1.78971 A   	100.0	11.2278 mV   
+3.2 	1.38231 A   	100.0	8.74834 mV   
+3.3 	1.1306 A    	100.0	7.17633 mV   
+3.4 	958.035 mA  	100.0	6.07043 mV   
+3.5 	831.734 mA  	100.0	5.24271 mV   
+3.6 	735.011 mA  	100.0	4.60553 mV   
+3.7 	658.419 mA  	100.0	4.12434 mV   
+3.8 	596.186 mA  	100.0	3.73139 mV   
+3.9 	544.572 mA  	100.0	3.40439 mV   
+3.10 	501.042 mA  	100.0	3.12806 mV   
+3.11 	463.816 mA  	100.0	2.89158 mV   
+3.12 	431.604 mA  	100.0	2.68703 mV   
+3.13 	403.447 mA  	100.0	2.50847 mV   
+3.14 	378.619 mA  	100.0	2.35135 mV   
+3.15 	356.557 mA  	100.0	2.21211 mV   
+3.16 	336.821 mA  	100.0	2.08796 mV   
+3.17 	319.058 mA  	100.0	1.97662 mV   
+3.18*	302.984 mA  	100.0	42.8836 mV   
+4.0 	99.4895 mA  	100.0	16.1147 mV   
+4.1 	63.2195 mA  	100.0	10.9932 mV   
+4.2 	45.2937 mA  	100.0	8.26328 mV   
+4.3 	34.3332 mA  	100.0	6.51018 mV   
+4.4 	26.929 mA   	100.0	5.2347 mV    
+4.5 	21.6118 mA  	100.0	4.26062 mV   
+4.6 	17.633 mA   	100.0	3.51422 mV   
+4.7 	14.5668 mA  	100.0	2.92146 mV   
+4.8 	12.1515 mA  	100.0	2.44114 mV   
+4.9 	10.2166 mA  	100.0	2.04982 mV   
+4.10 	8.64582 mA  	100.0	1.72955 mV   
+4.11 	7.3568 mA   	100.0	1.46629 mV   
+4.12 	6.28956 mA  	100.0	1.24891 mV   
+4.13 	5.39934 mA  	100.0	1.06856 mV   
+4.14 	4.65203 mA  	100.0	918.199 uV   
+4.15 	4.02124 mA  	100.0	792.212 uV   
+4.16 	3.48942 mA  	100.0	686.114 uV   
+4.17 	3.03615 mA  	100.0	596.319 uV   
+4.18 	2.64807 mA  	100.0	519.955 uV   
+4.19*	2.31527 mA  	100.0	3.92769 mV   
+5.0 	95.141 uA   	100.0	265.762 uV   
+5.1 	8.85727 uA  	100.0	29.8298 uV   
+5.2 	794.221 nA  	100.0	2.96256 uV   
+5.3 	69.3208 nA  	100.0	276.25 nV    
 An HB truncation error may be present.
 o The HB truncation error is due to using a finite order 
   (number of harmonics) in the representation of the
@@ -87,16 +87,18 @@ o The HB truncation error is due to using a finite order
 
 Waveform                Trunc error             Tolerance
 ---------------------------------------------------------
-D11._net5               3.457e-04       >       1.392e-06
-D11._net8               3.406e-04       >       1.499e-06
-D11.DIODE2.a            3.390e-04       >       1.393e-06
-D11.DIODE1.a            2.617e-04       >       1.180e-06
+D11._net8               6.417e-04       >       1.304e-06
+D11.DIODE1.a            5.326e-04       >       1.260e-06
+D11._net5               3.101e-04       >       1.149e-06
+D11.DIODE2.a            3.062e-04       >       1.152e-06
 
 o Number of waveforms violating the HB truncation error check:
         4 out of 4 waveforms.
-o Estimated max HB truncation error: 3.457e-04 @ waveform D11._net5 .
+o Estimated max HB truncation error: 6.417e-04 @ waveform D11._net8 .
 o The maximal HB truncation error estimate is greater than the 
-  achieved tolerance of 1.392e-06 for this waveform.
+  achieved tolerance of 1.304e-06 for this waveform.
+o A time-domain plot of the N__31 waveform may show the error as 
+  Gibbs ripples.
 o To reduce the error, increase the order (number of harmonics) 
   and re-simulate.
 
@@ -104,7 +106,7 @@ HB HB1[1] <EE_514_Labs_lib:mixer_single_balanced_HC_v1:schematic>
     Number of tones:   2.
     Number of frequencies:   23.
     Number of time samples:  128.
-    Number of HB equations (problem size): 2295.
+    Number of HB equations (problem size): 2790.
     Auto mode: on.
     Convergence mode: Auto.
     Linear solver: direct.
@@ -112,22 +114,18 @@ HB HB1[1] <EE_514_Labs_lib:mixer_single_balanced_HC_v1:schematic>
 Newton solver:					
 Iter	KCL residual	Damp %	Sol update
 ------------------------------------------------------------------------------
-0.0*	7.81033 mA  	100.0             
-1.0*	7.81033 mA  	  6.2	368.091 mV   
-2.0*	7.52844 mA  	  6.2	362.046 mV   
-3.0*	7.25091 mA  	 12.5	354.16 mV    
-4.0*	7.11246 mA  	 12.5	334.381 mV   
-5.0*	6.72223 mA  	 12.5	306.406 mV   
-6.0*	6.20524 mA  	 25.0	276.419 mV   
-7.0*	5.73814 mA  	 25.0	213.519 mV   
-8.0*	4.78966 mA  	 50.0	168.952 mV   
-9.0*	3.90234 mA  	100.0	92.833 mV    
-10.0*	1.49579 mA  	100.0	5.28591 mV   
-11.0 	96.5417 uA  	100.0	298.851 uV   
-11.1 	14.2736 uA  	100.0	42.8429 uV   
-11.2 	2.10788 uA  	100.0	6.2192 uV    
-11.3 	299.333 nA  	100.0	877.868 nV   
-11.4 	41.5329 nA  	100.0	121.453 nV   
+0.0*	11.4037 mA  	100.0             
+1.0*	11.4037 mA  	 25.0	427.218 mV   
+2.0*	10.0457 mA  	 25.0	344.365 mV   
+3.0*	8.56711 mA  	 25.0	271.603 mV   
+4.0*	7.28343 mA  	 25.0	212.417 mV   
+5.0*	6.0771 mA   	 50.0	166.29 mV    
+6.0*	5.03185 mA  	100.0	89.411 mV    
+7.0*	1.81124 mA  	100.0	6.12956 mV   
+8.0 	55.9339 uA  	100.0	89.4085 uV   
+8.1 	3.47138 uA  	100.0	5.01667 uV   
+8.2 	216.942 nA  	100.0	319.823 nV   
+8.3 	13.5305 nA  	100.0	20.8719 nV   
 An HB truncation error may be present.
 o The HB truncation error is due to using a finite order 
   (number of harmonics) in the representation of the
@@ -135,19 +133,123 @@ o The HB truncation error is due to using a finite order
 
 Waveform                Trunc error             Tolerance
 ---------------------------------------------------------
-D11._net8               1.061e-04       >       1.482e-06
-D11._net5               8.475e-05       >       1.393e-06
-D11.DIODE1.a            8.436e-05       >       1.205e-06
-D11.DIODE2.a            8.332e-05       >       1.397e-06
+D11._net8               1.130e-04       >       1.300e-06
+D11.DIODE1.a            9.220e-05       >       1.256e-06
+D11._net5               4.817e-05       >       1.137e-06
+D11.DIODE2.a            4.805e-05       >       1.139e-06
 
 o Number of waveforms violating the HB truncation error check:
         4 out of 4 waveforms.
-o Estimated max HB truncation error: 1.061e-04 @ waveform D11._net8 .
+o Estimated max HB truncation error: 1.130e-04 @ waveform D11._net8 .
 o The maximal HB truncation error estimate is greater than the 
-  achieved tolerance of 1.482e-06 for this waveform.
+  achieved tolerance of 1.300e-06 for this waveform.
+o To reduce the error, increase the order (number of harmonics) 
+  and re-simulate.
+
+HB HB2[1] <EE_514_Labs_lib:mixer_single_balanced_HC_v1:schematic>
+    Number of tones:   2.
+    Number of frequencies:   23.
+    Number of time samples:  128.
+    Number of HB equations (problem size): 2790.
+    Auto mode: on.
+    Convergence mode: Auto.
+    Linear solver: direct.
+Port 1 has power at 2.4e+09 Hz
+Port 2 has power at 2.398e+09 Hz
+
+Driving port 1.
+------------------------------------------------------------------------------
+Newton solver:					
+Iter	KCL residual	Damp %	Sol update
+------------------------------------------------------------------------------
+0.0*	14.1589 mA  	100.0             
+1.0*	14.1589 mA  	  6.2	1.02206 V    
+2.0*	13.9213 mA  	  6.2	988.568 mV   
+3.0*	13.6851 mA  	  6.2	947.759 mV   
+4.0*	13.4553 mA  	  6.2	902.732 mV   
+5.0*	13.2443 mA  	  6.2	857.487 mV   
+6.0*	13.0538 mA  	  6.2	813.278 mV   
+7.0*	12.8893 mA  	  6.2	772.946 mV   
+8.0*	12.7441 mA  	  6.2	730.929 mV   
+9.0*	12.5989 mA  	  6.2	691.818 mV   
+10.0*	12.4265 mA  	  6.2	654.909 mV   
+11.0*	12.2116 mA  	  6.2	620.276 mV   
+12.0*	11.9705 mA  	  6.2	586.473 mV   
+13.0*	11.6868 mA  	  6.2	566.228 mV   
+14.0*	11.3301 mA  	 12.5	558.481 mV   
+15.0*	11.1492 mA  	 12.5	516.984 mV   
+16.0*	10.6724 mA  	 25.0	437.236 mV   
+17.0*	10.1751 mA  	 50.0	324.457 mV   
+18.0*	9.73056 mA  	100.0	174.778 mV   
+19.0*	6.39155 mA  	100.0	45.6514 mV   
+20.0 	950.637 uA  	100.0	4.1275 mV    
+20.1 	288.603 uA  	100.0	673.722 uV   
+20.2 	91.4874 uA  	100.0	237.127 uV   
+20.3 	28.1362 uA  	100.0	71.9143 uV   
+20.4 	8.69879 uA  	100.0	20.9834 uV   
+20.5 	2.6785 uA   	100.0	7.60555 uV   
+20.6 	829.184 nA  	100.0	2.32735 uV   
+20.7 	257.861 nA  	100.0	786.193 nV   
+20.8 	80.9224 nA  	100.0	248.623 nV   
+20.9 	25.7474 nA  	100.0	81.5589 nV   
+20.10 	8.27923 nA  	100.0	26.0533 nV   
+
+Driving port 2.
+------------------------------------------------------------------------------
+Newton solver:					
+Iter	KCL residual	Damp %	Sol update
+------------------------------------------------------------------------------
+0.0*	20.4835 mA  	100.0             
+1.0*	20.4835 mA  	  3.1	1.28551 V    
+2.0*	20.2115 mA  	  3.1	1.27055 V    
+3.0*	19.926 mA   	  3.1	1.27139 V    
+4.0*	19.64 mA    	  3.1	1.24709 V    
+5.0*	19.3584 mA  	  3.1	1.20535 V    
+6.0*	19.0719 mA  	  6.2	1.16928 V    
+7.0*	18.8505 mA  	  6.2	1.11981 V    
+8.0*	18.2663 mA  	  6.2	1.06435 V    
+9.0*	17.5175 mA  	  6.2	1.01744 V    
+10.0*	16.8854 mA  	  6.2	975.933 mV   
+11.0*	16.5453 mA  	  6.2	899.305 mV   
+12.0*	16.3619 mA  	  3.1	806.614 mV   
+13.0*	16.0402 mA  	  3.1	764.821 mV   
+14.0*	15.7129 mA  	  3.1	737.409 mV   
+15.0*	15.402 mA   	  6.2	708.839 mV   
+16.0*	15.1452 mA  	  6.2	643.707 mV   
+17.0*	14.6443 mA  	  6.2	598.119 mV   
+18.0*	14.0828 mA  	  6.2	560.925 mV   
+19.0*	13.5283 mA  	 12.5	527.425 mV   
+20.0*	13.0092 mA  	 12.5	459.618 mV   
+21.0*	11.9717 mA  	 25.0	395.084 mV   
+22.0*	11.0235 mA  	 50.0	288.857 mV   
+23.0*	10.5416 mA  	100.0	140.63 mV    
+24.0*	2.33819 mA  	100.0	5.13438 mV   
+25.0 	57.7422 uA  	100.0	135.178 uV   
+25.1 	3.03539 uA  	100.0	7.09437 uV   
+25.2 	171.961 nA  	100.0	388.076 nV   
+25.3 	9.7787 nA   	100.0	21.4958 nV   
+An HB truncation error may be present.
+o The HB truncation error is due to using a finite order 
+  (number of harmonics) in the representation of the
+  circuit signals.
+
+Waveform                Trunc error             Tolerance
+---------------------------------------------------------
+D11._net8               1.879e-04       >       1.304e-06
+D11.DIODE1.a            1.577e-04       >       1.260e-06
+D11._net5               9.462e-05       >       1.149e-06
+D11.DIODE2.a            9.377e-05       >       1.152e-06
+
+o Number of waveforms violating the HB truncation error check:
+        4 out of 4 waveforms.
+o Estimated max HB truncation error: 1.879e-04 @ waveform D11._net8 .
+o The maximal HB truncation error estimate is greater than the 
+  achieved tolerance of 1.304e-06 for this waveform.
+o A time-domain plot of the N__31 waveform may show the error as 
+  Gibbs ripples.
 o To reduce the error, increase the order (number of harmonics) 
   and re-simulate.
 
 Resource usage:
-  Total stopwatch time     =     2.62 seconds.
+  Total stopwatch time     =     1.07 seconds.
 

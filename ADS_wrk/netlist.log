@@ -29,7 +29,8 @@ MLIN2:TL7  P1 P2 Subst="MSub2" W=194.586614 mil L=660.366142 mil Mod=1
 MLIN2:TL8  P4 P3 Subst="MSub2" W=194.586614 mil L=660.366142 mil Mod=1 
 end hybrid_coupler_90deg
 
-hybrid_coupler_90deg:X1  V_rf V_a V_b V_lo 
+hybrid_coupler_90deg:X1  N__31 N__23 N__33 N__16 
+Short:I_a  N__37 V_a Mode=0 SaveCurrent=yes 
 HB:HB1 MaxOrder=4 Freq[1]=LOfreq Freq[2]=RFfreq Order[1]=5 Order[2]=5 StatusLevel=2 HBSS_WSP=0 OutputPlan="HB1_Output" 
 
 OutputPlan:HB1_Output \
@@ -58,6 +59,7 @@ Component:tahb_HB1 Module="ATAHB" Type="ModelExtractor" \
 
 Port:PORT1  V_rf 0 Num=1 Z=50 Ohm P[1]=dbmtow(RFpower) Freq[1]=RFfreq    Noise=yes Pac=polar(dbmtow(0),0) 
 model BAT15_03W Diode Is=74e-9 Rs=5.0 N=1.07 Tt=3e-12 Cjo=138.3e-12 Vj=0.224 M=0.138 Fc=0.5 Bv=4.2 Ibv=100e-6 AllowScaling=0 
+Short:I_b  N__42 V_b Mode=0 SaveCurrent=yes 
 R:R2  V_if_filtered 0 R=50 Ohm Noise=yes 
 
 RFfreq=2.4 GHz
@@ -71,10 +73,22 @@ V_Source:SRC2  N__8 0 Type="V_DC" Vdc=Vbias V SaveCurrent=1
 LP_filter_5MHz_LE_ord5:X6  N__40 V_if_filtered 
 #uselib "HfDiodeLibrary" , "di_hp_HSMS282C_20000301"
 di_hp_HSMS282C_20000301:D11  V_if N__37 N__42 
+MLEF2:TL12  N__39 Subst="MSub1" W=60 mil notune{ 5 mil to 1000 mil by 5 mil } L=580 mil tune{ 2 mil to 1000 mil by 10 mil } Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
 aele Zif = HB.V_if/HB.I_if.i;Zin_a = HB.V_a/ HB.I_a.i;Zin_b = HB.V_b / HB.I_b.i;
-L:L3  N__39 N__40 L=4.2 nH tune{ 3.379 nH to 10.137 nH by 0.1 nH } Noise=yes  
+MLIN2:TL10  V_rf N__31 Subst="MSub1" W=114 mil L=60 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+HB:HB2 MaxOrder=4 Freq[1]=LOfreq Freq[2]=RFfreq Order[1]=5 Order[2]=5 StatusLevel=2 CalcS_Params=yes LSSP_FreqAtPort[1]=RFfreq LSSP_FreqAtPort[2]=LOfreq OutputPlan="HB2_Output" 
+
+OutputPlan:HB2_Output \
+      Type="Output" \
+      UseEquationNestLevel=yes \
+      EquationNestLevel=2 \
+      UseSavedEquationNestLevel=yes \
+      SavedEquationNestLevel=2
+
 V_Source:SRC1  N__21 0 Type="V_DC" Vdc=Vbias V SaveCurrent=1 
-Short:I_if  V_if N__39 Mode=0 SaveCurrent=yes 
+MLIN2:TL9  N__33 V_b Subst="MSub1" W=114 mil L=60 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL8  N__23 V_a Subst="MSub1" W=114 mil L=60 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+Short:I_if  V_if N__18 Mode=0 SaveCurrent=yes 
 ; models
 #include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/tlc220x_5v.net"
 #include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/tlc220x_10v.net"
@@ -90,7 +104,5 @@ Short:I_if  V_if N__39 Mode=0 SaveCurrent=yes
 ; User defined parasitic parameters
 #include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/parasitic_param_values.txt"
 model MSub1 MSUB H=59.2 mil Er=4.34  Mur=1.0  Cond=5.8e+7  Hu=3.9370e+34 mil T=1.4 mil TanD=0.016  Rough=0 mil DielectricLossModel=1 FreqForEpsrTanD=1.0e9  LowFreqForTanD=1.0e3  HighFreqForTanD=1.0e12  RoughnessModel=2 
-V_Source:SRC3  N__28 0 Type="V_DC" Vdc=Vbias V SaveCurrent=1 
-Short:I_a  N__37 V_a Mode=0 SaveCurrent=yes 
-Short:I_b  N__42 V_b Mode=0 SaveCurrent=yes 
-C:C1  0 N__40 C=0.4 pF tune{ 0.05 pF to 10.35 pF by 0.05 pF } 
+MLIN2:TL11  V_lo N__16 Subst="MSub1" W=114 mil L=60 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MTEE_ADS:Tee1  N__18 N__40 N__39 Subst="MSub1" W1=60 mil W2=60 mil W3=60 mil tune{ 10 mil to 10000 mil by 10 mil } 
