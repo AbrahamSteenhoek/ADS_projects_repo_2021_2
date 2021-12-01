@@ -1,17 +1,38 @@
-; Top Design: "EE_514_Labs_lib:diode_TB:schematic"
+; Top Design: "EE_514_Labs_lib:mixer_single_balanced_HC_v1:schematic"
 ; Netlisted using Hierarchy Policy: "Standard"
 
-Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="EE_514_Labs_lib:diode_TB:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
-"BAT15_03W":DIODE1  V_a 0 Mode=1 Noise=yes 
-model BAT15_03W Diode Is=74e-9 Rs=5.0 N=1.07 Tt=3e-12 Cjo=138.3e-12 Vj=0.224 M=0.138 Fc=0.5 Bv=4.2 Ibv=100e-6 AllowScaling=0 
-V_Source:SRC1  N__2 0 Type="V_DC" Vdc=V_b V SaveCurrent=1 
-Short:I_Probe1  N__2 V_a Mode=0 SaveCurrent=yes 
-DC:DC1 StatusLevel=2 DevOpPtLevel=0 UseFiniteDiff=no PrintOpPoint=no Restart=1 \
-SweepVar="V_b" SweepPlan="DC1_stim" OutputPlan="DC1_Output" 
+Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="EE_514_Labs_lib:mixer_single_balanced_HC_v1:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
+; Library Name: EE_514_Labs_lib
+; Cell Name: LP_filter_5MHz_LE_ord5
+; View Name: schematic
+define LP_filter_5MHz_LE_ord5 ( P1  P2 ) 
+;parameters 
+L:L1  N__7 N__3 L=2.714 uH Noise=yes  
+C:C1  N__3 0 C=782.79 pF 
+L:L2  N__3 N__10 L=4.04 nH Noise=yes  
+C:C2  N__10 0 C=1.0 pF 
+L:L3  N__10 N__6 L=2.714 nH Noise=yes  
+model MSub1 MSUB H=59.2 mil Er=4.34  Mur=1.0  Cond=5.8e+7  Hu=3.9370e+34 mil T=1.4 mil TanD=0.016  Rough=0 mil DielectricLossModel=1 FreqForEpsrTanD=1.0e9  LowFreqForTanD=1.0e3  HighFreqForTanD=1.0e12  RoughnessModel=2 
+MLIN2:TL1  P1 N__7 Subst="MSub1" W=124 mil L=158 mil Mod=1 
+MLIN2:TL2  N__6 P2 Subst="MSub1" W=124 mil L=158 mil Mod=1 
+end LP_filter_5MHz_LE_ord5
 
-SweepPlan: DC1_stim Start=0.1 Stop=1 Lin=1001 
+; Library Name: EE_514_Labs_lib
+; Cell Name: hybrid_coupler_90deg
+; View Name: schematic
+define hybrid_coupler_90deg ( P1  P2  P3  P4 ) 
+;parameters 
+model MSub2 MSUB H=59.2 mil Er=4.34  Mur=1.0  Cond=5.8e7  Hu=3.9e+34 mil T=1.4 mil TanD=0.016  Rough=0 mil DielectricLossModel=1 FreqForEpsrTanD=1.0e9  LowFreqForTanD=1.0e3  HighFreqForTanD=1.0e12  RoughnessModel=2 
+MLIN2:TL1  P1 P4 Subst="MSub2"  W=113.478740 mil L=678.397638 mil Mod=1 
+MLIN2:TL2  P2 P3 Subst="MSub2"  W=113.478740 mil L=678.397638 mil Mod=1 
+MLIN2:TL7  P1 P2 Subst="MSub2" W=194.586614 mil L=660.366142 mil Mod=1 
+MLIN2:TL8  P4 P3 Subst="MSub2" W=194.586614 mil L=660.366142 mil Mod=1 
+end hybrid_coupler_90deg
 
-OutputPlan:DC1_Output \
+hybrid_coupler_90deg:X1  V_rf V_a V_b V_lo 
+HB:HB1 MaxOrder=4 Freq[1]=LOfreq Freq[2]=RFfreq Order[1]=5 Order[2]=5 StatusLevel=2 HBSS_WSP=0 OutputPlan="HB1_Output" 
+
+OutputPlan:HB1_Output \
       Type="Output" \
       UseNodeNestLevel=yes \
       NodeNestLevel=2 \
@@ -29,5 +50,47 @@ OutputPlan:DC1_Output \
       DeviceVoltageNestLevel=0 \
       DeviceVoltageDeviceType="All"
 
+Tran:HB1_tran HB_Sol=1 SteadyState=1 StatusLevel=3 \
+Freq[1]=LOfreq Order[1]=5 
 
-V_b=1.0
+Component:tahb_HB1 Module="ATAHB" Type="ModelExtractor" \ 
+ Tran_Analysis="HB1_tran" HB_Analysis="HB1" 
+
+Port:PORT1  V_rf 0 Num=1 Z=50 Ohm P[1]=dbmtow(RFpower) Freq[1]=RFfreq    Noise=yes Pac=polar(dbmtow(0),0) 
+model BAT15_03W Diode Is=74e-9 Rs=5.0 N=1.07 Tt=3e-12 Cjo=138.3e-12 Vj=0.224 M=0.138 Fc=0.5 Bv=4.2 Ibv=100e-6 AllowScaling=0 
+R:R2  V_if_filtered 0 R=50 Ohm Noise=yes 
+
+RFfreq=2.4 GHz
+Vbias=0
+RFpower=0
+LOpower=7
+LOfreq=2.398 GHz
+Port:PORT2  V_lo 0 Num=2 Z=50 Ohm P[1]=dbmtow(LOpower) Freq[1]=LOfreq    Noise=no Pac=polar(dbmtow(0),0) 
+model DIODEM1 Diode AllowScaling=0 
+V_Source:SRC2  N__8 0 Type="V_DC" Vdc=Vbias V SaveCurrent=1 
+LP_filter_5MHz_LE_ord5:X6  N__40 V_if_filtered 
+#uselib "HfDiodeLibrary" , "di_hp_HSMS282C_20000301"
+di_hp_HSMS282C_20000301:D11  V_if N__37 N__42 
+aele Zif = HB.V_if/HB.I_if.i;Zin_a = HB.V_a/ HB.I_a.i;Zin_b = HB.V_b / HB.I_b.i;
+L:L3  N__39 N__40 L=4.2 nH tune{ 3.379 nH to 10.137 nH by 0.1 nH } Noise=yes  
+V_Source:SRC1  N__21 0 Type="V_DC" Vdc=Vbias V SaveCurrent=1 
+Short:I_if  V_if N__39 Mode=0 SaveCurrent=yes 
+; models
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/tlc220x_5v.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/tlc220x_10v.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/res_1206.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/res_0603.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/ind_0603.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/cap_1206.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/cap_0603.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/BFR182_cktName.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/BFR182.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/BFP620_cktName.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/BFP620.net"
+; User defined parasitic parameters
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/parasitic_param_values.txt"
+model MSub1 MSUB H=59.2 mil Er=4.34  Mur=1.0  Cond=5.8e+7  Hu=3.9370e+34 mil T=1.4 mil TanD=0.016  Rough=0 mil DielectricLossModel=1 FreqForEpsrTanD=1.0e9  LowFreqForTanD=1.0e3  HighFreqForTanD=1.0e12  RoughnessModel=2 
+V_Source:SRC3  N__28 0 Type="V_DC" Vdc=Vbias V SaveCurrent=1 
+Short:I_a  N__37 V_a Mode=0 SaveCurrent=yes 
+Short:I_b  N__42 V_b Mode=0 SaveCurrent=yes 
+C:C1  0 N__40 C=0.4 pF tune{ 0.05 pF to 10.35 pF by 0.05 pF } 

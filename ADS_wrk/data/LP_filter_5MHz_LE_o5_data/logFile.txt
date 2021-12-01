@@ -1,0 +1,17 @@
+
+hpeesofsim (*) 532.update2.0 Mar  6 2021, MINT version 5
+    (64-bit windows built: Sat Mar 06, 2021 18:08:32 +0000)
+
+
+***** Simulation started at Tue Nov 30 14:05:28 2021
+      Running on host: "DESKTOP-2U8UJ4L"
+      In Directory: "C:\Users\abrah\OneDrive\Documents\ee514\ADS_2021_u2\ADS_wrk\data"
+      Process ID: 15256
+
+
+SP SP1[1] <EE_514_Labs_lib:LP_filter_5MHz_LE_o5:schematic>   freq=(0 Hz->10 MHz)
+
+
+Resource usage:
+  Total stopwatch time     =     0.84 seconds.
+

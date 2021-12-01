@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      abrah
+HostName                       DESKTOP-2U8UJ4L
+ProcessIdentifier              30888
+ProcessCreationTime_UTC        1638319865
+ProcessCreationTime_Readable   Tue Nov 30 18:51:05 2021 Central Standard Time
+AppIdentifier                  OA File System Design Manager
+OSType                         win32
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         C:\Users\abrah\OneDrive\Documents\ee514\ADS_2021_u2\ADS_wrk\EE_514_Labs_lib\mixer_single_balanced_%H%C_v1\schematic\sch.oa.cdslck
+TimeEditLocked                 Tue Nov 30 18:52:33 2021 Central Standard Time
