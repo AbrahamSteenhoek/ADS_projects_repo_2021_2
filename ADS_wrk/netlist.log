@@ -1,11 +1,11 @@
-; Top Design: "EE_514_Labs_lib:LP_filter_5MHz_LE_ord5_TB:schematic"
+; Top Design: "EE_514_Labs_lib:TL_TB:schematic"
 ; Netlisted using Hierarchy Policy: "Standard"
 
-Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="EE_514_Labs_lib:LP_filter_5MHz_LE_ord5_TB:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
-S_Param:SP1 CalcS=yes CalcY=no CalcZ=no GroupDelayAperture=1e-4 FreqConversion=no FreqConversionPort=1 StatusLevel=2 CalcNoise=no SortNoise=0 BandwidthForNoise=1.0 Hz DevOpPtLevel=0 \
-SweepVar="freq" SweepPlan="SP1_stim" OutputPlan="SP1_Output" 
-
-SweepPlan: SP1_stim Start=0 MHz Stop=10 MHz Lin=1001 
+Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="EE_514_Labs_lib:TL_TB:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
+Port:TermG1  N__0 0 Num=1 Z=50 Ohm Noise=yes 
+Port:TermG2  N__11 0 Num=2 Z=50 Ohm Noise=yes 
+S_Param:SP1 CalcS=yes CalcY=no CalcZ=no GroupDelayAperture=1e-4 FreqConversion=no FreqConversionPort=1 StatusLevel=2 CalcNoise=no SortNoise=0 BandwidthForNoise=1.0 Hz Freq=2 MHz DevOpPtLevel=0 \
+OutputPlan="SP1_Output" 
 
 OutputPlan:SP1_Output \
       Type="Output" \
@@ -16,33 +16,30 @@ OutputPlan:SP1_Output \
 
 #load "python","LinearCollapse"
 Component Module="LinearCollapse" Type="ModelExtractor" NetworkRepresentation=2
-Port:TermG1  N__7 0 Num=1 Z=50 Ohm Noise=yes 
-Port:TermG2  N__1 0 Num=2 Z=50 Ohm Noise=yes 
-C:C1  N__3 N__0 C=782 pF 
-L:L2  N__3 N__10 L=4 uH Noise=yes  
-C:C2  N__10 N__9 C=782 pF 
-L:L3  N__10 N__1 L=2.7 uH Noise=yes  
-model MSub1 MSUB H=59.2 mil Er=4.34  Mur=1.0  Cond=5.8e+7  Hu=3.9370e+34 mil T=1.4 mil TanD=0.016  Rough=0 mil DielectricLossModel=1 FreqForEpsrTanD=1.0e9  LowFreqForTanD=1.0e3  HighFreqForTanD=1.0e12  RoughnessModel=2 
-model MSub2 MSUB H=59.2 mil Er=4.34  Mur=1  Cond=5.8e+7  Hu=3.937e+34 mil T=1.4 mil TanD=0.016  Rough=0 mil DielectricLossModel=1 FreqForEpsrTanD=1.0e9  LowFreqForTanD=1.0e3  HighFreqForTanD=1.0e12  RoughnessModel=2 
+MTEE_ADS:Tee2  N__8 N__11 N__9 Subst="MSub1" W1=60 mil W2=60 mil W3=60 mil 
 aele SmZ1=sm_z1(S,PortZ1);
 aele SmZ2=sm_z2(S,PortZ2);
-L:L1  N__7 N__3 L=2.7 uH Noise=yes  
-MLIN2:TL5  N__0 N__6 Subst="MSub1" W=50 mil L=25 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
-VIAGND:V2  N__6 Subst="MSub1" D=20 mil T=1.4 mil Rho=0.6885 W=30 mil 
-MLOC2:TL6  N__6 Subst="MSub1" W=50 mil L=25 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
-MLIN2:TL7  N__9 N__11 Subst="MSub1" W=50 mil L=25 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
-VIAGND:V3  N__11 Subst="MSub1" D=20 mil T=1.4 mil Rho=0.6885 W=30 mil 
-MLOC2:TL8  N__11 Subst="MSub1" W=50 mil L=25 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
-L:L4  N__15 N__4 L=3.18 uH Noise=yes  
-L:L5  N__13 N__15 L=980 nH Noise=yes  
-L:L6  N__4 N__12 L=980 nH Noise=yes  
-C:C3  N__4 N__8 C=1 nF 
-C:C4  N__15 N__14 C=1 nF 
-MLIN2:TL9  N__8 N__5 Subst="MSub1" W=50 mil L=25 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
-MLIN2:TL10  N__14 N__2 Subst="MSub1" W=50 mil L=25 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
-VIAGND:V4  N__5 Subst="MSub1" D=20 mil T=1.4 mil Rho=0.6885 W=30 mil 
-VIAGND:V5  N__2 Subst="MSub1" D=20 mil T=1.4 mil Rho=0.6885 W=30 mil 
-MLOC2:TL11  N__5 Subst="MSub1" W=50 mil L=25 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
-MLOC2:TL12  N__2 Subst="MSub1" W=50 mil L=25 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
-Port:TermG3  N__13 0 Num=3 Z=50 Ohm Noise=yes 
-Port:TermG4  N__12 0 Num=4 Z=50 Ohm Noise=yes 
+aele Zin1=zin(S11,PortZ1);
+model MSub1 MSUB H=59.2 mil Er=4.34  Mur=1.0  Cond=5.8e+7  Hu=3.9370e+34 mil T=1.4 mil TanD=0.016  Rough=0 mil DielectricLossModel=1 FreqForEpsrTanD=1.0e9  LowFreqForTanD=1.0e3  HighFreqForTanD=1.0e12  RoughnessModel=2 
+MLIN2:TL17  N__6 N__14 Subst="MSub1" W=60 mil L=50 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+Port:TermG3  N__6 0 Num=3 Z=50 Ohm Noise=yes 
+Port:TermG4  N__7 0 Num=4 Z=50 Ohm Noise=yes 
+MLIN2:TL7  N__0 N__3 Subst="MSub1" W=60 mil L=50 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLEF2:TL14  N__9 Subst="MSub1" W=60 mil notune{ 5 mil to 1000 mil by 5 mil } L=470 mil notune{ 2 mil to 1000 mil by 10 mil } Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+ind_0603:L4  N__3 N__8 L=1 nH notune{ 0.1 nH to 50 nH by 0.1 nH } 
+MLEF2:TL16  N__12 Subst="MSub1" W=60 mil notune{ 5 mil to 1000 mil by 5 mil } L=470 mil notune{ 2 mil to 1000 mil by 10 mil } Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MTEE_ADS:Tee4  N__14 N__7 N__12 Subst="MSub1" W1=60 mil W2=60 mil W3=60 mil 
+; models
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/tlc220x_5v.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/tlc220x_10v.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/res_1206.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/res_0603.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/ind_0603.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/cap_1206.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/cap_0603.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/BFR182_cktName.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/BFR182.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/BFP620_cktName.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/BFP620.net"
+; User defined parasitic parameters
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/parasitic_param_values.txt"

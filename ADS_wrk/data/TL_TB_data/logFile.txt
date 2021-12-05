@@ -3,19 +3,13 @@ hpeesofsim (*) 532.update2.0 Mar  6 2021, MINT version 5
     (64-bit windows built: Sat Mar 06, 2021 18:08:32 +0000)
 
 
-***** Simulation started at Tue Nov 30 22:18:06 2021
+***** Simulation started at Sun Dec  5 17:50:53 2021
       Running on host: "DESKTOP-2U8UJ4L"
       In Directory: "C:\Users\abrah\OneDrive\Documents\ee514\ADS_2021_u2\ADS_wrk\data"
-      Process ID: 38436
+      Process ID: 15888
 
 
 SP SP1[1] <EE_514_Labs_lib:TL_TB:schematic>   freq=2 MHz
-Warning detected by hpeesofsim during SP analysis 'SP1'.
-    UserValue(0.001504) < MinRecommendValue(0.000100) OR UserValue > MaxRecommendValue(0.000635) for 'H' in `V1'
-
-Warning detected by hpeesofsim during SP analysis 'SP1'.
-    UserValue(0.422297) < MinRecommendValue(1.000000) OR UserValue > MaxRecommendValue(2.200000) for 'W/H' in `V1'
-
 
 Warning detected by hpeesofsim during circuit set up.
     Evaluation failed for ` SmZ1=sm_z1(S,PortZ1)':  "SmZ1":
@@ -25,5 +19,5 @@ Warning detected by hpeesofsim during circuit set up.
       Function "sm_z2" : Simultaneous match output impedance is only available for 2-port networks
 
 Resource usage:
-  Total stopwatch time     =     0.86 seconds.
+  Total stopwatch time     =     0.76 seconds.
 

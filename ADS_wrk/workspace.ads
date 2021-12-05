@@ -1,4 +1,4 @@
-<ADSWorkspace Revision="145" Version="100">
+<ADSWorkspace Revision="150" Version="100">
     <Workspace Name="">
         <LibraryDefs Name="lib.defs" />
         <ConfigFile Name="dds.cfg" />
@@ -99,6 +99,7 @@
             <Cell Name="EE_514_Labs_lib:LP_filter_5MHz_LE_ord5" />
             <Cell Name="EE_514_Labs_lib:LP_filter_200MHz_LE_ord5_TB_v1" />
             <Cell Name="EE_514_Labs_lib:LP_filter_250MHz_LE_ord5" />
+            <Cell Name="EE_514_Labs_lib:mixer_double_balanced_HC" />
         </Library>
         <Library Name="EE414_DesignKit_tech" />
         <Library Name="EE414_DesignKit" />
@@ -237,9 +238,7 @@
         <Data_Files Name="Lab4_Osc_Design_ideal_bias_data\logFile.txt" />
         <Folder Name="RF_Mixer">
             <Cell Name="EE_514_Labs_lib:mixer_single_balanced_v1" />
-            <Cell Name="EE_514_Labs_lib:mixer_single_balanced_v1_SS" />
             <Data_Display Name="mixer_single_balanced_v1.dds" />
-            <Data_Display Name="mixer_single_balanced_v1_SS.dds" />
             <Cell Name="EE_514_Labs_lib:hybrid_coupler_90deg" />
             <Cell Name="EE_514_Labs_lib:mixer_double_balanced_ideal_transformer" />
             <Data_Display Name="mixer_double_balanced_ideal_transformer.dds" />
@@ -263,6 +262,8 @@
             <Cell Name="EE_514_Labs_lib:LP_filter_250MHz_LE_ord5_TB_v1" />
             <Cell Name="EE_514_Labs_lib:LP_filter_250MHz_LE_ord5" />
             <Cell Name="EE_514_Labs_lib:TL_TB" />
+            <Data_Display Name="TL_TB.dds" />
+            <Data_Display Name="LP_filter_250MHz_LE_ord5_TB_v1.dds" />
         </Folder>
         <Dataset Name="mixer_v1.ds" />
         <Data_Files Name="mixer_v1.ds" />
@@ -357,7 +358,12 @@
         <Data_Files Name="LP_filter_250MHz_LE_ord5_TB_v1.ds" />
         <Data_Files Name="LP_filter_250MHz_LE_ord5_TB_v1_data\logFile.txt" />
         <ConfigFile Name="linecalc.cfg" />
-        <Data_Display Name="LP_filter_250MHz_LE_ord5_TB_v1.dds" />
+        <Dataset Name="TL_TB.ds" />
+        <Data_Files Name="TL_TB.ds" />
+        <Data_Files Name="TL_TB_data\logFile.txt" />
+        <Dataset Name="LP_filter_5MHz_LE_ord5_TB.ds" />
+        <Data_Files Name="LP_filter_5MHz_LE_ord5_TB.ds" />
+        <Data_Files Name="LP_filter_5MHz_LE_ord5_TB_data\logFile.txt" />
         <Data_Files Name="dc_annotation\%E%E_514_%Labs_lib_mixer_single_balanced_%H%C_v1_schematic\annotation_1.xml" />
         <Data_Files Name="dc_annotation\%E%E_514_%Labs_lib_mixer_single_balanced_%H%C_v1_schematic\annotation_map.xml" />
     </Workspace>
