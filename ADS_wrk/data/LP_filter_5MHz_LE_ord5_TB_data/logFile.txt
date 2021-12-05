@@ -1,0 +1,47 @@
+
+hpeesofsim (*) 532.update2.0 Mar  6 2021, MINT version 5
+    (64-bit windows built: Sat Mar 06, 2021 18:08:32 +0000)
+
+
+***** Simulation started at Sun Dec  5 17:13:08 2021
+      Running on host: "DESKTOP-2U8UJ4L"
+      In Directory: "C:\Users\abrah\OneDrive\Documents\ee514\ADS_2021_u2\ADS_wrk\data"
+      Process ID: 19764
+
+
+SP SP1[1] <EE_514_Labs_lib:LP_filter_5MHz_LE_ord5_TB:schematic>   freq=(0 Hz->10 MHz)
+Warning detected by hpeesofsim during SP analysis 'SP1'.
+    UserValue(0.001504) < MinRecommendValue(0.000100) OR UserValue > MaxRecommendValue(0.000635) for 'H' in `V5'
+
+Warning detected by hpeesofsim during SP analysis 'SP1'.
+    UserValue(0.506757) < MinRecommendValue(1.000000) OR UserValue > MaxRecommendValue(2.200000) for 'W/H' in `V5'
+
+Warning detected by hpeesofsim during SP analysis 'SP1'.
+    UserValue(0.001504) < MinRecommendValue(0.000100) OR UserValue > MaxRecommendValue(0.000635) for 'H' in `V4'
+
+Warning detected by hpeesofsim during SP analysis 'SP1'.
+    UserValue(0.506757) < MinRecommendValue(1.000000) OR UserValue > MaxRecommendValue(2.200000) for 'W/H' in `V4'
+
+Warning detected by hpeesofsim during SP analysis 'SP1'.
+    UserValue(0.001504) < MinRecommendValue(0.000100) OR UserValue > MaxRecommendValue(0.000635) for 'H' in `V3'
+
+Warning detected by hpeesofsim during SP analysis 'SP1'.
+    UserValue(0.506757) < MinRecommendValue(1.000000) OR UserValue > MaxRecommendValue(2.200000) for 'W/H' in `V3'
+
+Warning detected by hpeesofsim during SP analysis 'SP1'.
+    UserValue(0.001504) < MinRecommendValue(0.000100) OR UserValue > MaxRecommendValue(0.000635) for 'H' in `V2'
+
+Warning detected by hpeesofsim during SP analysis 'SP1'.
+    UserValue(0.506757) < MinRecommendValue(1.000000) OR UserValue > MaxRecommendValue(2.200000) for 'W/H' in `V2'
+
+
+Warning detected by hpeesofsim during circuit set up.
+    Evaluation failed for ` SmZ1=sm_z1(S,PortZ1)':  "SmZ1":
+      Function "sm_z1" : Simultaneous match input impedance is only available for 2-port networks
+Warning detected by hpeesofsim during circuit set up.
+    Evaluation failed for ` SmZ2=sm_z2(S,PortZ2)':  "SmZ2":
+      Function "sm_z2" : Simultaneous match output impedance is only available for 2-port networks
+
+Resource usage:
+  Total stopwatch time     =     0.79 seconds.
+

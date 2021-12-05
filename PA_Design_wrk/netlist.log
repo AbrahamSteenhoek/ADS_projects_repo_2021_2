@@ -1,7 +1,34 @@
-; Top Design: "PA_Design_lib:HB_sim1:schematic"
+; Top Design: "PA_Design_lib:HB1Tone_LoadPull_ZSweep:schematic"
 ; Netlisted using Hierarchy Policy: "Standard"
 
-Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="PA_Design_lib:HB_sim1:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
+Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="PA_Design_lib:HB1Tone_LoadPull_ZSweep:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
+; Library Name: PA_Design_lib
+; Cell Name: Load_Tuner_Zsweep_wHarm_Zs_1
+; View Name: schematic
+define Load_Tuner_Zsweep_wHarm_Zs_1 ( N__3  N__1 ) 
+parameters  Fund_Freq=1 GHz  Z_Load_Baseband=50+j*0  Z_Load_Fund=50+j*0  Z_Load_2nd=500+j*0  Z_Load_3rd=500+j*0  Z_Load_4th=500+j*0  Z_Load_5th=500+j*0  Swept_Harmonic_Num=1  Z_imag_min=-10  Z_imag_max=10  Z_imag_num_pts=10  Z_real_min=5  Z_real_max=10  Z_real_num_pts=10  Simulation_1="HB1" 
+ParamSweep:SweepOuter SimInstanceName[1]="SweepInner" StatusLevel=2 SweepVar="Z_imag" SweepPlan="SweepOuter_stim" 
+
+SweepPlan: SweepOuter_stim Start=Z_imag_min Stop=Z_imag_max Lin=Z_imag_num_pts 
+
+ParamSweep:SweepInner SimInstanceName[1]=Simulation_1 StatusLevel=2 SweepVar="Z_real" SweepPlan="SweepInner_stim" 
+
+SweepPlan: SweepInner_stim Start=Z_real_min Stop=Z_real_max Lin=Z_real_num_pts 
+
+
+Z_real=0
+Z_imag=0
+Z_Load_Swept=Z_real+j*Z_imag
+
+LoadTuner=LoadArray[iload]
+LoadArray_Fund=list(Z_Load_Baseband,Z_Load_Swept,Z_Load_2nd,Z_Load_3rd,Z_Load_4th,Z_Load_5th)
+LoadArray_2nd=list(Z_Load_Baseband,Z_Load_Fund,Z_Load_Swept,Z_Load_3rd,Z_Load_4th,Z_Load_5th)
+LoadArray_3rd=list(Z_Load_Baseband,Z_Load_Fund,Z_Load_2nd,Z_Load_Swept,Z_Load_4th,Z_Load_5th)
+LoadArray=if (Swept_Harmonic_Num ==2) then LoadArray_2nd elseif (Swept_Harmonic_Num ==3) then LoadArray_3rd else LoadArray_Fund endif
+iload=int(min(abs(freq)/Fund_Freq +1.5,length(LoadArray)))
+Z_Port:Z1P1  N__3 N__1 Z[1,1]=LoadTuner 
+end Load_Tuner_Zsweep_wHarm_Zs_1
+
 ; Library Name: PA_Design_lib
 ; Cell Name: GaAs_FET
 ; View Name: schematic
@@ -11,19 +38,26 @@ model Generic_GaAsFET GaAs NFET=1 PFET=0 Idsmod=3 Vto=-2.5 Beta=0.310 Lambda=0.0
 "Generic_GaAsFET":FET1  P1 P2 P3 Area=10 Noise=yes 
 end GaAs_FET
 
-Port:PORT1  V_in 0 Num=1 Z=1.13+j*24.95 Ohm P[1]=polar(dbmtow(P_avs_dBm),0) Freq[1]=850 MHz    Noise=yes Pac=polar(dbmtow(0),0) LimitPhaseNoiseToCarrier=no 
-GaAs_FET:M2  V_ds N__5 0 
-Short:DC_Block1  N__5 N__8 Mode=1 
-Short:DC_Feed1  N__5 N__1 Mode=-1 
-Short:I_in  V_in N__8 Mode=0 SaveCurrent=yes 
-Short:DC_Block2  N__9 N__6 Mode=1 
-R:R_L  V_L 0 R=7.22 Ohm Noise=yes 
-V_Source:SRC1  N__0 0 Type="V_DC" Vdc=4.8 V SaveCurrent=1 
-TLIN:TL1  N__7 N__9 Z=50.0 Ohm E=90 F=850 MHz 
-V_Source:SRC2  N__1 0 Type="V_DC" Vdc=-2.5 V SaveCurrent=1 
-HB:HB1 MaxOrder=4 Freq[1]=850 MHz Order[1]=20 StatusLevel=2 HBSS_WSP=0 SweepVar="P_avs_dBm" SweepPlan="HB1_stim" OutputPlan="HB1_Output" 
+; Library Name: PA_Design_lib
+; Cell Name: Load_Pull_Instr_ZSweep1
+; View Name: schematic
+define Load_Pull_Instr_ZSweep1 ( N__4  N__6  N__7  N__8 ) 
+parameters  V_Bias1=1  V_Bias2=5  RF_Freq=1 GHz  Pavs_dBm=0  Swept_Harmonic_Num=1  Z_Load_Baseband=50+j*0  Z_Load_Fund=50+j*0  Z_Load_2nd=500+j*0  Z_Load_3rd=500+j*0  Z_Load_4th=500+j*0  Z_Load_5th=500+j*0  Z_imag_min=-10  Z_imag_max=10  Z_imag_num_pts=10  Z_real_min=5  Z_real_max=10  Z_real_num_pts=10  Z_Source_Baseband=50  Z_Source_Fund=10+j*0  Z_Source_2nd=1000  Z_Source_3rd=1000  Z_Source_4th=1000  Z_Source_5th=1000 
+aele Pdel_W=0.5*real(Vload[1]*conj(Iload.i[1]));Pdel_dBm=10*log(Pdel_W)+30;Pdc=real(Is_1.i[0]*Vs_1[0] +Is_2.i[0]*Vs_2[0]);P_In_Watts=0.5*real(V_In[1]*conj(I_In.i[1]));PAE=100*(Pdel_W-P_In_Watts)/Pdc;
 
-SweepPlan: HB1_stim Start=-20 Stop=20 Lin=101 
+Pavs_dBm_O=Pavs_dBm
+Z_s_fund_O=Z_Source_Fund
+Z_s_2nd_O=Z_Source_2nd
+Z_s_3rd_O=Z_Source_3rd
+
+iload = int(min(abs(freq)/RF_Freq+1.5,length(SrcArray)))
+;Source impedances=
+Z_s = SrcArray[isrc]
+SrcArray =list(Z_Source_Baseband, Z_Source_Fund, Z_Source_2nd,Z_Source_3rd,Z_Source_4th,Z_Source_5th)
+isrc = min(iload,length(SrcArray))
+HB:HB1 MaxOrder=4 Freq[1]=RF_Freq Order[1]=9 StatusLevel=3 FundOversample=1 \
+Restart=no UseAllSS_Freqs=yes OutputBudgetIV=no UseOutFile=no \
+HBSS_WSP=0 UseInFile=no OutputPlan="HB1_Output" 
 
 OutputPlan:HB1_Output \
       Type="Output" \
@@ -33,8 +67,11 @@ OutputPlan:HB1_Output \
       EquationNestLevel=2 \
       UseSavedEquationNestLevel=yes \
       SavedEquationNestLevel=2 \
+      SavedEquationName[1]="Pavs_dBm_O" \
+      SavedEquationName[2]="Z_s_2nd_O" \
+      SavedEquationName[3]="Z_s_3rd_O" \
+      SavedEquationName[4]="Z_s_fund_O" \
       UseDeviceCurrentNestLevel=no \
-      DeviceCurrentNestLevel=0 \
       DeviceCurrentDeviceType="All" \
       DeviceCurrentSymSyntax=yes \
       UseCurrentNestLevel=yes \
@@ -44,16 +81,24 @@ OutputPlan:HB1_Output \
       DeviceVoltageDeviceType="All"
 
 Tran:HB1_tran HB_Sol=1 SteadyState=1 StatusLevel=3 \
-Freq[1]=850 MHz Order[1]=20 
+Freq[1]=RF_Freq Order[1]=9 
 
 Component:tahb_HB1 Module="ATAHB" Type="ModelExtractor" \ 
  Tran_Analysis="HB1_tran" HB_Analysis="HB1" 
 
+Load_Tuner_Zsweep_wHarm_Zs_1:X1  Vload 0 Fund_Freq=RF_Freq Z_Load_Baseband=Z_Load_Baseband Z_Load_Fund=Z_Load_Fund Z_Load_2nd=Z_Load_2nd Z_Load_3rd=Z_Load_3rd Z_Load_4th=Z_Load_4th Z_Load_5th=Z_Load_5th Swept_Harmonic_Num=Swept_Harmonic_Num Z_imag_min=Z_imag_min Z_imag_max=Z_imag_max Z_imag_num_pts=Z_imag_num_pts Z_real_min=Z_real_min Z_real_max=Z_real_max Z_real_num_pts=Z_real_num_pts Simulation_1="HB1" 
+Port:PORT1  N__5 0 Num=1 Z=Z_s P[1]=dbmtow(Pavs_dBm) Freq[1]=RF_Freq    Noise=yes Pac=dbmtow(0) 
+Short:Is_2  Vs_2 N__10 Mode=0 SaveCurrent=yes 
+Short:Is_1  Vs_1 N__11 Mode=0 SaveCurrent=yes 
+V_Source:SRC1  Vs_2 0 Type="V_DC" Vdc=V_Bias2 SaveCurrent=1 
+V_Source:SRC2  Vs_1 0 Type="V_DC" Vdc=V_Bias1 SaveCurrent=1 
+L:L2  N__11 N__7 L=1 uH Noise=yes  
+L:L1  N__10 N__8 L=1 uH Noise=yes  
+C:C1  V_In N__4 C=1.0 uF 
+C:C2  N__6 N__12 C=1.0 uF 
+Short:I_In  N__5 V_In Mode=0 SaveCurrent=yes 
+Short:Iload  N__12 Vload Mode=0 SaveCurrent=yes 
+end Load_Pull_Instr_ZSweep1
 
-R_s=5
-P_avs_dBm=0
-aele Z_in=HB.V_in[1]/HB.I_in.i[1];
-Short:I_L  N__6 V_L Mode=0 SaveCurrent=yes 
-Short:I_supply  N__0 N__7 Mode=0 SaveCurrent=yes 
-Short:I_ds  N__9 V_ds Mode=0 SaveCurrent=yes 
-aele P_L = real( 0.5*HB.V_L[1] * conj(HB.I_L.i[1]) );P_supply = real(HB.I_supply.i[0] * 4.8);DE = P_L / P_supply;P_L_dBm = 10*log10(P_L) + 30;
+Load_Pull_Instr_ZSweep1:X1  N__3 N__6 N__3 N__6 V_Bias1=-2.5 V V_Bias2=4.8 V RF_Freq=850 MHz Pavs_dBm=20 Swept_Harmonic_Num=1 Z_Load_Baseband=50+j*0 Z_Load_Fund=10+j*0 Z_Load_2nd=1000+j*0 Z_Load_3rd=1000+j*0 Z_Load_4th=500+j*0 Z_Load_5th=500+j*0 Z_imag_min=0 Z_imag_max=100 Z_imag_num_pts=51 Z_real_min=1 Z_real_max=100 Z_real_num_pts=51 Z_Source_Baseband=50 Z_Source_Fund=5+j*0 Z_Source_2nd=1000 Z_Source_3rd=1000 Z_Source_4th=1000 Z_Source_5th=1000 
+GaAs_FET:M1  N__6 N__3 0 

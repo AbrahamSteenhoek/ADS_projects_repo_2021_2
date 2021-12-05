@@ -1,5 +1,7 @@
 <!DOCTYPE SaveWorkspaceState>
 <SaveWorkspaceState>
-    <Windows/>
+    <Windows>
+        <Schematic x1="-1" height="1017" width="1920" y1="-8" cell="Lab4_Osc_Design_reg_biased" view="schematic" lib="EE_514_Labs_lib" geom="1,0,2,644,215,1041,673,1920,1080"/>
+    </Windows>
     <MainWindowTab tab="1"/>
 </SaveWorkspaceState>

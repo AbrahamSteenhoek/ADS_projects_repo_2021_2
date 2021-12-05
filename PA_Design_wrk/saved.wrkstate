@@ -1,7 +1,7 @@
 <!DOCTYPE SaveWorkspaceState>
 <SaveWorkspaceState>
     <Windows>
-        <DDS name="HB_sim1.dds"/>
+        <DDS name="HB1Tone_LoadPull_ZSweep.dds"/>
     </Windows>
     <MainWindowTab tab="1"/>
 </SaveWorkspaceState>

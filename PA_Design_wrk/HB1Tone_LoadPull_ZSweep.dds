@@ -10,7 +10,7 @@ ddoId = get_new(ddsId, "Object");
 // DataDisplay Object:
 	set(ddoId, "Path", dds_get_exec_path(what_file(0)));
 	set(ddoId, "Name", dds_get_exec_file(what_file(0)));
-	set(ddoId, "FileModifiedDateAndTime", "2021-11-17T03:57:11Z");
+	set(ddoId, "FileModifiedDateAndTime", "2021-12-03T14:34:39Z");
 	dssId = get(ddoId, "DatasetServer");
 // Default Dataset
 	set(ddoId, "DefaultDataset", "HB1Tone_LoadPull_ZSweep");
@@ -43,7 +43,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 1925119454);
 // Graphical Object:
-	set(goId0, "Right", 15499);
+	set(goId0, "Right", 15495);
 	set(goId0, "Bottom", 6500);
 	set(goId0, "Left", 12500);
 	set(goId0, "Top", 6250);
@@ -68,7 +68,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 725569433);
 // Graphical Object:
-	set(goId0, "Right", 8640);
+	set(goId0, "Right", 8636);
 	set(goId0, "Bottom", 2375);
 	set(goId0, "Left", 5375);
 	set(goId0, "Top", 2125);
@@ -93,7 +93,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 2128619569);
 // Graphical Object:
-	set(goId0, "Right", 9249);
+	set(goId0, "Right", 9245);
 	set(goId0, "Bottom", 875);
 	set(goId0, "Left", 5500);
 	set(goId0, "Top", 625);
@@ -118,7 +118,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 728204967);
 // Graphical Object:
-	set(goId0, "Right", 10192);
+	set(goId0, "Right", 10202);
 	set(goId0, "Bottom", 1125);
 	set(goId0, "Left", 5500);
 	set(goId0, "Top", 875);
@@ -143,7 +143,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 1321835055);
 // Graphical Object:
-	set(goId0, "Right", 10783);
+	set(goId0, "Right", 10793);
 	set(goId0, "Bottom", 1375);
 	set(goId0, "Left", 5500);
 	set(goId0, "Top", 1125);
@@ -168,7 +168,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 1752642524);
 // Graphical Object:
-	set(goId0, "Right", 16137);
+	set(goId0, "Right", 16133);
 	set(goId0, "Bottom", 625);
 	set(goId0, "Left", 13875);
 	set(goId0, "Top", 375);
@@ -236,7 +236,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 768586014);
 // Graphical Object:
-	set(goId0, "Right", 11042);
+	set(goId0, "Right", 11038);
 	set(goId0, "Bottom", 1625);
 	set(goId0, "Left", 5500);
 	set(goId0, "Top", 1375);
@@ -328,7 +328,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 338250792);
 // Graphical Object:
-	set(goId0, "Right", 7757);
+	set(goId0, "Right", 7753);
 	set(goId0, "Bottom", 3625);
 	set(goId0, "Left", 5375);
 	set(goId0, "Top", 3375);
@@ -353,7 +353,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 2049463207);
 // Graphical Object:
-	set(goId0, "Right", 9675);
+	set(goId0, "Right", 9671);
 	set(goId0, "Bottom", 3875);
 	set(goId0, "Left", 5375);
 	set(goId0, "Top", 3625);
@@ -378,7 +378,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 570290923);
 // Graphical Object:
-	set(goId0, "Right", 16031);
+	set(goId0, "Right", 16034);
 	set(goId0, "Bottom", 4625);
 	set(goId0, "Left", 12500);
 	set(goId0, "Top", 4375);
@@ -403,7 +403,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 525952940);
 // Graphical Object:
-	set(goId0, "Right", 16071);
+	set(goId0, "Right", 16081);
 	set(goId0, "Bottom", 4875);
 	set(goId0, "Left", 12500);
 	set(goId0, "Top", 4625);
@@ -428,7 +428,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 982677928);
 // Graphical Object:
-	set(goId0, "Right", 10075);
+	set(goId0, "Right", 10085);
 	set(goId0, "Bottom", 4875);
 	set(goId0, "Left", 5375);
 	set(goId0, "Top", 4625);
@@ -453,7 +453,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 69386431);
 // Graphical Object:
-	set(goId0, "Right", 10964);
+	set(goId0, "Right", 10980);
 	set(goId0, "Bottom", 5125);
 	set(goId0, "Left", 5375);
 	set(goId0, "Top", 4875);
@@ -478,7 +478,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 774519674);
 // Graphical Object:
-	set(goId0, "Right", 10550);
+	set(goId0, "Right", 10559);
 	set(goId0, "Bottom", 4625);
 	set(goId0, "Left", 5375);
 	set(goId0, "Top", 4375);
@@ -562,8 +562,8 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 1253903560);
 // Graphical Object:
-	set(goId0, "Right", 17157);
-	set(goId0, "Bottom", 0);
+	set(goId0, "Right", 17153);
+	set(goId0, "Bottom", -1000);
 	set(goId0, "Left", 11250);
 	set(goId0, "Top", -1250);
 	set(goId0, "Zrot", 0.0);
@@ -630,7 +630,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 1877011567);
 // Graphical Object:
-	set(goId0, "Right", 16867);
+	set(goId0, "Right", 16863);
 	set(goId0, "Bottom", 2750);
 	set(goId0, "Left", 12500);
 	set(goId0, "Top", 2500);
@@ -655,7 +655,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 1550491290);
 // Graphical Object:
-	set(goId0, "Right", 15818);
+	set(goId0, "Right", 15814);
 	set(goId0, "Bottom", 2500);
 	set(goId0, "Left", 12500);
 	set(goId0, "Top", 2250);
@@ -680,7 +680,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 1623216709);
 // Graphical Object:
-	set(goId0, "Right", 18069);
+	set(goId0, "Right", 18071);
 	set(goId0, "Bottom", 3000);
 	set(goId0, "Left", 12500);
 	set(goId0, "Top", 2750);
@@ -705,7 +705,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 628273693);
 // Graphical Object:
-	set(goId0, "Right", 18303);
+	set(goId0, "Right", 18299);
 	set(goId0, "Bottom", 3750);
 	set(goId0, "Left", 12500);
 	set(goId0, "Top", 3500);
@@ -730,7 +730,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 1199882335);
 // Graphical Object:
-	set(goId0, "Right", 17856);
+	set(goId0, "Right", 17852);
 	set(goId0, "Bottom", 3250);
 	set(goId0, "Left", 12500);
 	set(goId0, "Top", 3000);
@@ -755,7 +755,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 539361818);
 // Graphical Object:
-	set(goId0, "Right", 17770);
+	set(goId0, "Right", 17766);
 	set(goId0, "Bottom", 3500);
 	set(goId0, "Left", 12500);
 	set(goId0, "Top", 3250);
@@ -780,7 +780,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 160004082);
 // Graphical Object:
-	set(goId0, "Right", 17655);
+	set(goId0, "Right", 17651);
 	set(goId0, "Bottom", 4000);
 	set(goId0, "Left", 12500);
 	set(goId0, "Top", 3750);
@@ -805,7 +805,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 1223813402);
 // Graphical Object:
-	set(goId0, "Right", 18102);
+	set(goId0, "Right", 18098);
 	set(goId0, "Bottom", 4250);
 	set(goId0, "Left", 12500);
 	set(goId0, "Top", 4000);
@@ -830,8 +830,8 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 2093481800);
 // Graphical Object:
-	set(goId0, "Right", 14240);
-	set(goId0, "Bottom", 0);
+	set(goId0, "Right", 14236);
+	set(goId0, "Bottom", -750);
 	set(goId0, "Left", 11250);
 	set(goId0, "Top", -1000);
 	set(goId0, "Zrot", 0.0);
@@ -855,7 +855,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 1417282670);
 // Graphical Object:
-	set(goId0, "Right", 16025);
+	set(goId0, "Right", 16021);
 	set(goId0, "Bottom", 7500);
 	set(goId0, "Left", 12500);
 	set(goId0, "Top", 7250);
@@ -880,7 +880,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 1615152614);
 // Graphical Object:
-	set(goId0, "Right", 16913);
+	set(goId0, "Right", 16916);
 	set(goId0, "Bottom", 7750);
 	set(goId0, "Left", 12500);
 	set(goId0, "Top", 7500);
@@ -905,7 +905,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 1871784734);
 // Graphical Object:
-	set(goId0, "Right", 17147);
+	set(goId0, "Right", 17143);
 	set(goId0, "Bottom", 6750);
 	set(goId0, "Left", 12500);
 	set(goId0, "Top", 6500);
@@ -930,7 +930,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 632986140);
 // Graphical Object:
-	set(goId0, "Right", 17059);
+	set(goId0, "Right", 17055);
 	set(goId0, "Bottom", 8250);
 	set(goId0, "Left", 12500);
 	set(goId0, "Top", 8000);
@@ -955,7 +955,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 1250206640);
 // Graphical Object:
-	set(goId0, "Right", 16940);
+	set(goId0, "Right", 16936);
 	set(goId0, "Bottom", 8000);
 	set(goId0, "Left", 12500);
 	set(goId0, "Top", 7750);
@@ -980,7 +980,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 898550250);
 // Graphical Object:
-	set(goId0, "Right", 16499);
+	set(goId0, "Right", 16495);
 	set(goId0, "Bottom", 7000);
 	set(goId0, "Left", 12500);
 	set(goId0, "Top", 6750);
@@ -1005,7 +1005,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 730023429);
 // Graphical Object:
-	set(goId0, "Right", 16946);
+	set(goId0, "Right", 16942);
 	set(goId0, "Bottom", 7250);
 	set(goId0, "Left", 12500);
 	set(goId0, "Top", 7000);
@@ -1030,7 +1030,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 154513384);
 // Graphical Object:
-	set(goId0, "Right", 20246);
+	set(goId0, "Right", 20282);
 	set(goId0, "Bottom", 5125);
 	set(goId0, "Left", 12500);
 	set(goId0, "Top", 4875);
@@ -1055,7 +1055,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 833253756);
 // Graphical Object:
-	set(goId0, "Right", 18022);
+	set(goId0, "Right", 18018);
 	set(goId0, "Bottom", 8500);
 	set(goId0, "Left", 12500);
 	set(goId0, "Top", 8250);
@@ -1080,8 +1080,8 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 1467758972);
 // Graphical Object:
-	set(goId0, "Right", 7202);
-	set(goId0, "Bottom", 0);
+	set(goId0, "Right", 7211);
+	set(goId0, "Bottom", -1375);
 	set(goId0, "Left", 5875);
 	set(goId0, "Top", -1625);
 	set(goId0, "Zrot", 0.0);
@@ -1148,7 +1148,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 281567234);
 // Graphical Object:
-	set(goId0, "Right", 11323);
+	set(goId0, "Right", 11332);
 	set(goId0, "Bottom", 1875);
 	set(goId0, "Left", 5500);
 	set(goId0, "Top", 1625);
@@ -1173,7 +1173,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 1551198323);
 // Graphical Object:
-	set(goId0, "Right", 12232);
+	set(goId0, "Right", 12241);
 	set(goId0, "Bottom", 2625);
 	set(goId0, "Left", 5375);
 	set(goId0, "Top", 2375);
@@ -1198,7 +1198,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 754156521);
 // Graphical Object:
-	set(goId0, "Right", 19918);
+	set(goId0, "Right", 19927);
 	set(goId0, "Bottom", 875);
 	set(goId0, "Left", 13875);
 	set(goId0, "Top", 625);
@@ -1223,7 +1223,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 1538049172);
 // Graphical Object:
-	set(goId0, "Right", 15737);
+	set(goId0, "Right", 15733);
 	set(goId0, "Bottom", 5875);
 	set(goId0, "Left", 12500);
 	set(goId0, "Top", 5625);
@@ -1248,7 +1248,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 1975263391);
 // Graphical Object:
-	set(goId0, "Right", 15737);
+	set(goId0, "Right", 15733);
 	set(goId0, "Bottom", 6125);
 	set(goId0, "Left", 12500);
 	set(goId0, "Top", 5875);
@@ -1273,7 +1273,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 1439599412);
 // Graphical Object:
-	set(goId0, "Right", 11131);
+	set(goId0, "Right", 11127);
 	set(goId0, "Bottom", 2875);
 	set(goId0, "Left", 5375);
 	set(goId0, "Top", 2625);
@@ -1298,7 +1298,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 1611555999);
 // Graphical Object:
-	set(goId0, "Right", 20200);
+	set(goId0, "Right", 20216);
 	set(goId0, "Bottom", 5375);
 	set(goId0, "Left", 12500);
 	set(goId0, "Top", 5125);
@@ -1323,7 +1323,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 271672414);
 // Graphical Object:
-	set(goId0, "Right", 10623);
+	set(goId0, "Right", 10619);
 	set(goId0, "Bottom", 8125);
 	set(goId0, "Left", 5375);
 	set(goId0, "Top", 7875);
@@ -1348,7 +1348,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 178615687);
 // Graphical Object:
-	set(goId0, "Right", 7483);
+	set(goId0, "Right", 7479);
 	set(goId0, "Bottom", 7125);
 	set(goId0, "Left", 5375);
 	set(goId0, "Top", 6875);
@@ -1373,7 +1373,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 49007133);
 // Graphical Object:
-	set(goId0, "Right", 9310);
+	set(goId0, "Right", 9306);
 	set(goId0, "Bottom", 6375);
 	set(goId0, "Left", 5375);
 	set(goId0, "Top", 6125);
@@ -1398,7 +1398,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 1759679220);
 // Graphical Object:
-	set(goId0, "Right", 10187);
+	set(goId0, "Right", 10183);
 	set(goId0, "Bottom", 6625);
 	set(goId0, "Left", 5375);
 	set(goId0, "Top", 6375);
@@ -1466,7 +1466,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 583267451);
 // Graphical Object:
-	set(goId0, "Right", 16542);
+	set(goId0, "Right", 16538);
 	set(goId0, "Bottom", 9875);
 	set(goId0, "Left", 13625);
 	set(goId0, "Top", 9625);
@@ -1491,7 +1491,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 436696196);
 // Graphical Object:
-	set(goId0, "Right", 8759);
+	set(goId0, "Right", 8755);
 	set(goId0, "Bottom", 7625);
 	set(goId0, "Left", 5375);
 	set(goId0, "Top", 7375);
@@ -1516,7 +1516,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 1280373772);
 // Graphical Object:
-	set(goId0, "Right", 10590);
+	set(goId0, "Right", 10586);
 	set(goId0, "Bottom", 7875);
 	set(goId0, "Left", 5375);
 	set(goId0, "Top", 7625);
@@ -1541,7 +1541,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 934549763);
 // Graphical Object:
-	set(goId0, "Right", 16395);
+	set(goId0, "Right", 16391);
 	set(goId0, "Bottom", 10125);
 	set(goId0, "Left", 13625);
 	set(goId0, "Top", 9875);
@@ -1566,7 +1566,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 1860585632);
 // Graphical Object:
-	set(goId0, "Right", 16315);
+	set(goId0, "Right", 16311);
 	set(goId0, "Bottom", 10375);
 	set(goId0, "Left", 13625);
 	set(goId0, "Top", 10125);
@@ -1591,7 +1591,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 1330049454);
 // Graphical Object:
-	set(goId0, "Right", 16969);
+	set(goId0, "Right", 16965);
 	set(goId0, "Bottom", 10875);
 	set(goId0, "Left", 13625);
 	set(goId0, "Top", 10625);
@@ -1616,7 +1616,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 1314995472);
 // Graphical Object:
-	set(goId0, "Right", 16929);
+	set(goId0, "Right", 16925);
 	set(goId0, "Bottom", 11125);
 	set(goId0, "Left", 13625);
 	set(goId0, "Top", 10875);
@@ -1641,7 +1641,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 1285292955);
 // Graphical Object:
-	set(goId0, "Right", 10534);
+	set(goId0, "Right", 10530);
 	set(goId0, "Bottom", 9000);
 	set(goId0, "Left", 5500);
 	set(goId0, "Top", 8750);
@@ -1666,7 +1666,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 58340752);
 // Graphical Object:
-	set(goId0, "Right", 9739);
+	set(goId0, "Right", 9735);
 	set(goId0, "Bottom", 9250);
 	set(goId0, "Left", 5500);
 	set(goId0, "Top", 9000);
@@ -1691,7 +1691,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 1978648079);
 // Graphical Object:
-	set(goId0, "Right", 11690);
+	set(goId0, "Right", 11686);
 	set(goId0, "Bottom", 9500);
 	set(goId0, "Left", 5500);
 	set(goId0, "Top", 9250);
@@ -1716,7 +1716,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 1228835566);
 // Graphical Object:
-	set(goId0, "Right", 12802);
+	set(goId0, "Right", 12798);
 	set(goId0, "Bottom", 9875);
 	set(goId0, "Left", 5500);
 	set(goId0, "Top", 9625);
@@ -1741,7 +1741,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 1084982580);
 // Graphical Object:
-	set(goId0, "Right", 12344);
+	set(goId0, "Right", 12340);
 	set(goId0, "Bottom", 10125);
 	set(goId0, "Left", 5500);
 	set(goId0, "Top", 9875);
@@ -1766,7 +1766,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 1399728819);
 // Graphical Object:
-	set(goId0, "Right", 13260);
+	set(goId0, "Right", 13256);
 	set(goId0, "Bottom", 10375);
 	set(goId0, "Left", 5500);
 	set(goId0, "Top", 10125);
@@ -1791,7 +1791,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 1920134673);
 // Graphical Object:
-	set(goId0, "Right", 12612);
+	set(goId0, "Right", 12608);
 	set(goId0, "Bottom", 10625);
 	set(goId0, "Left", 5500);
 	set(goId0, "Top", 10375);
@@ -1816,7 +1816,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 1919647744);
 // Graphical Object:
-	set(goId0, "Right", 12138);
+	set(goId0, "Right", 12134);
 	set(goId0, "Bottom", 10875);
 	set(goId0, "Left", 5500);
 	set(goId0, "Top", 10625);
@@ -1841,7 +1841,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 125842878);
 // Graphical Object:
-	set(goId0, "Right", 13059);
+	set(goId0, "Right", 13055);
 	set(goId0, "Bottom", 11125);
 	set(goId0, "Left", 5500);
 	set(goId0, "Top", 10875);
@@ -1866,7 +1866,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 1204710982);
 // Graphical Object:
-	set(goId0, "Right", 13026);
+	set(goId0, "Right", 13029);
 	set(goId0, "Bottom", 11375);
 	set(goId0, "Left", 5500);
 	set(goId0, "Top", 11125);
@@ -1891,8 +1891,8 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 15976751);
 // Graphical Object:
-	set(goId0, "Right", 9404);
-	set(goId0, "Bottom", 0);
+	set(goId0, "Right", 9400);
+	set(goId0, "Bottom", -2125);
 	set(goId0, "Left", 6000);
 	set(goId0, "Top", -2375);
 	set(goId0, "Zrot", 0.0);
@@ -1916,7 +1916,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 1983522522);
 // Graphical Object:
-	set(goId0, "Right", 19170);
+	set(goId0, "Right", 19166);
 	set(goId0, "Bottom", 1625);
 	set(goId0, "Left", 13875);
 	set(goId0, "Top", 1375);
@@ -1941,7 +1941,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 1948725400);
 // Graphical Object:
-	set(goId0, "Right", 8372);
+	set(goId0, "Right", 8368);
 	set(goId0, "Bottom", 6125);
 	set(goId0, "Left", 5375);
 	set(goId0, "Top", 5875);
@@ -2035,7 +2035,7 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "LabelOnOff", TRUE);
 	set(goId0, "OutlineLineType", ddsSolidLineType);
 	set(goId0, "OutlineThickness", 14);
-	set(goId0, "VerticalScroll", -1);
+	set(goId0, "VerticalScroll", 0);
 	set(goId0, "ShowIndependentData", TRUE);
 	set(goId0, "SuppressTable", FALSE);
 	set(goId0, "AutoSizeListingWidth", FALSE);
@@ -2073,7 +2073,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 1353771522);
 // Graphical Object:
-	set(goId0, "Right", 9510);
+	set(goId0, "Right", 9482);
 	set(goId0, "Bottom", -2875);
 	set(goId0, "Left", 8000);
 	set(goId0, "Top", -3125);
@@ -2091,8 +2091,8 @@ goId0 = get_new(pageId, "SmithChart");
 // Graphical Object:
 	set(goId0, "Right", 6100);
 	set(goId0, "Bottom", 5125);
-	set(goId0, "Left", 2082);
-	set(goId0, "Top", 1109);
+	set(goId0, "Left", 2190);
+	set(goId0, "Top", 1375);
 	set(goId0, "Zrot", 0.0);
 	set(goId0, "Yrot", 0.0);
 	set(goId0, "Xrot", 0.0);
@@ -2105,9 +2105,9 @@ goId0 = get_new(pageId, "SmithChart");
 	set(goId0, "FillColor", 0);
 // Plot base...
 	set(goId0, "LegendOnOff", TRUE);
-	set(goId0, "LeftMargin", 793);
+	set(goId0, "LeftMargin", 685);
 	set(goId0, "RightMargin", 100);
-	set(goId0, "TopMargin", 391);
+	set(goId0, "TopMargin", 125);
 	set(goId0, "BottomMargin", 500);
 // Plot Title...
 	set(goId0, "Title", "");
@@ -2129,9 +2129,9 @@ axisID = get_new(goId0, "Axis", ddsXaxis, "X Axis");
 		 set(axisID, "LineType", 0);
 		 set(axisID, "TickFontSize", 112);
 		 set(axisID, "AutoscaleOnOff", TRUE);
-		 set(axisID, "MinValue", -1);
-		 set(axisID, "MaxValue", 1);
-		 set(axisID, "StepSize", 1);
+		 set(axisID, "MinValue", -1.27143473818499);
+		 set(axisID, "MaxValue", 1.27143473818499);
+		 set(axisID, "StepSize", 1.27143473818499);
 		 set(axisID, "Logarithmic", FALSE);
 		 set(axisID, "Font", "Arial For CAE");
 		 set(axisID, "Format", ddsFormatAutomatic);
@@ -2140,8 +2140,8 @@ axisID = get_new(goId0, "Axis", ddsXaxis, "X Axis");
 //Polar axis...
 	if (axisID != NULL) {
 		set(axisID, "DisplayAllIndependentData", TRUE);
-		set(axisID, "IndepStart", -1.0);
-		set(axisID, "IndepStop", 1.0);
+		set(axisID, "IndepStart", 0.0);
+		set(axisID, "IndepStop", 100.0);
 	}
 //Smith chart axis...
 	if (axisID != NULL) {
@@ -2167,9 +2167,9 @@ axisID = get_new(goId0, "Axis", ddsYaxis, "Y Axis");
 		 set(axisID, "LineType", 0);
 		 set(axisID, "TickFontSize", 112);
 		 set(axisID, "AutoscaleOnOff", TRUE);
-		 set(axisID, "MinValue", -1);
-		 set(axisID, "MaxValue", 1);
-		 set(axisID, "StepSize", 1);
+		 set(axisID, "MinValue", -1.27143473818499);
+		 set(axisID, "MaxValue", 1.27143473818499);
+		 set(axisID, "StepSize", 1.27143473818499);
 		 set(axisID, "Logarithmic", FALSE);
 		 set(axisID, "Font", "Arial For CAE");
 		 set(axisID, "Format", ddsFormatAutomatic);
@@ -2178,8 +2178,8 @@ axisID = get_new(goId0, "Axis", ddsYaxis, "Y Axis");
 //Polar axis...
 	if (axisID != NULL) {
 		set(axisID, "DisplayAllIndependentData", TRUE);
-		set(axisID, "IndepStart", -1.0);
-		set(axisID, "IndepStop", 1.0);
+		set(axisID, "IndepStart", 0.0);
+		set(axisID, "IndepStop", 100.0);
 	}
 //Smith chart axis...
 	if (axisID != NULL) {
@@ -2280,8 +2280,8 @@ markerID = get_new(traceID, "MarkerNew", "m1", "7.000000000000000000000000000000
 		set(markerID, "MkrReadoutFontSize", 167);
 		set(markerID, "MkrReadoutColor", 0);
 		set(markerID, "MkrReadoutLeft", 2875);
-		set(markerID, "MkrReadoutRight", 2931);
-		set(markerID, "MkrReadoutBottom", 5181);
+		set(markerID, "MkrReadoutRight", 2903);
+		set(markerID, "MkrReadoutBottom", 5153);
 		set(markerID, "MkrReadoutTop", 5125);
 		set(markerID, "MkrIndicatorColor", 0);
 		set(markerID, "MkrIndicatorSize", 6);
@@ -2449,7 +2449,7 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "LabelOnOff", TRUE);
 	set(goId0, "OutlineLineType", ddsSolidLineType);
 	set(goId0, "OutlineThickness", 14);
-	set(goId0, "VerticalScroll", -1);
+	set(goId0, "VerticalScroll", 0);
 	set(goId0, "ShowIndependentData", TRUE);
 	set(goId0, "SuppressTable", FALSE);
 	set(goId0, "AutoSizeListingWidth", FALSE);
@@ -2506,7 +2506,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 1444267907);
 // Graphical Object:
-	set(goId0, "Right", 9285);
+	set(goId0, "Right", 9257);
 	set(goId0, "Bottom", -2250);
 	set(goId0, "Left", 8000);
 	set(goId0, "Top", -2500);
@@ -2519,7 +2519,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "LineWidth", 14);
 goId0 = get_new(pageId, "Equation");
 // Expression...
-	set(goId0, "Expression", "NumPAE_lines=5");
+	set(goId0, "Expression", "NumPAE_lines=10");
 	set(goId0, "Font", "Arial For CAE");
 	set(goId0, "FontSize", 166);
 	set(goId0, "TextColor", 0);
@@ -2531,7 +2531,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 735914349);
 // Graphical Object:
-	set(goId0, "Right", 9676);
+	set(goId0, "Right", 9741);
 	set(goId0, "Bottom", -2000);
 	set(goId0, "Left", 8000);
 	set(goId0, "Top", -2250);
@@ -2577,7 +2577,7 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "LabelOnOff", TRUE);
 	set(goId0, "OutlineLineType", ddsSolidLineType);
 	set(goId0, "OutlineThickness", 14);
-	set(goId0, "VerticalScroll", -1);
+	set(goId0, "VerticalScroll", 0);
 	set(goId0, "ShowIndependentData", TRUE);
 	set(goId0, "SuppressTable", FALSE);
 	set(goId0, "AutoSizeListingWidth", FALSE);
@@ -2603,7 +2603,7 @@ traceID = get_new(goId0, "Trace", "PAEmax", "", "");
 	set(goId0, "InitPlot", 0);
 goId0 = get_new(pageId, "Equation");
 // Expression...
-	set(goId0, "Expression", "NumPower_lines=5");
+	set(goId0, "Expression", "NumPower_lines=10");
 	set(goId0, "Font", "Arial For CAE");
 	set(goId0, "FontSize", 166);
 	set(goId0, "TextColor", 0);
@@ -2615,7 +2615,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 222745556);
 // Graphical Object:
-	set(goId0, "Right", 9829);
+	set(goId0, "Right", 9894);
 	set(goId0, "Bottom", -2625);
 	set(goId0, "Left", 8000);
 	set(goId0, "Top", -2875);
@@ -2661,7 +2661,7 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "LabelOnOff", TRUE);
 	set(goId0, "OutlineLineType", ddsSolidLineType);
 	set(goId0, "OutlineThickness", 14);
-	set(goId0, "VerticalScroll", -1);
+	set(goId0, "VerticalScroll", 0);
 	set(goId0, "ShowIndependentData", TRUE);
 	set(goId0, "SuppressTable", FALSE);
 	set(goId0, "AutoSizeListingWidth", FALSE);
@@ -2768,7 +2768,7 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "LabelOnOff", TRUE);
 	set(goId0, "OutlineLineType", ddsSolidLineType);
 	set(goId0, "OutlineThickness", 14);
-	set(goId0, "VerticalScroll", -1);
+	set(goId0, "VerticalScroll", 0);
 	set(goId0, "ShowIndependentData", TRUE);
 	set(goId0, "SuppressTable", FALSE);
 	set(goId0, "AutoSizeListingWidth", FALSE);
@@ -2827,7 +2827,7 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "LabelOnOff", TRUE);
 	set(goId0, "OutlineLineType", ddsSolidLineType);
 	set(goId0, "OutlineThickness", 14);
-	set(goId0, "VerticalScroll", -1);
+	set(goId0, "VerticalScroll", 0);
 	set(goId0, "ShowIndependentData", TRUE);
 	set(goId0, "SuppressTable", FALSE);
 	set(goId0, "AutoSizeListingWidth", FALSE);
@@ -2886,7 +2886,7 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "LabelOnOff", TRUE);
 	set(goId0, "OutlineLineType", ddsSolidLineType);
 	set(goId0, "OutlineThickness", 14);
-	set(goId0, "VerticalScroll", -1);
+	set(goId0, "VerticalScroll", 0);
 	set(goId0, "ShowIndependentData", TRUE);
 	set(goId0, "SuppressTable", FALSE);
 	set(goId0, "AutoSizeListingWidth", FALSE);
@@ -2972,7 +2972,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 592540752);
 // Graphical Object:
-	set(goId0, "Right", 9713);
+	set(goId0, "Right", 9685);
 	set(goId0, "Bottom", -1250);
 	set(goId0, "Left", 8000);
 	set(goId0, "Top", -1500);
@@ -2997,7 +2997,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 579316098);
 // Graphical Object:
-	set(goId0, "Right", 9459);
+	set(goId0, "Right", 9431);
 	set(goId0, "Bottom", -1500);
 	set(goId0, "Left", 8000);
 	set(goId0, "Top", -1750);
@@ -3043,7 +3043,7 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "LabelOnOff", TRUE);
 	set(goId0, "OutlineLineType", ddsSolidLineType);
 	set(goId0, "OutlineThickness", 14);
-	set(goId0, "VerticalScroll", -1);
+	set(goId0, "VerticalScroll", 0);
 	set(goId0, "ShowIndependentData", TRUE);
 	set(goId0, "SuppressTable", FALSE);
 	set(goId0, "AutoSizeListingWidth", FALSE);
@@ -3102,7 +3102,7 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "LabelOnOff", TRUE);
 	set(goId0, "OutlineLineType", ddsSolidLineType);
 	set(goId0, "OutlineThickness", 14);
-	set(goId0, "VerticalScroll", -1);
+	set(goId0, "VerticalScroll", 0);
 	set(goId0, "ShowIndependentData", TRUE);
 	set(goId0, "SuppressTable", FALSE);
 	set(goId0, "AutoSizeListingWidth", FALSE);
@@ -3161,7 +3161,7 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "LabelOnOff", TRUE);
 	set(goId0, "OutlineLineType", ddsSolidLineType);
 	set(goId0, "OutlineThickness", 14);
-	set(goId0, "VerticalScroll", -1);
+	set(goId0, "VerticalScroll", 0);
 	set(goId0, "ShowIndependentData", TRUE);
 	set(goId0, "SuppressTable", FALSE);
 	set(goId0, "AutoSizeListingWidth", FALSE);
@@ -3220,7 +3220,7 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "LabelOnOff", TRUE);
 	set(goId0, "OutlineLineType", ddsSolidLineType);
 	set(goId0, "OutlineThickness", 14);
-	set(goId0, "VerticalScroll", -1);
+	set(goId0, "VerticalScroll", 0);
 	set(goId0, "ShowIndependentData", TRUE);
 	set(goId0, "SuppressTable", FALSE);
 	set(goId0, "AutoSizeListingWidth", FALSE);
@@ -3279,7 +3279,7 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "LabelOnOff", TRUE);
 	set(goId0, "OutlineLineType", ddsSolidLineType);
 	set(goId0, "OutlineThickness", 14);
-	set(goId0, "VerticalScroll", -1);
+	set(goId0, "VerticalScroll", 0);
 	set(goId0, "ShowIndependentData", TRUE);
 	set(goId0, "SuppressTable", FALSE);
 	set(goId0, "AutoSizeListingWidth", FALSE);
@@ -3338,7 +3338,7 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "LabelOnOff", TRUE);
 	set(goId0, "OutlineLineType", ddsSolidLineType);
 	set(goId0, "OutlineThickness", 14);
-	set(goId0, "VerticalScroll", -1);
+	set(goId0, "VerticalScroll", 0);
 	set(goId0, "ShowIndependentData", TRUE);
 	set(goId0, "SuppressTable", FALSE);
 	set(goId0, "AutoSizeListingWidth", FALSE);
@@ -3397,7 +3397,7 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "LabelOnOff", TRUE);
 	set(goId0, "OutlineLineType", ddsSolidLineType);
 	set(goId0, "OutlineThickness", 14);
-	set(goId0, "VerticalScroll", -1);
+	set(goId0, "VerticalScroll", 0);
 	set(goId0, "ShowIndependentData", TRUE);
 	set(goId0, "SuppressTable", FALSE);
 	set(goId0, "AutoSizeListingWidth", FALSE);
@@ -3494,7 +3494,7 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "LabelOnOff", TRUE);
 	set(goId0, "OutlineLineType", ddsSolidLineType);
 	set(goId0, "OutlineThickness", 14);
-	set(goId0, "VerticalScroll", -1);
+	set(goId0, "VerticalScroll", 0);
 	set(goId0, "ShowIndependentData", TRUE);
 	set(goId0, "SuppressTable", FALSE);
 	set(goId0, "AutoSizeListingWidth", FALSE);
@@ -3553,7 +3553,7 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "LabelOnOff", TRUE);
 	set(goId0, "OutlineLineType", ddsSolidLineType);
 	set(goId0, "OutlineThickness", 14);
-	set(goId0, "VerticalScroll", -1);
+	set(goId0, "VerticalScroll", 0);
 	set(goId0, "ShowIndependentData", TRUE);
 	set(goId0, "SuppressTable", FALSE);
 	set(goId0, "AutoSizeListingWidth", FALSE);
@@ -3612,7 +3612,7 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "LabelOnOff", TRUE);
 	set(goId0, "OutlineLineType", ddsSolidLineType);
 	set(goId0, "OutlineThickness", 14);
-	set(goId0, "VerticalScroll", -1);
+	set(goId0, "VerticalScroll", 0);
 	set(goId0, "ShowIndependentData", TRUE);
 	set(goId0, "SuppressTable", FALSE);
 	set(goId0, "AutoSizeListingWidth", FALSE);
@@ -3695,7 +3695,7 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "LabelOnOff", TRUE);
 	set(goId0, "OutlineLineType", ddsSolidLineType);
 	set(goId0, "OutlineThickness", 14);
-	set(goId0, "VerticalScroll", -1);
+	set(goId0, "VerticalScroll", 0);
 	set(goId0, "ShowIndependentData", TRUE);
 	set(goId0, "SuppressTable", FALSE);
 	set(goId0, "AutoSizeListingWidth", FALSE);
@@ -3754,7 +3754,7 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "LabelOnOff", TRUE);
 	set(goId0, "OutlineLineType", ddsSolidLineType);
 	set(goId0, "OutlineThickness", 14);
-	set(goId0, "VerticalScroll", -1);
+	set(goId0, "VerticalScroll", 0);
 	set(goId0, "ShowIndependentData", TRUE);
 	set(goId0, "SuppressTable", FALSE);
 	set(goId0, "AutoSizeListingWidth", FALSE);
@@ -3813,7 +3813,7 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "LabelOnOff", TRUE);
 	set(goId0, "OutlineLineType", ddsSolidLineType);
 	set(goId0, "OutlineThickness", 14);
-	set(goId0, "VerticalScroll", -1);
+	set(goId0, "VerticalScroll", 0);
 	set(goId0, "ShowIndependentData", TRUE);
 	set(goId0, "SuppressTable", FALSE);
 	set(goId0, "AutoSizeListingWidth", FALSE);
@@ -3872,7 +3872,7 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "LabelOnOff", TRUE);
 	set(goId0, "OutlineLineType", ddsSolidLineType);
 	set(goId0, "OutlineThickness", 14);
-	set(goId0, "VerticalScroll", -1);
+	set(goId0, "VerticalScroll", 0);
 	set(goId0, "ShowIndependentData", TRUE);
 	set(goId0, "SuppressTable", FALSE);
 	set(goId0, "AutoSizeListingWidth", FALSE);
@@ -4100,7 +4100,7 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "LabelOnOff", FALSE);
 	set(goId0, "OutlineLineType", ddsSolidLineType);
 	set(goId0, "OutlineThickness", 14);
-	set(goId0, "VerticalScroll", -1);
+	set(goId0, "VerticalScroll", 0);
 	set(goId0, "ShowIndependentData", TRUE);
 	set(goId0, "SuppressTable", FALSE);
 	set(goId0, "AutoSizeListingWidth", FALSE);
@@ -4183,7 +4183,7 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "LabelOnOff", FALSE);
 	set(goId0, "OutlineLineType", ddsSolidLineType);
 	set(goId0, "OutlineThickness", 14);
-	set(goId0, "VerticalScroll", -1);
+	set(goId0, "VerticalScroll", 0);
 	set(goId0, "ShowIndependentData", TRUE);
 	set(goId0, "SuppressTable", FALSE);
 	set(goId0, "AutoSizeListingWidth", FALSE);
@@ -4238,8 +4238,8 @@ goId0 = get_new(pageId, "SmithChart");
 // Graphical Object:
 	set(goId0, "Right", 5475);
 	set(goId0, "Bottom", 250);
-	set(goId0, "Left", 1636);
-	set(goId0, "Top", -4036);
+	set(goId0, "Left", 1750);
+	set(goId0, "Top", -3500);
 	set(goId0, "Zrot", 0.0);
 	set(goId0, "Yrot", 0.0);
 	set(goId0, "Xrot", 0.0);
@@ -4252,9 +4252,9 @@ goId0 = get_new(pageId, "SmithChart");
 	set(goId0, "FillColor", 0);
 // Plot base...
 	set(goId0, "LegendOnOff", TRUE);
-	set(goId0, "LeftMargin", 614);
+	set(goId0, "LeftMargin", 500);
 	set(goId0, "RightMargin", 100);
-	set(goId0, "TopMargin", 661);
+	set(goId0, "TopMargin", 125);
 	set(goId0, "BottomMargin", 500);
 // Plot Title...
 	set(goId0, "Title", "");
@@ -4287,8 +4287,8 @@ axisID = get_new(goId0, "Axis", ddsXaxis, "X Axis");
 //Polar axis...
 	if (axisID != NULL) {
 		set(axisID, "DisplayAllIndependentData", TRUE);
-		set(axisID, "IndepStart", -1.0);
-		set(axisID, "IndepStop", 1.0);
+		set(axisID, "IndepStart", 0.0);
+		set(axisID, "IndepStop", 98.0);
 	}
 //Smith chart axis...
 	if (axisID != NULL) {
@@ -4325,8 +4325,8 @@ axisID = get_new(goId0, "Axis", ddsYaxis, "Y Axis");
 //Polar axis...
 	if (axisID != NULL) {
 		set(axisID, "DisplayAllIndependentData", TRUE);
-		set(axisID, "IndepStart", -1.0);
-		set(axisID, "IndepStop", 1.0);
+		set(axisID, "IndepStart", 0.0);
+		set(axisID, "IndepStop", 98.0);
 	}
 //Smith chart axis...
 	if (axisID != NULL) {
@@ -4376,7 +4376,7 @@ traceID = get_new(goId0, "Trace", "PAE_contours_Rho", "X Axis", "Y Axis");
 			set(traceID, "DensitySymbolType", ddsStarSymbol);
 		}
 	}
-markerID = get_new(traceID, "MarkerNew", "E", "43", 29, "", "", 1, "");
+markerID = get_new(traceID, "MarkerNew", "E", "40", 22, "", "", 1, "");
 // Base Class Object:
 	set(markerID, "Name", "");
 	set(markerID, "Uid", 1764610377);
@@ -4427,8 +4427,8 @@ markerID = get_new(traceID, "MarkerNew", "E", "43", 29, "", "", 1, "");
 		set(markerID, "MkrReadoutFontSize", 167);
 		set(markerID, "MkrReadoutColor", 5);
 		set(markerID, "MkrReadoutLeft", 1875);
-		set(markerID, "MkrReadoutRight", 2045);
-		set(markerID, "MkrReadoutBottom", 223);
+		set(markerID, "MkrReadoutRight", 3813);
+		set(markerID, "MkrReadoutBottom", 362);
 		set(markerID, "MkrReadoutTop", 0);
 		set(markerID, "MkrIndicatorColor", 0);
 		set(markerID, "MkrIndicatorSize", 6);
@@ -4480,7 +4480,7 @@ traceID = get_new(goId0, "Trace", "Power_contours_Rho", "X Axis", "Y Axis");
 			set(traceID, "DensitySymbolType", ddsStarSymbol);
 		}
 	}
-markerID = get_new(traceID, "MarkerNew", "P", "13", 79, "", "", 1, "");
+markerID = get_new(traceID, "MarkerNew", "P", "58", 137, "", "", 1, "");
 // Base Class Object:
 	set(markerID, "Name", "default");
 	set(markerID, "Uid", 1319799526);
@@ -4531,8 +4531,8 @@ markerID = get_new(traceID, "MarkerNew", "P", "13", 79, "", "", 1, "");
 		set(markerID, "MkrReadoutFontSize", 167);
 		set(markerID, "MkrReadoutColor", 1);
 		set(markerID, "MkrReadoutLeft", 4125);
-		set(markerID, "MkrReadoutRight", 4295);
-		set(markerID, "MkrReadoutBottom", 223);
+		set(markerID, "MkrReadoutRight", 5970);
+		set(markerID, "MkrReadoutBottom", 362);
 		set(markerID, "MkrReadoutTop", 0);
 		set(markerID, "MkrIndicatorColor", 0);
 		set(markerID, "MkrIndicatorSize", 6);
@@ -4639,7 +4639,7 @@ goId0 = get_new(pageId, "Text");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 1536925666);
 // Graphical Object:
-	set(goId0, "Right", 12598);
+	set(goId0, "Right", 9452);
 	set(goId0, "Bottom", 5404);
 	set(goId0, "Left", 5778);
 	set(goId0, "Top", 4903);
@@ -4749,7 +4749,7 @@ goId1 = get_new(goId0, "Listing");
 	set(goId1, "LabelOnOff", FALSE);
 	set(goId1, "OutlineLineType", ddsSolidLineType);
 	set(goId1, "OutlineThickness", 1);
-	set(goId1, "VerticalScroll", -1);
+	set(goId1, "VerticalScroll", 0);
 	set(goId1, "ShowIndependentData", FALSE);
 	set(goId1, "SuppressTable", FALSE);
 	set(goId1, "AutoSizeListingWidth", FALSE);
@@ -4759,6 +4759,29 @@ goId1 = get_new(goId0, "Listing");
 	set(goId1, "TitleFont", "Arial For CAE");
 	set(goId1, "TitleFontSize", 126);
 	set(goId1, "TitleColor", 0);
+axisID = get_new(goId1, "Axis", ddsXaxis, "");
+// Axis...
+	if (axisID != NULL) {
+		 set(axisID, "Uid", 1672794546);
+		 set(axisID, "Color", 104);
+		 set(axisID, "UserLabel", "");
+		 set(axisID, "LabelColor", 0);
+		 set(axisID, "TicksOnOff", TRUE);
+		 set(axisID, "GridOnOff", TRUE);
+		 set(axisID, "LabelsOnOff", TRUE);
+		 set(axisID, "FontSize", 140);
+		 set(axisID, "LineThick", 7);
+		 set(axisID, "LineType", 0);
+		 set(axisID, "TickFontSize", 112);
+		 set(axisID, "AutoscaleOnOff", TRUE);
+		 set(axisID, "MinValue", -1);
+		 set(axisID, "MaxValue", 1);
+		 set(axisID, "StepSize", 0);
+		 set(axisID, "Logarithmic", FALSE);
+		 set(axisID, "Font", "Arial For CAE");
+		 set(axisID, "Format", ddsFormatAutomatic);
+		 set(axisID, "NumDigits", 3);
+	}
 traceID = get_new(goId1, "Trace", "sort(indep(Power_contours[::,0,0]),\"descending\")", "", "");
 // Text trace:
 	if (traceID != NULL) set(traceID, "ComplexNumberFormat", ddsComplexFormatMagPhase);
@@ -4824,7 +4847,7 @@ goId1 = get_new(goId0, "Listing");
 	set(goId1, "LabelOnOff", FALSE);
 	set(goId1, "OutlineLineType", ddsSolidLineType);
 	set(goId1, "OutlineThickness", 14);
-	set(goId1, "VerticalScroll", -1);
+	set(goId1, "VerticalScroll", 0);
 	set(goId1, "ShowIndependentData", FALSE);
 	set(goId1, "SuppressTable", FALSE);
 	set(goId1, "AutoSizeListingWidth", FALSE);
@@ -4834,6 +4857,29 @@ goId1 = get_new(goId0, "Listing");
 	set(goId1, "TitleFont", "Arial For CAE");
 	set(goId1, "TitleFontSize", 154);
 	set(goId1, "TitleColor", 0);
+axisID = get_new(goId1, "Axis", ddsXaxis, "");
+// Axis...
+	if (axisID != NULL) {
+		 set(axisID, "Uid", 939776229);
+		 set(axisID, "Color", 104);
+		 set(axisID, "UserLabel", "");
+		 set(axisID, "LabelColor", 0);
+		 set(axisID, "TicksOnOff", TRUE);
+		 set(axisID, "GridOnOff", TRUE);
+		 set(axisID, "LabelsOnOff", TRUE);
+		 set(axisID, "FontSize", 140);
+		 set(axisID, "LineThick", 7);
+		 set(axisID, "LineType", 0);
+		 set(axisID, "TickFontSize", 112);
+		 set(axisID, "AutoscaleOnOff", TRUE);
+		 set(axisID, "MinValue", -1);
+		 set(axisID, "MaxValue", 1);
+		 set(axisID, "StepSize", 0);
+		 set(axisID, "Logarithmic", FALSE);
+		 set(axisID, "Font", "Arial For CAE");
+		 set(axisID, "Format", ddsFormatAutomatic);
+		 set(axisID, "NumDigits", 3);
+	}
 traceID = get_new(goId1, "Trace", "sort(indep(PAE_contours[::,0,0]),\"descending\")", "", "");
 // Text trace:
 	if (traceID != NULL) set(traceID, "ComplexNumberFormat", ddsComplexFormatMagPhase);
@@ -4923,7 +4969,7 @@ goId1 = get_new(goId0, "Listing");
 	set(goId1, "LabelOnOff", FALSE);
 	set(goId1, "OutlineLineType", ddsSolidLineType);
 	set(goId1, "OutlineThickness", 14);
-	set(goId1, "VerticalScroll", -1);
+	set(goId1, "VerticalScroll", 0);
 	set(goId1, "ShowIndependentData", FALSE);
 	set(goId1, "SuppressTable", FALSE);
 	set(goId1, "AutoSizeListingWidth", FALSE);
@@ -4933,6 +4979,29 @@ goId1 = get_new(goId0, "Listing");
 	set(goId1, "TitleFont", "Arial For CAE");
 	set(goId1, "TitleFontSize", 154);
 	set(goId1, "TitleColor", 0);
+axisID = get_new(goId1, "Axis", ddsXaxis, "");
+// Axis...
+	if (axisID != NULL) {
+		 set(axisID, "Uid", 1527300753);
+		 set(axisID, "Color", 104);
+		 set(axisID, "UserLabel", "");
+		 set(axisID, "LabelColor", 0);
+		 set(axisID, "TicksOnOff", TRUE);
+		 set(axisID, "GridOnOff", TRUE);
+		 set(axisID, "LabelsOnOff", TRUE);
+		 set(axisID, "FontSize", 140);
+		 set(axisID, "LineThick", 7);
+		 set(axisID, "LineType", 0);
+		 set(axisID, "TickFontSize", 112);
+		 set(axisID, "AutoscaleOnOff", TRUE);
+		 set(axisID, "MinValue", -1);
+		 set(axisID, "MaxValue", 1);
+		 set(axisID, "StepSize", 0);
+		 set(axisID, "Logarithmic", FALSE);
+		 set(axisID, "Font", "Arial For CAE");
+		 set(axisID, "Format", ddsFormatAutomatic);
+		 set(axisID, "NumDigits", 3);
+	}
 traceID = get_new(goId1, "Trace", "sort(indep(GainTransducerContours[::,0,0]),\"descending\")", "", "");
 // Text trace:
 	if (traceID != NULL) set(traceID, "ComplexNumberFormat", ddsComplexFormatMagPhase);
@@ -5006,7 +5075,7 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "LabelOnOff", FALSE);
 	set(goId0, "OutlineLineType", ddsSolidLineType);
 	set(goId0, "OutlineThickness", 14);
-	set(goId0, "VerticalScroll", -1);
+	set(goId0, "VerticalScroll", 0);
 	set(goId0, "ShowIndependentData", FALSE);
 	set(goId0, "SuppressTable", FALSE);
 	set(goId0, "AutoSizeListingWidth", FALSE);
@@ -5016,6 +5085,29 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "TitleFont", "Arial For CAE");
 	set(goId0, "TitleFontSize", 168);
 	set(goId0, "TitleColor", 0);
+axisID = get_new(goId0, "Axis", ddsXaxis, "");
+// Axis...
+	if (axisID != NULL) {
+		 set(axisID, "Uid", 1773039403);
+		 set(axisID, "Color", 104);
+		 set(axisID, "UserLabel", "");
+		 set(axisID, "LabelColor", 0);
+		 set(axisID, "TicksOnOff", TRUE);
+		 set(axisID, "GridOnOff", TRUE);
+		 set(axisID, "LabelsOnOff", TRUE);
+		 set(axisID, "FontSize", 140);
+		 set(axisID, "LineThick", 7);
+		 set(axisID, "LineType", 0);
+		 set(axisID, "TickFontSize", 112);
+		 set(axisID, "AutoscaleOnOff", TRUE);
+		 set(axisID, "MinValue", -1);
+		 set(axisID, "MaxValue", 1);
+		 set(axisID, "StepSize", 0);
+		 set(axisID, "Logarithmic", FALSE);
+		 set(axisID, "Font", "Arial For CAE");
+		 set(axisID, "Format", ddsFormatAutomatic);
+		 set(axisID, "NumDigits", 3);
+	}
 traceID = get_new(goId0, "Trace", "Z_at_marker_E", "", "");
 // Text trace:
 	if (traceID != NULL) set(traceID, "ComplexNumberFormat", ddsComplexFormatRealImaginary);
@@ -5065,7 +5157,7 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "LabelOnOff", FALSE);
 	set(goId0, "OutlineLineType", ddsSolidLineType);
 	set(goId0, "OutlineThickness", 14);
-	set(goId0, "VerticalScroll", -1);
+	set(goId0, "VerticalScroll", 0);
 	set(goId0, "ShowIndependentData", FALSE);
 	set(goId0, "SuppressTable", FALSE);
 	set(goId0, "AutoSizeListingWidth", FALSE);
@@ -5075,6 +5167,29 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "TitleFont", "Arial For CAE");
 	set(goId0, "TitleFontSize", 168);
 	set(goId0, "TitleColor", 0);
+axisID = get_new(goId0, "Axis", ddsXaxis, "");
+// Axis...
+	if (axisID != NULL) {
+		 set(axisID, "Uid", 902867397);
+		 set(axisID, "Color", 104);
+		 set(axisID, "UserLabel", "");
+		 set(axisID, "LabelColor", 0);
+		 set(axisID, "TicksOnOff", TRUE);
+		 set(axisID, "GridOnOff", TRUE);
+		 set(axisID, "LabelsOnOff", TRUE);
+		 set(axisID, "FontSize", 140);
+		 set(axisID, "LineThick", 7);
+		 set(axisID, "LineType", 0);
+		 set(axisID, "TickFontSize", 112);
+		 set(axisID, "AutoscaleOnOff", TRUE);
+		 set(axisID, "MinValue", -1);
+		 set(axisID, "MaxValue", 1);
+		 set(axisID, "StepSize", 0);
+		 set(axisID, "Logarithmic", FALSE);
+		 set(axisID, "Font", "Arial For CAE");
+		 set(axisID, "Format", ddsFormatAutomatic);
+		 set(axisID, "NumDigits", 3);
+	}
 traceID = get_new(goId0, "Trace", "Z_at_marker_P", "", "");
 // Text trace:
 	if (traceID != NULL) set(traceID, "ComplexNumberFormat", ddsComplexFormatRealImaginary);
@@ -5095,9 +5210,9 @@ goId0 = get_new(pageId, "Plot");
 	set(goId0, "Uid", 95203170);
 // Graphical Object:
 	set(goId0, "Right", 15100);
-	set(goId0, "Bottom", 882);
-	set(goId0, "Left", 10483);
-	set(goId0, "Top", -3881);
+	set(goId0, "Bottom", 769);
+	set(goId0, "Left", 10544);
+	set(goId0, "Top", -3250);
 	set(goId0, "Zrot", 0.0);
 	set(goId0, "Yrot", 0.0);
 	set(goId0, "Xrot", 0.0);
@@ -5110,10 +5225,10 @@ goId0 = get_new(pageId, "Plot");
 	set(goId0, "FillColor", 0);
 // Plot base...
 	set(goId0, "LegendOnOff", TRUE);
-	set(goId0, "LeftMargin", 767);
+	set(goId0, "LeftMargin", 706);
 	set(goId0, "RightMargin", 100);
-	set(goId0, "TopMargin", 756);
-	set(goId0, "BottomMargin", 757);
+	set(goId0, "TopMargin", 125);
+	set(goId0, "BottomMargin", 644);
 // Plot Title...
 	set(goId0, "Title", "");
 	set(goId0, "TitleFont", "Arial For CAE");
@@ -5134,9 +5249,9 @@ axisID = get_new(goId0, "Axis", ddsXaxis, "X Axis");
 		 set(axisID, "LineType", 0);
 		 set(axisID, "TickFontSize", 112);
 		 set(axisID, "AutoscaleOnOff", TRUE);
-		 set(axisID, "MinValue", -1);
-		 set(axisID, "MaxValue", 1);
-		 set(axisID, "StepSize", 0.2);
+		 set(axisID, "MinValue", 0);
+		 set(axisID, "MaxValue", 100);
+		 set(axisID, "StepSize", 10);
 		 set(axisID, "Logarithmic", FALSE);
 		 set(axisID, "Font", "Arial For CAE");
 		 set(axisID, "Format", ddsFormatAutomatic);
@@ -5157,9 +5272,9 @@ axisID = get_new(goId0, "Axis", ddsYaxis, "Y Axis");
 		 set(axisID, "LineType", 0);
 		 set(axisID, "TickFontSize", 112);
 		 set(axisID, "AutoscaleOnOff", TRUE);
-		 set(axisID, "MinValue", -1);
-		 set(axisID, "MaxValue", 1);
-		 set(axisID, "StepSize", 0.2);
+		 set(axisID, "MinValue", 0);
+		 set(axisID, "MaxValue", 100);
+		 set(axisID, "StepSize", 20);
 		 set(axisID, "Logarithmic", FALSE);
 		 set(axisID, "Font", "Arial For CAE");
 		 set(axisID, "Format", ddsFormatAutomatic);
@@ -5250,7 +5365,7 @@ traceID = get_new(goId0, "Trace", "plot_vs(imag(PAE_contours), real(PAE_contours
 			set(traceID, "DensitySymbolType", ddsDotSymbol);
 		}
 	}
-markerID = get_new(traceID, "MarkerNew", "PAE_Z", "9.06551561698545250000000000000000", 248, "", "10.06105091179748900000000000000000", 1, "");
+markerID = get_new(traceID, "MarkerNew", "PAE_Z", "14.99826778846420083368684572633356", 340, "", "10.06105091179748900000000000000000", 1, "");
 // Base Class Object:
 	set(markerID, "Name", "");
 	set(markerID, "Uid", 583668760);
@@ -5301,8 +5416,8 @@ markerID = get_new(traceID, "MarkerNew", "PAE_Z", "9.065515616985452500000000000
 		set(markerID, "MkrReadoutFontSize", 167);
 		set(markerID, "MkrReadoutColor", 5);
 		set(markerID, "MkrReadoutLeft", 10625);
-		set(markerID, "MkrReadoutRight", 11202);
-		set(markerID, "MkrReadoutBottom", -4152);
+		set(markerID, "MkrReadoutRight", 12657);
+		set(markerID, "MkrReadoutBottom", -4013);
 		set(markerID, "MkrReadoutTop", -4375);
 		set(markerID, "MkrIndicatorColor", 0);
 		set(markerID, "MkrIndicatorSize", 6);
@@ -5354,7 +5469,7 @@ traceID = get_new(goId0, "Trace", "plot_vs(imag(Power_contours), real(Power_cont
 			set(traceID, "DensitySymbolType", ddsDotSymbol);
 		}
 	}
-markerID = get_new(traceID, "MarkerNew", "Pdel_Z", "9.08574744418633706288801477057859", 233, "", "4.22800029406538513399027578998357", 1, "");
+markerID = get_new(traceID, "MarkerNew", "Pdel_Z", "9.08574744418633706288801477057859", 410, "", "4.22800029406538513399027578998357", 1, "");
 // Base Class Object:
 	set(markerID, "Name", "");
 	set(markerID, "Uid", 1017588709);
@@ -5405,8 +5520,8 @@ markerID = get_new(traceID, "MarkerNew", "Pdel_Z", "9.08574744418633706288801477
 		set(markerID, "MkrReadoutFontSize", 167);
 		set(markerID, "MkrReadoutColor", 1);
 		set(markerID, "MkrReadoutLeft", 13000);
-		set(markerID, "MkrReadoutRight", 13590);
-		set(markerID, "MkrReadoutBottom", -4152);
+		set(markerID, "MkrReadoutRight", 14845);
+		set(markerID, "MkrReadoutBottom", -4013);
 		set(markerID, "MkrReadoutTop", -4375);
 		set(markerID, "MkrIndicatorColor", 0);
 		set(markerID, "MkrIndicatorSize", 6);
@@ -5428,9 +5543,9 @@ goId0 = get_new(pageId, "Plot");
 	set(goId0, "Uid", 1628695797);
 // Graphical Object:
 	set(goId0, "Right", 14975);
-	set(goId0, "Bottom", 5704);
-	set(goId0, "Left", 10026);
-	set(goId0, "Top", 46);
+	set(goId0, "Bottom", 5424);
+	set(goId0, "Left", 10139);
+	set(goId0, "Top", 1125);
 	set(goId0, "Zrot", 0.0);
 	set(goId0, "Yrot", 0.0);
 	set(goId0, "Xrot", 0.0);
@@ -5443,10 +5558,10 @@ goId0 = get_new(pageId, "Plot");
 	set(goId0, "FillColor", 0);
 // Plot base...
 	set(goId0, "LegendOnOff", TRUE);
-	set(goId0, "LeftMargin", 1099);
+	set(goId0, "LeftMargin", 986);
 	set(goId0, "RightMargin", 100);
-	set(goId0, "TopMargin", 1204);
-	set(goId0, "BottomMargin", 1204);
+	set(goId0, "TopMargin", 125);
+	set(goId0, "BottomMargin", 924);
 // Plot Title...
 	set(goId0, "Title", "");
 	set(goId0, "TitleFont", "Arial For CAE");
@@ -5467,9 +5582,9 @@ axisID = get_new(goId0, "Axis", ddsXaxis, "X Axis");
 		 set(axisID, "LineType", 0);
 		 set(axisID, "TickFontSize", 112);
 		 set(axisID, "AutoscaleOnOff", TRUE);
-		 set(axisID, "MinValue", -1);
-		 set(axisID, "MaxValue", 1);
-		 set(axisID, "StepSize", 0.2);
+		 set(axisID, "MinValue", -10);
+		 set(axisID, "MaxValue", 100);
+		 set(axisID, "StepSize", 10);
 		 set(axisID, "Logarithmic", FALSE);
 		 set(axisID, "Font", "Arial For CAE");
 		 set(axisID, "Format", ddsFormatAutomatic);
@@ -5490,9 +5605,9 @@ axisID = get_new(goId0, "Axis", ddsYaxis, "Y Axis");
 		 set(axisID, "LineType", 0);
 		 set(axisID, "TickFontSize", 112);
 		 set(axisID, "AutoscaleOnOff", TRUE);
-		 set(axisID, "MinValue", -1);
-		 set(axisID, "MaxValue", 1);
-		 set(axisID, "StepSize", 0.2);
+		 set(axisID, "MinValue", -40);
+		 set(axisID, "MaxValue", 100);
+		 set(axisID, "StepSize", 20);
 		 set(axisID, "Logarithmic", FALSE);
 		 set(axisID, "Font", "Arial For CAE");
 		 set(axisID, "Format", ddsFormatAutomatic);
@@ -5583,7 +5698,7 @@ traceID = get_new(goId0, "Trace", "vs(imag(GainTransducerContours),real(GainTran
 			set(traceID, "DensitySymbolType", ddsDotSymbol);
 		}
 	}
-markerID = get_new(traceID, "MarkerNew", "Gain_Z", "7.45700629573242060000000000000000", 213, "", "8.56278890532671790000000000000000", 1, "");
+markerID = get_new(traceID, "MarkerNew", "Gain_Z", "5.92590597593910572982167650479823", 136, "", "8.15352811608839367352175031555817", 1, "");
 // Base Class Object:
 	set(markerID, "Name", "");
 	set(markerID, "Uid", 860870391);
@@ -5634,8 +5749,8 @@ markerID = get_new(traceID, "MarkerNew", "Gain_Z", "7.45700629573242060000000000
 		set(markerID, "MkrReadoutFontSize", 167);
 		set(markerID, "MkrReadoutColor", 1);
 		set(markerID, "MkrReadoutLeft", 10875);
-		set(markerID, "MkrReadoutRight", 11479);
-		set(markerID, "MkrReadoutBottom", 5848);
+		set(markerID, "MkrReadoutRight", 12626);
+		set(markerID, "MkrReadoutBottom", 5987);
 		set(markerID, "MkrReadoutTop", 5625);
 		set(markerID, "MkrIndicatorColor", 0);
 		set(markerID, "MkrIndicatorSize", 6);
@@ -5738,8 +5853,8 @@ markerID = get_new(traceID, "MarkerNew", "m2", "7.000000000000000000000000000000
 		set(markerID, "MkrReadoutFontSize", 167);
 		set(markerID, "MkrReadoutColor", 0);
 		set(markerID, "MkrReadoutLeft", 10125);
-		set(markerID, "MkrReadoutRight", 10181);
-		set(markerID, "MkrReadoutBottom", 4556);
+		set(markerID, "MkrReadoutRight", 10153);
+		set(markerID, "MkrReadoutBottom", 4528);
 		set(markerID, "MkrReadoutTop", 4500);
 		set(markerID, "MkrIndicatorColor", 0);
 		set(markerID, "MkrIndicatorSize", 6);
@@ -5916,7 +6031,7 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "LabelOnOff", TRUE);
 	set(goId0, "OutlineLineType", ddsSolidLineType);
 	set(goId0, "OutlineThickness", 14);
-	set(goId0, "VerticalScroll", -1);
+	set(goId0, "VerticalScroll", 0);
 	set(goId0, "ShowIndependentData", FALSE);
 	set(goId0, "SuppressTable", FALSE);
 	set(goId0, "AutoSizeListingWidth", FALSE);
@@ -5926,6 +6041,29 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "TitleFont", "Arial For CAE");
 	set(goId0, "TitleFontSize", 182);
 	set(goId0, "TitleColor", 0);
+axisID = get_new(goId0, "Axis", ddsXaxis, "");
+// Axis...
+	if (axisID != NULL) {
+		 set(axisID, "Uid", 969186264);
+		 set(axisID, "Color", 104);
+		 set(axisID, "UserLabel", "");
+		 set(axisID, "LabelColor", 0);
+		 set(axisID, "TicksOnOff", TRUE);
+		 set(axisID, "GridOnOff", TRUE);
+		 set(axisID, "LabelsOnOff", TRUE);
+		 set(axisID, "FontSize", 140);
+		 set(axisID, "LineThick", 7);
+		 set(axisID, "LineType", 0);
+		 set(axisID, "TickFontSize", 112);
+		 set(axisID, "AutoscaleOnOff", TRUE);
+		 set(axisID, "MinValue", -1);
+		 set(axisID, "MaxValue", 1);
+		 set(axisID, "StepSize", 0);
+		 set(axisID, "Logarithmic", FALSE);
+		 set(axisID, "Font", "Arial For CAE");
+		 set(axisID, "Format", ddsFormatAutomatic);
+		 set(axisID, "NumDigits", 3);
+	}
 traceID = get_new(goId0, "Trace", "m2_Z", "", "");
 // Text trace:
 	if (traceID != NULL) set(traceID, "ComplexNumberFormat", ddsComplexFormatRealImaginary);
@@ -5975,7 +6113,7 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "LabelOnOff", FALSE);
 	set(goId0, "OutlineLineType", ddsSolidLineType);
 	set(goId0, "OutlineThickness", 14);
-	set(goId0, "VerticalScroll", -1);
+	set(goId0, "VerticalScroll", 0);
 	set(goId0, "ShowIndependentData", FALSE);
 	set(goId0, "SuppressTable", FALSE);
 	set(goId0, "AutoSizeListingWidth", FALSE);
@@ -5985,6 +6123,29 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "TitleFont", "Arial For CAE");
 	set(goId0, "TitleFontSize", 168);
 	set(goId0, "TitleColor", 0);
+axisID = get_new(goId0, "Axis", ddsXaxis, "");
+// Axis...
+	if (axisID != NULL) {
+		 set(axisID, "Uid", 1459083514);
+		 set(axisID, "Color", 104);
+		 set(axisID, "UserLabel", "");
+		 set(axisID, "LabelColor", 0);
+		 set(axisID, "TicksOnOff", TRUE);
+		 set(axisID, "GridOnOff", TRUE);
+		 set(axisID, "LabelsOnOff", TRUE);
+		 set(axisID, "FontSize", 140);
+		 set(axisID, "LineThick", 7);
+		 set(axisID, "LineType", 0);
+		 set(axisID, "TickFontSize", 112);
+		 set(axisID, "AutoscaleOnOff", TRUE);
+		 set(axisID, "MinValue", -1);
+		 set(axisID, "MaxValue", 1);
+		 set(axisID, "StepSize", 0);
+		 set(axisID, "Logarithmic", FALSE);
+		 set(axisID, "Font", "Arial For CAE");
+		 set(axisID, "Format", ddsFormatAutomatic);
+		 set(axisID, "NumDigits", 3);
+	}
 traceID = get_new(goId0, "Trace", "indep(PAE_Z)+j*PAE_Z", "", "");
 // Text trace:
 	if (traceID != NULL) set(traceID, "ComplexNumberFormat", ddsComplexFormatRealImaginary);
@@ -6034,7 +6195,7 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "LabelOnOff", FALSE);
 	set(goId0, "OutlineLineType", ddsSolidLineType);
 	set(goId0, "OutlineThickness", 14);
-	set(goId0, "VerticalScroll", -1);
+	set(goId0, "VerticalScroll", 0);
 	set(goId0, "ShowIndependentData", FALSE);
 	set(goId0, "SuppressTable", FALSE);
 	set(goId0, "AutoSizeListingWidth", FALSE);
@@ -6044,6 +6205,29 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "TitleFont", "Arial For CAE");
 	set(goId0, "TitleFontSize", 168);
 	set(goId0, "TitleColor", 0);
+axisID = get_new(goId0, "Axis", ddsXaxis, "");
+// Axis...
+	if (axisID != NULL) {
+		 set(axisID, "Uid", 1355086548);
+		 set(axisID, "Color", 104);
+		 set(axisID, "UserLabel", "");
+		 set(axisID, "LabelColor", 0);
+		 set(axisID, "TicksOnOff", TRUE);
+		 set(axisID, "GridOnOff", TRUE);
+		 set(axisID, "LabelsOnOff", TRUE);
+		 set(axisID, "FontSize", 140);
+		 set(axisID, "LineThick", 7);
+		 set(axisID, "LineType", 0);
+		 set(axisID, "TickFontSize", 112);
+		 set(axisID, "AutoscaleOnOff", TRUE);
+		 set(axisID, "MinValue", -1);
+		 set(axisID, "MaxValue", 1);
+		 set(axisID, "StepSize", 0);
+		 set(axisID, "Logarithmic", FALSE);
+		 set(axisID, "Font", "Arial For CAE");
+		 set(axisID, "Format", ddsFormatAutomatic);
+		 set(axisID, "NumDigits", 3);
+	}
 traceID = get_new(goId0, "Trace", "indep(Pdel_Z)+j*Pdel_Z", "", "");
 // Text trace:
 	if (traceID != NULL) set(traceID, "ComplexNumberFormat", ddsComplexFormatRealImaginary);
@@ -6093,7 +6277,7 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "LabelOnOff", FALSE);
 	set(goId0, "OutlineLineType", ddsSolidLineType);
 	set(goId0, "OutlineThickness", 14);
-	set(goId0, "VerticalScroll", -1);
+	set(goId0, "VerticalScroll", 0);
 	set(goId0, "ShowIndependentData", FALSE);
 	set(goId0, "SuppressTable", FALSE);
 	set(goId0, "AutoSizeListingWidth", FALSE);
@@ -6103,6 +6287,29 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "TitleFont", "Arial For CAE");
 	set(goId0, "TitleFontSize", 168);
 	set(goId0, "TitleColor", 0);
+axisID = get_new(goId0, "Axis", ddsXaxis, "");
+// Axis...
+	if (axisID != NULL) {
+		 set(axisID, "Uid", 1434159169);
+		 set(axisID, "Color", 104);
+		 set(axisID, "UserLabel", "");
+		 set(axisID, "LabelColor", 0);
+		 set(axisID, "TicksOnOff", TRUE);
+		 set(axisID, "GridOnOff", TRUE);
+		 set(axisID, "LabelsOnOff", TRUE);
+		 set(axisID, "FontSize", 140);
+		 set(axisID, "LineThick", 7);
+		 set(axisID, "LineType", 0);
+		 set(axisID, "TickFontSize", 112);
+		 set(axisID, "AutoscaleOnOff", TRUE);
+		 set(axisID, "MinValue", -1);
+		 set(axisID, "MaxValue", 1);
+		 set(axisID, "StepSize", 0);
+		 set(axisID, "Logarithmic", FALSE);
+		 set(axisID, "Font", "Arial For CAE");
+		 set(axisID, "Format", ddsFormatAutomatic);
+		 set(axisID, "NumDigits", 3);
+	}
 traceID = get_new(goId0, "Trace", "indep(Gain_Z)+j*Gain_Z", "", "");
 // Text trace:
 	if (traceID != NULL) set(traceID, "ComplexNumberFormat", ddsComplexFormatRealImaginary);
@@ -6152,7 +6359,7 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "LabelOnOff", FALSE);
 	set(goId0, "OutlineLineType", ddsSolidLineType);
 	set(goId0, "OutlineThickness", 14);
-	set(goId0, "VerticalScroll", -1);
+	set(goId0, "VerticalScroll", 0);
 	set(goId0, "ShowIndependentData", TRUE);
 	set(goId0, "SuppressTable", FALSE);
 	set(goId0, "AutoSizeListingWidth", FALSE);
@@ -6211,7 +6418,7 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "LabelOnOff", FALSE);
 	set(goId0, "OutlineLineType", ddsSolidLineType);
 	set(goId0, "OutlineThickness", 14);
-	set(goId0, "VerticalScroll", -1);
+	set(goId0, "VerticalScroll", 0);
 	set(goId0, "ShowIndependentData", TRUE);
 	set(goId0, "SuppressTable", FALSE);
 	set(goId0, "AutoSizeListingWidth", FALSE);
@@ -6270,7 +6477,7 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "LabelOnOff", FALSE);
 	set(goId0, "OutlineLineType", ddsSolidLineType);
 	set(goId0, "OutlineThickness", 14);
-	set(goId0, "VerticalScroll", -1);
+	set(goId0, "VerticalScroll", 0);
 	set(goId0, "ShowIndependentData", TRUE);
 	set(goId0, "SuppressTable", FALSE);
 	set(goId0, "AutoSizeListingWidth", FALSE);
@@ -6329,7 +6536,7 @@ goId0 = get_new(pageId, "Listing");
 	set(goId0, "LabelOnOff", FALSE);
 	set(goId0, "OutlineLineType", ddsSolidLineType);
 	set(goId0, "OutlineThickness", 14);
-	set(goId0, "VerticalScroll", -1);
+	set(goId0, "VerticalScroll", 0);
 	set(goId0, "ShowIndependentData", TRUE);
 	set(goId0, "SuppressTable", FALSE);
 	set(goId0, "AutoSizeListingWidth", FALSE);
@@ -6391,7 +6598,7 @@ goId0 = get_new(pageId, "Equation");
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 329082528);
 // Graphical Object:
-	set(goId0, "Right", 5338);
+	set(goId0, "Right", 5310);
 	set(goId0, "Bottom", -3875);
 	set(goId0, "Left", 4500);
 	set(goId0, "Top", -4125);
@@ -7024,7 +7231,7 @@ traceID = get_new(goId0, "Trace", "plot_vs(Pdel_dBm, PAE)", "X Axis", "Y Axis");
 			set(traceID, "DensitySymbolType", ddsDotSymbol);
 		}
 	}
-markerID = get_new(traceID, "MarkerNew", "mPdel_vs_PAE", "59.98464437981073200000000000000000", 11, "", "28.50643215692658600000000000000000", 1, "");
+markerID = get_new(traceID, "MarkerNew", "mPdel_vs_PAE", "59.98464437981073200000000000000000", 20, "", "28.50643215692658600000000000000000", 1, "");
 // Base Class Object:
 	set(markerID, "Name", "");
 	set(markerID, "Uid", 2060793027);
@@ -7427,6 +7634,29 @@ goId1 = get_new(goId0, "Listing");
 	set(goId1, "TitleFont", "Arial For CAE");
 	set(goId1, "TitleFontSize", 126);
 	set(goId1, "TitleColor", 0);
+axisID = get_new(goId1, "Axis", ddsXaxis, "");
+// Axis...
+	if (axisID != NULL) {
+		 set(axisID, "Uid", 1820651158);
+		 set(axisID, "Color", 104);
+		 set(axisID, "UserLabel", "");
+		 set(axisID, "LabelColor", 0);
+		 set(axisID, "TicksOnOff", TRUE);
+		 set(axisID, "GridOnOff", TRUE);
+		 set(axisID, "LabelsOnOff", TRUE);
+		 set(axisID, "FontSize", 140);
+		 set(axisID, "LineThick", 7);
+		 set(axisID, "LineType", 0);
+		 set(axisID, "TickFontSize", 112);
+		 set(axisID, "AutoscaleOnOff", TRUE);
+		 set(axisID, "MinValue", -1);
+		 set(axisID, "MaxValue", 1);
+		 set(axisID, "StepSize", 0);
+		 set(axisID, "Logarithmic", FALSE);
+		 set(axisID, "Font", "Arial For CAE");
+		 set(axisID, "Format", ddsFormatAutomatic);
+		 set(axisID, "NumDigits", 3);
+	}
 traceID = get_new(goId1, "Trace", "sort(indep(Power_contours[::,0,0]),\"descending\")", "", "");
 // Text trace:
 	if (traceID != NULL) set(traceID, "ComplexNumberFormat", ddsComplexFormatMagPhase);
@@ -7502,6 +7732,29 @@ goId1 = get_new(goId0, "Listing");
 	set(goId1, "TitleFont", "Arial For CAE");
 	set(goId1, "TitleFontSize", 154);
 	set(goId1, "TitleColor", 0);
+axisID = get_new(goId1, "Axis", ddsXaxis, "");
+// Axis...
+	if (axisID != NULL) {
+		 set(axisID, "Uid", 267195497);
+		 set(axisID, "Color", 104);
+		 set(axisID, "UserLabel", "");
+		 set(axisID, "LabelColor", 0);
+		 set(axisID, "TicksOnOff", TRUE);
+		 set(axisID, "GridOnOff", TRUE);
+		 set(axisID, "LabelsOnOff", TRUE);
+		 set(axisID, "FontSize", 140);
+		 set(axisID, "LineThick", 7);
+		 set(axisID, "LineType", 0);
+		 set(axisID, "TickFontSize", 112);
+		 set(axisID, "AutoscaleOnOff", TRUE);
+		 set(axisID, "MinValue", -1);
+		 set(axisID, "MaxValue", 1);
+		 set(axisID, "StepSize", 0);
+		 set(axisID, "Logarithmic", FALSE);
+		 set(axisID, "Font", "Arial For CAE");
+		 set(axisID, "Format", ddsFormatAutomatic);
+		 set(axisID, "NumDigits", 3);
+	}
 traceID = get_new(goId1, "Trace", "sort(indep(PAE_contours[::,0,0]),\"descending\")", "", "");
 // Text trace:
 	if (traceID != NULL) set(traceID, "ComplexNumberFormat", ddsComplexFormatMagPhase);
@@ -7656,12 +7909,6 @@ goId0 = get_new(pageId, "Text");
 	set(goId0, "FillPattern", -1);
 	set(goId0, "FillColor", 0);
 	set(goId0, "OutlineOnOff", FALSE);
-// Embedded Expressions:
-	set(goId0, "ComplexNumberFormat", ddsComplexFormatMagPhase);
-	set(goId0, "Format", ddsFormatAutomatic);
-	set(goId0, "NumDigits", 3);
-	set(goId0, "NumDataPoints", 3);
-	set(goId0, "TextDataSeparator", ", ");
 // Base Class Object:
 	set(goId0, "Name", "");
 	set(goId0, "Uid", 100810482);
@@ -8054,11 +8301,11 @@ goId0 = get_new(pageId, "Text");
 ddWinId = get_new(ddsId, "Window", 310, 26, 1507, 968);
 	set(ddWinId, "Object", ddoId);
 	set(ddWinId, "CurrentPage", 2036694258);
-	set(ddWinId, "PageViewRect_620193056", list(2265, 11827, 24610, -2702));
-	set(ddWinId, "PageViewRect_2036694258", list(-4254, 6996, 15478, -5370));
+	set(ddWinId, "PageViewRect_620193056", list(-756, 11828, 27630, -2702));
+	set(ddWinId, "PageViewRect_2036694258", list(-1385, 3508, 12583, -3643));
 	set(ddWinId, "PageViewRect_1319522875", list(-3384, 7513, 9011, -255));
 	set(ddWinId, "Frame", list(310, 26, 1507, 968));
-	set(ddWinId, "Maximized", FALSE);
+	set(ddWinId, "Maximized", TRUE);
 	set(ddWinId, "ForegroundColor", 0);
 	set(ddWinId, "BackgroundColor", 8);
 	set(ddWinId, "WindowPageOrder", list("Equations","Contours on Smith Charts","Power delivered versus PAE"));

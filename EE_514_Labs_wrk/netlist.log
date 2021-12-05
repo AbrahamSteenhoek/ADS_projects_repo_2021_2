@@ -1,18 +1,22 @@
-; Top Design: "EE_514_Labs_lib:Amp_wDC_Bias:schematic"
+; Top Design: "EE_514_Labs_lib:Lab4_Osc_Design_reg_biased:schematic"
 ; Netlisted using Hierarchy Policy: "Standard"
 
-Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="EE_514_Labs_lib:Amp_wDC_Bias:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
+Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="EE_514_Labs_lib:Lab4_Osc_Design_reg_biased:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
 ; Library Name: EE_514_Labs_lib
-; Cell Name: DC_Bias_Regulator
+; Cell Name: DC_Bias_Regulator_symbol
 ; View Name: schematic
-define DC_Bias_Regulator ( Vcc_5V  Bias_Collector  Bias_Base  Vss ) 
+define DC_Bias_Regulator_symbol ( Vcc_5V  Bias_Collector  Bias_Base  Vss ) 
 ;parameters 
-tlc220x_5v:U1  N__12 Vref Vcc_5V Vss N__5 
-model MSub1 MSUB H=59.2 mil Er=4.34 Mur=1 Cond=5.8E7 Hu=3.93701e+34 mil T=1.4 mil TanD=0.016 Rough=0 mil DielectricLossModel=1 FreqForEpsrTanD=1.0 GHz LowFreqForTanD=1.0 kHz HighFreqForTanD=1.0 THz RoughnessModel=2 
+
+beta=R_base/(R_base+R_atten)
+R_base=1000000 tune{ 1 to 1000000 by 50 }
+R_atten=1 tune{ 1 to 10000 by 50 }
+Vref=2*beta
+MLIN2:TL1  N__17 N__31 Subst="MSub1" W=50 mil L=50 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+Short:R1  N__19 N__18 Mode=0 SaveCurrent=no
+res_0603:R3  Bias_Base N__31 R=10 kOhm 
+res_0603:R4  N__23 Vcc_5V R=75 Ohm 
 R:R5  Vcc_5V Vref R=3 kOhm Noise=yes 
-R:R6  Vref Vss R=2 kOhm Noise=yes 
-Short:Tee2  N__12 N__11 Mode=0 SaveCurrent=no
-MTEE_ADS:Tee3  N__8 Bias_Collector N__6 Subst="MSub1" W1=50 mil W2=50 mil W3=50 mil 
 ; models
 #include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/tlc220x_5v.net"
 #include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/tlc220x_10v.net"
@@ -27,56 +31,62 @@ MTEE_ADS:Tee3  N__8 Bias_Collector N__6 Subst="MSub1" W1=50 mil W2=50 mil W3=50 
 #include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/BFP620.net"
 ; User defined parasitic parameters
 #include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/parasitic_param_values.txt"
-MLIN2:TL1  N__5 N__7 Subst="MSub1" W=50 mil L=50 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
-Short:R1  N__11 N__6 Mode=0 SaveCurrent=no
-res_0603:R3  Bias_Base N__7 R=50 Ohm 
-res_0603:R4  N__8 Vcc_5V R=50 Ohm 
-
-beta=R_base/(R_base+R_atten)
-R_base=1000000 tune{ 1 to 1000000 by 50 }
-R_atten=1 tune{ 1 to 10000 by 50 }
-Vref=2*beta
-end DC_Bias_Regulator
-
-BFP620:Q1  N__14 N__18 N__19 N__23 
-MLIN2:TL9  Vce N__15 Subst="MSub1" W=50 mil L=50 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
-MLIN2:TL3  N__19 N__16 Subst="MSub1" W=50 mil L=25 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
-MLIN2:TL5  N__23 N__17 Subst="MSub1" W=50 mil L=25 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
-MLIN2:TL24  N__8 N__5 Subst="MSub1" W=50 mil L=25 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
-MLIN2:TL14  N__28 N__29 Subst="MSub1" W=50 mil L=25 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
-MLIN2:TL10  N__30 N__20 Subst="MSub1" W=50 mil L=50 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
-MLIN2:TL22  N__1 N__2 Subst="MSub1" W=50 mil L=25 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
-VIAGND:V1  N__16 Subst="MSub1" D=20.0 mil T=1.4 mil Rho=0.6885 W=30.0 mil 
-VIAGND:V2  N__17 Subst="MSub1" D=20.0 mil T=1.4 mil Rho=0.6885 W=30.0 mil 
-VIAGND:V4  N__29 Subst="MSub1" D=20.0 mil T=1.4 mil Rho=0.6885 W=30.0 mil 
-VIAGND:V6  N__2 Subst="MSub1" D=20.0 mil T=1.4 mil Rho=0.6885 W=30.0 mil 
-VIAGND:V7  N__5 Subst="MSub1" D=20.0 mil T=1.4 mil Rho=0.6885 W=30.0 mil 
-MLOC2:TL29  N__16 Subst="MSub1" W=50 mil L=25 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
-MLOC2:TL12  N__29 Subst="MSub1" W=50 mil L=25 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
-MLOC2:TL23  N__2 Subst="MSub1" W=50 mil L=25 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
-MLOC2:TL25  N__5 Subst="MSub1" W=50 mil L=25 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
-MLOC2:TL27  N__17 Subst="MSub1" W=50 mil L=25 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
-Short:Ic  N__15 N__14 Mode=0 SaveCurrent=yes 
-V_Source:SRC1  N__12 0 Type="V_DC" Vdc=5 V SaveCurrent=1 
-MTEE_ADS:Tee6  N__24 N__26 N__33 Subst="MSub1" W1=50 mil W2=50 mil W3=50 mil 
-MTEE_ADS:Tee2  N__32 N__25 N__27 Subst="MSub1" W1=50 mil W2=50 mil W3=50.0 mil 
-MTEE_ADS:Tee4  N__6 N__18 N__9 Subst="MSub1" W1=50 mil W2=50 mil W3=50.0 mil 
-MTEE_ADS:Tee5  N__34 N__13 N__3 Subst="MSub1" W1=50 mil W2=50 mil W3=50.0 mil 
-MTEE_ADS:Tee7  N__10 N__7 N__4 Subst="MSub1" W1=50 mil W2=50 mil W3=50 mil 
-ind_0603:L1  N__9 N__10 L=12 nH 
-ind_0603:L3  N__27 N__26 L=6.2 nH 
-ind_0603:L5  Vce N__32 L=3 nH 
-ind_0603:L4  N__3 N__1 L=2.7 nH 
-cap_0603:C2  N__8 N__7 C=6.2 pF 
-cap_0603:C1  N__28 N__24 C=3.9 pF 
-cap_0603:C3  N__25 N__30 C=2.2 pF 
-cap_0603:C4  N__13 N__6 C=1.6 pF 
+Short:Tee2  N__48 N__19 Mode=0 SaveCurrent=no
+MTEE_ADS:Tee3  N__23 Bias_Collector N__18 Subst="MSub1" W1=50 mil W2=50 mil W3=50 mil 
+R:R6  Vref Vss R=2 kOhm Noise=yes 
 model MSub1 MSUB H=59.2 mil Er=4.34 Mur=1 Cond=5.8E7 Hu=3.93701e+34 mil T=1.4 mil TanD=0.016 Rough=0 mil DielectricLossModel=1 FreqForEpsrTanD=1.0 GHz LowFreqForTanD=1.0 kHz HighFreqForTanD=1.0 THz RoughnessModel=2 
-aele S_StabRegion1=s_stab_region(S);
-DC:DC1 StatusLevel=2 DevOpPtLevel=0 UseFiniteDiff=no PrintOpPoint=no Restart=1 \
-OutputPlan="DC1_Output" 
+tlc220x_5v:U1  N__48 Vref Vcc_5V Vss N__17 
+end DC_Bias_Regulator_symbol
 
-OutputPlan:DC1_Output \
+; models
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/tlc220x_5v.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/tlc220x_10v.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/res_1206.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/res_0603.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/ind_0603.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/cap_1206.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/cap_0603.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/BFR182_cktName.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/BFR182.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/BFP620_cktName.net"
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/BFP620.net"
+; User defined parasitic parameters
+#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/parasitic_param_values.txt"
+BFP620:Q1  Vce N__45 N__30 N__26 
+Short:Ic  N__29 Vce Mode=0 SaveCurrent=yes 
+cap_1206:C_leak_2  N__25 N__31 C=6.2 pF 
+ind_0603:L5  N__28 N__18 L=2.2 nH notune{ 0.1 nH to 6.12 nH by 0.1 nH } 
+MTEE_ADS:Tee8  N__14 N__16 N__31 Subst="MSub1" W1=50 mil W2=50 mil W3=50 mil 
+MLOC2:TL43  N__20 Subst="MSub1" W=50 mil L=25 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+
+SweepPlan:SwpPlan1 SweepPlan[1]="SwpPlan1_seg1" 
+SweepPlan:SwpPlan1_seg1 Start=1E9 Stop=3E9 Lin=6000 
+
+Vcc=2.024
+Vdd=5
+Vbias=850.25 mV
+model MSub1 MSUB H=59.2 mil Er=4.34 Mur=1 Cond=5.8e7 Hu=3.93701e+34 mil T=1.4 mil TanD=0.016 Rough=0 mil DielectricLossModel=1 FreqForEpsrTanD=1.0 GHz LowFreqForTanD=1.0 kHz HighFreqForTanD=1.0 THz RoughnessModel=2 
+VIAGND:V3  N__23 Subst="MSub1" D=20 mil T=1.4 mil Rho=0.6885 W=30 mil 
+V_Source:SRC4  N__24 0 Type="V_DC" Vdc=Vdd V SaveCurrent=1 
+MLIN2:TL42  N__25 N__20 Subst="MSub1" W=50 mil L=50 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+
+Cf=2.2
+VIAGND:V14  N__20 Subst="MSub1" D=20.0 mil T=1.4 mil Rho=0.6885 W=30.0 mil 
+aele Mu1=mu(S);
+VIAGND:V4  N__9 Subst="MSub1" D=20 mil T=1.4 mil Rho=0.6885 W=30 mil 
+cap_0603:Cf_2  N__7 N__6 C=Cf pF notune{ 0.1 pF to 21 pF by 0.01 pF } 
+ind_0603:DC_feed_2  N__27 N__32 L=16 nH 
+MTEE_ADS:Tee1  N__30 N__13 N__27 Subst="MSub1" W1=50 mil W2=50 mil W3=65 mil notune{ 25 mil to 75 mil by 1 mil } 
+MLOC2:TL6  N__11 Subst="MSub1" W=50 mil L=25 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLOC2:TL8  N__23 Subst="MSub1" W=50 mil L=25 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL5  N__12 N__11 Subst="MSub1" W=50 mil L=25 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL7  N__32 N__23 Subst="MSub1" W=50 mil L=25 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+VIAGND:V2  N__11 Subst="MSub1" D=20 mil T=1.4 mil Rho=0.6885 W=30 mil 
+MTEE_ADS:Tee4  N__29 N__21 N__0 Subst="MSub1" W1=50 mil W2=50 mil W3=50 mil tune{ 32.5 mil to 97.5 mil by 1 mil } 
+HB:HB1 MaxOrder=4 Freq[1]=2.2 GHz Order[1]=15 StatusLevel=2 Restart=no HBSS_WSP=0 OscPortName="Yes" \
+OutputPlan="HB1_Output" 
+
+OutputPlan:HB1_Output \
       Type="Output" \
       UseNodeNestLevel=yes \
       NodeNestLevel=2 \
@@ -94,44 +104,46 @@ OutputPlan:DC1_Output \
       DeviceVoltageNestLevel=0 \
       DeviceVoltageDeviceType="All"
 
-S_Param:SP1 CalcS=yes CalcY=no CalcZ=no GroupDelayAperture=1e-4 FreqConversion=no FreqConversionPort=1 StatusLevel=2 CalcNoise=no SortNoise=0 BandwidthForNoise=1.0 Hz DevOpPtLevel=0 \
-SweepVar="freq" SweepPlan="SP1_stim" OutputPlan="SP1_Output" 
+Tran:HB1_tran HB_Sol=1 SteadyState=1 StatusLevel=3 \
+Freq[1]=2.2 GHz Order[1]=15 
 
-SweepPlan: SP1_stim Start=100 MHz Stop=12 GHz Step=5 MHz 
+Component:tahb_HB1 Module="ATAHB" Type="ModelExtractor" \ 
+ Tran_Analysis="HB1_tran" HB_Analysis="HB1" 
 
-OutputPlan:SP1_Output \
-      Type="Output" \
-      UseEquationNestLevel=yes \
-      EquationNestLevel=2 \
-      UseSavedEquationNestLevel=yes \
-      SavedEquationNestLevel=2
+ind_0603:DC_feed_4  N__16 N__21 L=16 nH 
+DC_Bias_Regulator_symbol:X1  N__24 N__14 N__34 0 
 
-#load "python","LinearCollapse"
-Component Module="LinearCollapse" Type="ModelExtractor" NetworkRepresentation=2
-aele Mu1=mu(S);
-aele StabFact1=stab_fact(S);
-aele MaxGain1=max_gain(S);
-aele SmZ1=sm_z1(S,PortZ1);
-aele SmZ2=sm_z2(S,PortZ2);
-aele L_StabCircle1=l_stab_circle(S,501);
-aele L_StabRegion1=l_stab_region(S);
-aele S_StabCircle1=s_stab_circle(S,501);
-; models
-#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/tlc220x_5v.net"
-#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/tlc220x_10v.net"
-#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/res_1206.net"
-#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/res_0603.net"
-#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/ind_0603.net"
-#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/cap_1206.net"
-#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/cap_0603.net"
-#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/BFR182_cktName.net"
-#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/BFR182.net"
-#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/BFP620_cktName.net"
-#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/BFP620.net"
-; User defined parasitic parameters
-#include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/parasitic_param_values.txt"
-Port:TermG1  N__0 0 Num=1 Z=50 Ohm Noise=yes 
-Port:TermG2  N__31 0 Num=2 Z=50 Ohm Noise=yes 
-DC_Bias_Regulator:X1  N__12 N__33 N__4 0 
-MTAPER:Taper1  N__31 N__20 Subst="MSub1" W1=114 mil W2=50 mil L=32 mil 
-MTAPER:Taper2  N__0 N__34 Subst="MSub1" W1=114 mil W2=50 mil L=32 mil 
+r=1.0
+x=1.0
+Gamma_T=((r+j*x)-1)/((r+j*x)+1)
+cap_0603:Cf_1  N__13 N__12 C=Cf pF notune{ 0.1 pF to 21 pF by 0.01 pF } 
+VIAGND:V5  N__5 Subst="MSub1" D=20 mil T=1.4 mil Rho=0.6885 W=30 mil 
+MLIN2:TL9  N__10 N__9 Subst="MSub1" W=50 mil L=25 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL10  N__6 N__5 Subst="MSub1" W=50 mil L=25 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLOC2:TL11  N__9 Subst="MSub1" W=50 mil L=25 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLOC2:TL12  N__5 Subst="MSub1" W=50 mil L=25 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MTEE_ADS:Tee2  N__26 N__7 N__8 Subst="MSub1" W1=50 mil W2=50 mil W3=65 mil notune{ 25 mil to 75 mil by 1 mil } 
+ind_0603:DC_feed_3  N__8 N__10 L=16 nH 
+
+#uselib "ckt", "OscPort2"
+
+OscPort2:OscP1  N__0 0 N__3 0 Z=1.1 Ohm NumOctaves=2 Steps=101 FundIndex=1 Harm=1 FreqPlan="SwpPlan1" 
+VIAGND:V7  N__22 Subst="MSub1" D=20 mil T=1.4 mil Rho=0.6885 W=30 mil 
+MTEE_ADS:Tee5  N__4 Vin N__28 Subst="MSub1" W1=70 mil W2=70 mil W3=50 mil 
+MLOC2:TL19  N__22 Subst="MSub1" W=50 mil L=25 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+R:R1  Vin 0 R=50 Ohm Noise=yes 
+ind_0603:L6  N__3 N__1 L=2.7 nH tune{ 0.1 nH to 6 nH by 0.1 nH } 
+MLIN2:TL17  N__18 N__22 Subst="MSub1" W=50 mil L=25 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+cap_0603:C7  N__2 N__4 C=1.6 pF 
+MLIN2:TL18  N__1 N__2 Subst="MSub1" W=55 mil notune{ 25 mil to 75 mil by 1 mil } L=55 mil notune{ 25 mil to 75 mil by 1 mil } Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL40  N__38 N__44 Subst="MSub1" W=50 mil L=50 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL37  N__42 N__43 Subst="MSub1" W=50 mil L=25 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+VIAGND:V13  N__44 Subst="MSub1" D=20.0 mil T=1.4 mil Rho=0.6885 W=30.0 mil 
+VIAGND:V12  N__43 Subst="MSub1" D=20.0 mil T=1.4 mil Rho=0.6885 W=30.0 mil 
+MLOC2:TL41  N__44 Subst="MSub1" W=50 mil L=25 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLOC2:TL38  N__43 Subst="MSub1" W=50 mil L=25 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+cap_0603:C4  N__42 N__41 C=2.2 pF notune{ 0.1 pF to 15 pF by 0.1 pF } 
+MTEE_ADS:Tee6  N__34 N__37 N__36 Subst="MSub1" W1=50 mil W2=50 mil W3=50 mil 
+MTEE_ADS:Tee7  N__41 N__45 N__40 Subst="MSub1" W1=50.0 mil W2=50.0 mil W3=55 mil notune{ 25 mil to 75 mil by 5 mil } 
+cap_1206:C_leak_1  N__38 N__36 C=6.2 pF 
+ind_0603:DC_feed_1  N__40 N__37 L=16 nH 
