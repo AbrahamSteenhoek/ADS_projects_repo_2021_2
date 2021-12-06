@@ -1,4 +1,4 @@
-<ADSWorkspace Revision="150" Version="100">
+<ADSWorkspace Revision="155" Version="100">
     <Workspace Name="">
         <LibraryDefs Name="lib.defs" />
         <ConfigFile Name="dds.cfg" />
@@ -264,6 +264,8 @@
             <Cell Name="EE_514_Labs_lib:TL_TB" />
             <Data_Display Name="TL_TB.dds" />
             <Data_Display Name="LP_filter_250MHz_LE_ord5_TB_v1.dds" />
+            <Cell Name="EE_514_Labs_lib:mixer_double_balanced_HC" />
+            <Cell Name="EE_514_Labs_lib:hybrid_coupler_180deg" />
         </Folder>
         <Dataset Name="mixer_v1.ds" />
         <Data_Files Name="mixer_v1.ds" />
@@ -349,8 +351,6 @@
         <Dataset Name="BP_filter_200MHz_o2.ds" />
         <Data_Files Name="BP_filter_200MHz_o2.ds" />
         <Data_Files Name="BP_filter_200MHz_o2_data\logFile.txt" />
-        <Dataset Name="mixer_single_balanced_HC_v1.ds" />
-        <Data_Files Name="mixer_single_balanced_HC_v1.ds" />
         <Dataset Name="LP_filter_5MHz_LE_o5.ds" />
         <Data_Files Name="LP_filter_5MHz_LE_o5.ds" />
         <Data_Files Name="LP_filter_5MHz_LE_o5_data\logFile.txt" />
@@ -366,5 +366,17 @@
         <Data_Files Name="LP_filter_5MHz_LE_ord5_TB_data\logFile.txt" />
         <Data_Files Name="dc_annotation\%E%E_514_%Labs_lib_mixer_single_balanced_%H%C_v1_schematic\annotation_1.xml" />
         <Data_Files Name="dc_annotation\%E%E_514_%Labs_lib_mixer_single_balanced_%H%C_v1_schematic\annotation_map.xml" />
+        <Data_Files Name="dc_annotation\%E%E_514_%Labs_lib_mixer_double_balanced_%H%C_schematic\annotation_1.xml" />
+        <Data_Files Name="dc_annotation\%E%E_514_%Labs_lib_mixer_double_balanced_%H%C_schematic\annotation_map.xml" />
+        <Data_Files Name="mixer_double_balanced_HC_data\logFile.txt" />
+        <Dataset Name="mixer_double_balanced_HC.ds" />
+        <Data_Files Name="mixer_double_balanced_HC.ds" />
+        <Data_Display Name="mixer_double_balanced_HC.dds" />
+        <Dataset Name="mixer_single_balanced_HC_v1.ds" />
+        <Data_Files Name="mixer_single_balanced_HC_v1.ds" />
+        <Dataset Name="hybrid_coupler_180deg.ds" />
+        <Data_Files Name="hybrid_coupler_180deg.ds" />
+        <Data_Files Name="hybrid_coupler_180deg_data\logFile.txt" />
+        <Data_Display Name="hybrid_coupler_180deg.dds" />
     </Workspace>
 </ADSWorkspace>
