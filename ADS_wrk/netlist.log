@@ -1,7 +1,7 @@
-; Top Design: "EE_514_Labs_lib:mixer_single_balanced_HC_v1:schematic"
+; Top Design: "EE_514_Labs_lib:mixer_double_balanced_HC:schematic"
 ; Netlisted using Hierarchy Policy: "Standard"
 
-Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="EE_514_Labs_lib:mixer_single_balanced_HC_v1:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
+Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="EE_514_Labs_lib:mixer_double_balanced_HC:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
 ; Library Name: EE_514_Labs_lib
 ; Cell Name: HSMS282x
 ; View Name: schematic
@@ -44,8 +44,6 @@ MLIN2:TL7  P1 P2 Subst="MSub2" W=194.586614 mil L=660.366142 mil Mod=1
 MLIN2:TL8  P4 P3 Subst="MSub2" W=194.586614 mil L=660.366142 mil Mod=1 
 end hybrid_coupler_90deg
 
-hybrid_coupler_90deg:X1  N__31 N__23 N__33 N__16 
-Short:I_a  N__8 V_a Mode=0 SaveCurrent=yes 
 HB:HB1 MaxOrder=4 Freq[1]=LOfreq Freq[2]=RFfreq Order[1]=5 Order[2]=5 StatusLevel=2 HBSS_WSP=0 OutputPlan="HB1_Output" 
 
 OutputPlan:HB1_Output \
@@ -74,20 +72,18 @@ Component:tahb_HB1 Module="ATAHB" Type="ModelExtractor" \
 
 Port:PORT1  V_rf 0 Num=1 Z=50 Ohm P[1]=dbmtow(RFpower) Freq[1]=RFfreq    Noise=yes Pac=polar(dbmtow(0),0) 
 model BAT15_03W Diode Is=74e-9 Rs=5.0 N=1.07 Tt=3e-12 Cjo=138.3e-12 Vj=0.224 M=0.138 Fc=0.5 Bv=4.2 Ibv=100e-6 AllowScaling=0 
-Short:I_b  N__44 V_b Mode=0 SaveCurrent=yes 
 R:R2  V_if_filtered 0 R=50 Ohm Noise=yes 
 
 RFfreq=2.4 GHz
-Vbias=.34
+Vbias=0
 RFpower=0
 LOpower=7
 LOfreq=2.398 GHz
-Port:PORT2  V_lo 0 Num=2 Z=50 Ohm P[1]=dbmtow(LOpower) Freq[1]=LOfreq    Noise=no Pac=polar(dbmtow(0),0) 
 model DIODEM1 Diode AllowScaling=0 
-LP_filter_5MHz_LE_ord5:X6  N__40 V_if_filtered 
-MLEF2:TL12  N__45 Subst="MSub1" W=60 mil notune{ 5 mil to 1000 mil by 5 mil } L=660 mil tune{ 2 mil to 1000 mil by 10 mil } Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
-aele Zif = HB.V_if/HB.I_if.i;Zin_a = HB.V_a/ HB.I_a.i;Zin_b = HB.V_b / HB.I_b.i;
-MLIN2:TL10  V_rf N__31 Subst="MSub1" W=114 mil L=60 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+V_Source:SRC2  N__8 0 Type="V_DC" Vdc=Vbias V SaveCurrent=1 
+#uselib "HfDiodeLibrary" , "di_hp_HSMS280B_20000301"
+di_hp_HSMS280B_20000301:D12  N__39 N__41 N__44 
+aele Zif = HB.V_if/HB.I_if.i;Zif_L = HB.V_if_L/HB.I_if_L.i;Zin_a = HB.V_a/ HB.I_a.i;Zin_b = HB.V_b / HB.I_b.i;
 HB:HB2 MaxOrder=4 Freq[1]=LOfreq Freq[2]=RFfreq Order[1]=5 Order[2]=5 StatusLevel=2 CalcS_Params=yes LSSP_FreqAtPort[1]=RFfreq LSSP_FreqAtPort[2]=LOfreq OutputPlan="HB2_Output" 
 
 OutputPlan:HB2_Output \
@@ -98,8 +94,6 @@ OutputPlan:HB2_Output \
       SavedEquationNestLevel=2
 
 V_Source:SRC1  N__21 0 Type="V_DC" Vdc=Vbias V SaveCurrent=1 
-MLIN2:TL9  N__33 V_b Subst="MSub1" W=114 mil L=60 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
-MLIN2:TL8  N__23 V_a Subst="MSub1" W=114 mil L=60 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
 Short:I_if  V_if N__43 Mode=0 SaveCurrent=yes 
 ; models
 #include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/tlc220x_5v.net"
@@ -116,9 +110,27 @@ Short:I_if  V_if N__43 Mode=0 SaveCurrent=yes
 ; User defined parasitic parameters
 #include "C:/Users/abrah/OneDrive/Documents/ee514/ADS_2021_u2/DesignKits/DesignKit_EE414/circuit/models/parasitic_param_values.txt"
 model MSub1 MSUB H=59.2 mil Er=4.34  Mur=1.0  Cond=5.8e+7  Hu=3.9370e+34 mil T=1.4 mil TanD=0.016  Rough=0 mil DielectricLossModel=1 FreqForEpsrTanD=1.0e9  LowFreqForTanD=1.0e3  HighFreqForTanD=1.0e12  RoughnessModel=2 
-MLIN2:TL11  V_lo N__16 Subst="MSub1" W=114 mil L=60 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
-MTEE_ADS:Tee1  N__43 N__40 N__45 Subst="MSub1" W1=60 mil W2=60 mil W3=60 mil notune{ 10 mil to 10000 mil by 10 mil } 
-HSMS282x:X7  N__8 V_if 
-HSMS282x:X8  V_if N__44 
+hybrid_coupler_90deg:X7  N__36 N__35 V_a V_rf 
+MLIN2:TL13  N__35 N__25 Subst="MSub1" W=114 mil L=680 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
 #uselib "HfDiodeLibrary" , "di_hp_HSMS282C_20000301"
-di_hp_HSMS282C_20000301:D11  N__41 N__38 N__39 
+di_hp_HSMS282C_20000301:D11  N__45 N__29 N__30 
+Port:PORT2  V_lo 0 Num=2 Z=50 Ohm P[1]=dbmtow(LOpower) Freq[1]=LOfreq    Noise=no Pac=polar(dbmtow(0),0) 
+MLIN2:TL14  N__38 N__17 Subst="MSub1" W=114 mil L=680 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+hybrid_coupler_90deg:X8  N__31 N__38 V_b V_lo 
+HSMS282x:X9  N__25 N__17 
+HSMS282x:X10  V_if_R N__25 
+HSMS282x:X11  V_if_L V_if_R 
+HSMS282x:X12  N__17 V_if_L 
+R:R3  N__36 0 R=50 Ohm Noise=yes 
+R:R4  N__31 0 R=50 Ohm Noise=yes 
+Short:I_a  V_a V_if_L Mode=0 SaveCurrent=yes 
+Short:I_b  V_b V_if_R Mode=0 SaveCurrent=yes 
+Short:I_if_R  V_if_R N__32 Mode=0 SaveCurrent=yes 
+Short:I_if_L  V_if_L N__34 Mode=0 SaveCurrent=yes 
+R:R5  V_if_filtered_R 0 R=50 Ohm Noise=yes 
+C:C1  0 V_if_filtered C=5000 pF tune{ 0.5 pF to 10000 pF by 10 pF } 
+L:L1  N__34 V_if_filtered L=30 nH tune{ 0.5 nH to 5000 nH by 1 nH } Noise=yes  
+LP_filter_5MHz_LE_ord5:X6  N__22 N__16 
+C:C2  0 V_if_filtered_R C=5000 pF notune{ 0.5 pF to 10000 pF by 10 pF } 
+L:L2  N__32 V_if_filtered_R L=680 nH tune{ 0.5 nH to 5000 nH by 1 nH } Noise=yes  
+LP_filter_5MHz_LE_ord5:X13  N__24 N__40 
